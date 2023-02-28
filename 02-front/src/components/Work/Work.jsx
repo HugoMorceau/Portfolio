@@ -1,10 +1,10 @@
-import Lorem from "../Lorem/Lorem";
+import Lorem from '../Lorem/Lorem'
 
-export default function Work(){
-    // state 
-    // comportements
-    // render
-    return (
+export default function Work () {
+  // state
+  // comportements
+  // render
+  return (
     <div>
       <br />
       <h2>Work TEST Experience</h2>
@@ -16,5 +16,5 @@ export default function Work(){
       </ul>
       <Lorem />
     </div>
-    )
+  )
 }

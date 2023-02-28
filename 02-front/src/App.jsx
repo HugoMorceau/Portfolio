@@ -1,94 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
-import { useRef } from 'react';
-// components
-import Work from './components/Work/Work';
+/* eslint-disable react/no-unescaped-entities */
 
-function App() {
+import logo from './logo.svg'
+import './App.css'
+import { useRef } from 'react'
+// components
+import Work from './components/Work/Work'
+import Projects from './components/Projects/Projects'
+import Contact from './components/Contact/Contact'
+
+function App () {
   // state
+  const home = useRef(null)
   const work = useRef(null)
-  const executeScroll = (event) => {
+  const projects = useRef(null)
+  const contact = useRef(null)
+  const executeScroll = (to) => {
     // event.preventDefault()
-    console.log("executeScroll")
-    work.current.scrollIntoView({behavior: "smooth"})
-  } 
+    console.log('executeScroll to: ', to)
+    to.current.scrollIntoView({ behavior: 'smooth' })
+  }
   // comportements
   // render
   return (
-    <div className="App">
+    <div ref={home} className="App">
       <header className="App-header">
       <nav>
           <ul>
-            <li><a href="/" onClick ={executeScroll} >Home</a></li>
-            <li><a href="/work">Work Experience</a></li><button onClick={executeScroll}>Work Experience</button>
-            <li><a href="/projects">Projects</a> </li>
-            <li><a href="/contact">Contact</a></li>
+            <li><button onClick={() => executeScroll(home)}>Home</button></li>
+            <li><button onClick={() => executeScroll(work)}>Work Experience</button></li>
+            <li><button onClick={() => executeScroll(projects)}>Personal projects</button></li>
+            <li><button onClick={() => executeScroll(contact)}>Contact Me</button></li>
           </ul>
-        </nav>  
+        </nav>
         <img src={logo} className="App-logo" alt="logo" />
         <h1>Hi, I'm <span className="name">Hugo</span></h1>
         <h2>Full Stack Web Developer</h2>
+
       {/* Work Experience */}
+      <section ref={work}className="work">
       <Work />
-      <section className="work">
-    
       </section>
+
       {/* Projects */}
-      <section className="projects">
-      <br />
-        <h2>Projects</h2>
-      <br />
-        <div className="projects-container">
-          <div className="projects-item">
-            <ul>
-              <li>Project: <span className="project">Project</span></li>
-              <li>Technologies: <span className="technologies">Technologies</span></li>
-              <li>Start Date: <span className="start-date">Start Date</span></li>
-              <li>End Date: <span className="end-date">End Date</span></li>
-            </ul>
-            <br />
-            <ul>
-              <li>Project: <span className="project">Project</span></li>
-              <li>Technologies: <span className="technologies">Technologies</span></li>
-              <li>Start Date: <span className="start-date">Start Date</span></li>
-              <li>End Date: <span className="end-date">End Date</span></li>
-            </ul>
-            <ul>
-              <li>Project: <span className="project">Project</span></li>
-              <li>Technologies: <span className="technologies">Technologies</span></li>
-              <li>Start Date: <span className="start-date">Start Date</span></li>
-              <li>End Date: <span className="end-date">End Date</span></li>
-            </ul>
-            <br />
-            <ul>
-              <li>Project: <span className="project">Project</span></li>
-              <li>Technologies: <span className="technologies">Technologies</span></li>
-              <li>Start Date: <span className="start-date">Start Date</span></li>
-              <li>End Date: <span className="end-date">End Date</span></li>
-            </ul>
-          </div>
-        </div>
+      <section ref={projects}className="projects">
+        <Projects />
       </section>
       {/* Contact */}
       <section className="contact">
-      <br />
-        <h2 ref={work}>Contact</h2>
-      <br />
-        <div className="contact-container">
-          <div className="contact-item">
-            <ul>
-              <li>Email: <span className="email">Email</span></li>
-              <li>Phone: <span className="phone">Phone</span></li>
-              <li>LinkedIn: <span className="linkedin">LinkedIn</span></li>
-              <li>GitHub: <span className="github">GitHub</span></li>
-            </ul>
-          </div>
-        </div>
+        <br />
+        <h2 ref={contact}>Contact</h2>
+        <Contact />
       </section>
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
