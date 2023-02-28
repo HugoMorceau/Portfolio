@@ -6,7 +6,6 @@ export default function Projects () {
   // render
   return (
     <div>
-      <br />
       <h2>My Projects</h2>
       <ul>
         <li>

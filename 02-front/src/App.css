@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  background-color: #282c34;
+  color: white;
+  
 }
 
 .App-logo {
@@ -15,14 +18,47 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #31593d;
+  padding: 1rem; 
+  
+}
+.App-nav--ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.App-nav--li{
+  list-style: none;
+  margin: 0 1rem;
+  border-bottom: 2px solid white;
+}
+/*
+:target {
+  scroll-margin-top: 5rem;
+}*/
+
+.App-section {
+  min-height: 100vh;
+  max-width: 800px;
+  scroll-margin-top: 7rem;
+  margin-top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  
+
+
+
 }
 
 .App-link {

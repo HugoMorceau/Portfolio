@@ -6,7 +6,6 @@ export default function Work () {
   // render
   return (
     <div>
-      <br />
       <h2>Work TEST Experience</h2>
       <ul>
         <li>Company: <span className="company">Company</span></li>
