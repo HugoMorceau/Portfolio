@@ -20,7 +20,7 @@
 .App-header {
   min-height: 10vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: line;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -48,6 +48,7 @@
   scroll-margin-top: 5rem;
 }*/
 
+
 .App-section {
   min-height: 100vh;
   max-width: 800px;
@@ -55,14 +56,27 @@
   margin-top: 5rem;
   margin-left: auto;
   margin-right: auto;
-  
-
-
-
 }
+
 
 .App-link {
   color: #61dafb;
+}
+
+.App-lang{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.App-lang--button{
+  background-color: #31593d;
+  border: none;
+  color: white;
+  /* padding: 0.5rem;*/ 
+  margin: 0.5rem;
+  cursor: pointer;  
 }
 
 @keyframes App-logo-spin {
