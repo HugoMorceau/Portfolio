@@ -43,11 +43,19 @@
   margin: 0 1rem;
   border-bottom: 2px solid white;
 }
-/*
-:target {
-  scroll-margin-top: 5rem;
-}*/
 
+.App-lang{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+  
+}
+
+.App-lang--button{
+  border: white 1px solid;
+  cursor: pointer; 
+}
 
 .App-section {
   min-height: 100vh;
@@ -61,22 +69,6 @@
 
 .App-link {
   color: #61dafb;
-}
-
-.App-lang{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  width: 100%;
-}
-
-.App-lang--button{
-  background-color: #31593d;
-  border: none;
-  color: white;
-  /* padding: 0.5rem;*/ 
-  margin: 0.5rem;
-  cursor: pointer;  
 }
 
 @keyframes App-logo-spin {

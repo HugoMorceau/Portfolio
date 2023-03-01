@@ -1,26 +1,11 @@
 /* eslint-disable react/prop-types */
-
-// import { useRef } from 'react'
-export default function Navbar ({ to, scroll }) {
-  // state
-  // const home = useRef(null)
-  // const work = useRef(null)
-  // const projects = useRef(null)
-  // const contact = useRef(null)
-  // comportements
-  // render
+export default function Navbar ({ handleclick, liElt }) {
   return (
     <nav>
       <ul className="App-nav--ul">
-        <li className="App-nav--li"><button onClick={() => {
-          console.log(scroll)
-          scroll(to)
-        }}
-        >Home</button></li>
-
-        <li className="App-nav--li"><button onClick={() => scroll(to)}>Work Experience</button></li>
-        <li className="App-nav--li"><button onClick={() => scroll(to)}>Personal projects</button></li>
-        <li className="App-nav--li"><button onClick={() => scroll(to)}>Contact Me</button></li>
+        {liElt.map(({ key, ref }) => {
+          return (<li key={key} className="App-nav--li"><button id={key} onClick={(e) => handleclick(e, ref)}>{key}</button></li>)
+        })}
       </ul>
     </nav>
   )
