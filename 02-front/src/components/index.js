@@ -1,6 +1,6 @@
 import Intro from './Intro/Intro'
 import Navbar from './Navbar/Navbar'
-import Work from './Work/Work'
+import WorkXp from './WorkXp/WorkXp'
 import Skills from './Skills/Skills'
 import Projects from './Projects/Projects'
 import Contact from './Contact/Contact'
@@ -12,7 +12,7 @@ import Arrows from './Arrows/Arrows'
 export {
   Intro,
   Navbar,
-  Work,
+  WorkXp,
   Skills,
   Projects,
   Contact,

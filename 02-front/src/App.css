@@ -48,13 +48,13 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  width: 100%;
+  width: 100%; 
   
 }
 
 .App-lang--button{
-  border: white 1px solid;
   cursor: pointer; 
+  margin: 0.5rem;
 }
 
 .App-section {
@@ -84,7 +84,6 @@
 }
 
 .App-link:hover {
-  
   color: #61dafb;
 }
 

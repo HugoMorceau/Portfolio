@@ -31,7 +31,7 @@ export default function SwitchLanguage ({ languages }) {
       {languages.map((language) => {
         return (
           <button className="App-lang--button" key={language.code} onClick={() => i18n.changeLanguage(language.code)}>
-            <img src={language.flag} alt={language.name} height='40px' />
+            <img src={language.flag} alt={language.name} height='40px' width= '40px' />
           </button>
         )
       })}
