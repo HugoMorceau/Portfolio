@@ -5,13 +5,12 @@
   "Welcome": "Benvenido a mi portfolio",
   "Intro": "Español version",
 
-  "ComponentNavBar": "Introduction",
+  "ComponentNavBar": "Navbar",
   "Home" : "Inicio",
   "Skills" : "Habilidades",
   "Work Experience" : "Experiencia laboral",
   "My Projects" : "Mis proyectos",
   "Contact Me" : "Contactame",
-
 
   "End" : "Fin"
 }

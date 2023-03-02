@@ -9,13 +9,13 @@ export default function Contact () {
       <ul>
         <li>Email : <span className="email"> hugo.morceau@gmail.com</span></li>
         <li>Phone : <span className="phone"> Phone</span></li>
-        <li>LinkedIn :
-          <span className="linkedin">
-            <a href="https://www.linkedin.com/in/hugo-morceau-5b36051b7/"> Link</a>
-          </span>
+        <li>
+          <a href="https://www.linkedin.com/in/hugo-morceau-5b36051b7/"
+            className = "App-link">Linkedin</a>
         </li>
-        <li>GitHub: <span className="github">
-          <a href="https://github.com/HugoMorceau"> Link</a></span></li>
+        <li>
+          <a href="https://github.com/HugoMorceau"
+            className = "App-link">GitHub</a></li>
       </ul>
     </div>
   )

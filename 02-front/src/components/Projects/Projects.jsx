@@ -1,5 +1,3 @@
-import Lorem from '../Lorem/Lorem'
-
 export default function Projects () {
   // state
   // comportements
@@ -15,7 +13,6 @@ export default function Projects () {
           <a href=" ">Project 1</a>
         </li>
       </ul>
-      <Lorem />
     </div>
   )
 }

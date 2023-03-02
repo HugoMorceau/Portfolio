@@ -1,5 +1,3 @@
-import Lorem from '../Lorem/Lorem'
-
 export default function Work () {
   // state
   // comportements
@@ -13,7 +11,6 @@ export default function Work () {
         <li>Start Date: <span className="start-date">Start Date</span></li>
         <li>End Date: <span className="end-date">End Date</span></li>
       </ul>
-      <Lorem />
     </div>
   )
 }

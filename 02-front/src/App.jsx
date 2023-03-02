@@ -4,18 +4,17 @@ import { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 // components
-import Intro from './components/Intro/Intro'
-import Navbar from './components/Navbar/Navbar'
-import Work from './components/Work/Work'
-import Skills from './components/Skills/Skills'
-import Projects from './components/Projects/Projects'
-import Contact from './components/Contact/Contact'
-import SwitchLanguage from './components/SwitchLanguage/SwitchLanguage'
-import Arrows from './components/Arrows/Arrows'
+import {
+  Intro, Skills, Work, Projects,
+  Contact, Navbar, SwitchLanguage,
+  Arrows
+} from './components'
+
 // assets
 import arrowUp from './assets/arrow/arrowUp.svg'
 import arrowDown from './assets/arrow/arrowDown.svg'
 import languages from './assets/languages/languages.js'
+
 function App () {
   console.log('render app')
   const { t } = useTranslation()
@@ -45,7 +44,13 @@ function App () {
     to.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
     setCurrentPosition(to)
   }
-
+  /**
+   * @param {string} position
+   * @returns {void}
+   * @description Scroll to the next or previous section of the page
+   * @example scrollTo('next')
+   * @example scrollTo('previous')
+   **/
   const scrollTo = (position) => {
     const index = destinations.findIndex((destination) => destination.ref === currentPosition)
     if (position === 'next') {
