@@ -2,8 +2,6 @@
 const svgFiles = require.context('./', true, /\.svg$/)
 const images = svgFiles.keys().map(svgFiles)
 
-console.log('images', images)
-
 const languages = [
   { name: 'English', code: 'en', flag: images[0] },
   { name: 'Français', code: 'fr', flag: images[1] },

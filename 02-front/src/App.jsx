@@ -1,6 +1,6 @@
 
 import './App.css'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 // components
@@ -11,6 +11,9 @@ import Skills from './components/Skills/Skills'
 import Projects from './components/Projects/Projects'
 import Contact from './components/Contact/Contact'
 import SwitchLanguage from './components/SwitchLanguage/SwitchLanguage'
+// assets
+import arrowUp from './assets/arrow/arrowUp.svg'
+import arrowDown from './assets/arrow/arrowDown.svg'
 import languages from './assets/languages/languages.js'
 function App () {
   console.log('render app')
@@ -23,11 +26,12 @@ function App () {
   const contact = useRef(null)
   const destinations = [
     { key: t('Home'), ref: home },
-    { key: 'Skills', ref: skills },
-    { key: 'Work Experience', ref: work },
-    { key: 'Personal projects', ref: projects },
-    { key: 'Contact Me', ref: contact }
+    { key: t('Skills'), ref: skills },
+    { key: t('Work Experience'), ref: work },
+    { key: t('My Projects'), ref: projects },
+    { key: t('Contact Me'), ref: contact }
   ]
+  const [currentPosition, setCurrentPosition] = useState(home)
 
   // comportements
   /**
@@ -38,7 +42,24 @@ function App () {
   const executeScroll = (e) => {
     const to = destinations.find((destination) => destination.key === e.target.innerText).ref
     to.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
+    setCurrentPosition(to)
   }
+
+  const scrollTo = (position) => {
+    const index = destinations.findIndex((destination) => destination.ref === currentPosition)
+    if (position === 'next') {
+      if (index < destinations.length - 1) {
+        destinations[index + 1].ref.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
+        setCurrentPosition(destinations[index + 1].ref)
+      }
+    } else {
+      if (index > 0) {
+        destinations[index - 1].ref.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
+        setCurrentPosition(destinations[index - 1].ref)
+      }
+    }
+  }
+
   // render
   return (
     <div ref={home} className="App">
@@ -61,6 +82,14 @@ function App () {
       <section ref={contact} className="App-section">
         <Contact />
       </section>
+      <div className='App-arrow'>
+        <button className = "App-arrow--up" onClick={() => scrollTo('previous')}>
+          <img src={arrowUp} alt='arrow up' height='40px' />
+        </button>
+        <button className = "App-arrow--down" onClick={() => scrollTo('next')}>
+          <img src={arrowDown} alt='arrow down' height='40px' />
+        </button>
+      </div>
     </div>
   )
 }

@@ -26,7 +26,6 @@ import { useTranslation } from 'react-i18next'
   */
 export default function SwitchLanguage ({ languages }) {
   const { i18n } = useTranslation()
-  console.log(languages)
   return (
     <div className="App-lang">
       {languages.map((language) => {

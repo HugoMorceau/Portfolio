@@ -10,7 +10,9 @@ export default function Projects () {
       <ul>
         <li>
           <a href=" ">Project 1</a>
-          <a href=" ">Project 2</a>
+        </li>
+        <li>
+          <a href=" ">Project 1</a>
         </li>
       </ul>
       <Lorem />

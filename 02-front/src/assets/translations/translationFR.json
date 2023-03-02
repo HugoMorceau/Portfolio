@@ -7,6 +7,10 @@
 
   "ComponentNavBar": "Introduction",
   "Home" : "Accueil",
+  "Skills" : "Compétences",
+  "Work Experience" : "Expérience professionnelle",
+  "My Projects" : "Mes projets",
+  "Contact Me" : "Contact",
 
 
   "End" : "Fin"
