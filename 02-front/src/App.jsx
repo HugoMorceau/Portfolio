@@ -11,6 +11,7 @@ import Skills from './components/Skills/Skills'
 import Projects from './components/Projects/Projects'
 import Contact from './components/Contact/Contact'
 import SwitchLanguage from './components/SwitchLanguage/SwitchLanguage'
+import Arrows from './components/Arrows/Arrows'
 // assets
 import arrowUp from './assets/arrow/arrowUp.svg'
 import arrowDown from './assets/arrow/arrowDown.svg'
@@ -82,14 +83,7 @@ function App () {
       <section ref={contact} className="App-section">
         <Contact />
       </section>
-      <div className='App-arrow'>
-        <button className = "App-arrow--up" onClick={() => scrollTo('previous')}>
-          <img src={arrowUp} alt='arrow up' height='40px' />
-        </button>
-        <button className = "App-arrow--down" onClick={() => scrollTo('next')}>
-          <img src={arrowDown} alt='arrow down' height='40px' />
-        </button>
-      </div>
+      < Arrows handleClick={scrollTo} arrowUp={arrowUp} arrowDown={arrowDown}/>
     </div>
   )
 }

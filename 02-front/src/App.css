@@ -68,7 +68,7 @@
 
 .App-arrow {
   display: flex;
-  flex-direction: column;
+  flex-direction: line;
   position: fixed;
   bottom: 0;
   left: 50%;
