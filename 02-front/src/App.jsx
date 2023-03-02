@@ -1,25 +1,28 @@
-import logo from './logo.svg'
+
 import './App.css'
 import { useRef } from 'react'
-import { useTranslation } from 'react-i18next'
 
 // components
+import Intro from './components/Intro/Intro'
 import Navbar from './components/Navbar/Navbar'
 import Work from './components/Work/Work'
+import Skills from './components/Skills/Skills'
 import Projects from './components/Projects/Projects'
 import Contact from './components/Contact/Contact'
 import SwitchLanguage from './components/SwitchLanguage/SwitchLanguage'
-import languages from './assets/flags/languages.js'
+import languages from './assets/languages/languages.js'
 function App () {
   console.log('render app')
   // states
-  const { t } = useTranslation()
+
   const home = useRef(null)
+  const skills = useRef(null)
   const work = useRef(null)
   const projects = useRef(null)
   const contact = useRef(null)
   const destinations = [
     { key: 'Home', ref: home },
+    { key: 'Skills', ref: skills },
     { key: 'Work Experience', ref: work },
     { key: 'Personal projects', ref: projects },
     { key: 'Contact Me', ref: contact }
@@ -43,23 +46,17 @@ function App () {
         <SwitchLanguage languages={languages}/>
       </header>
       <section className="App-section">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Hi, I&apos;m <span className="name">Hugo</span></h1>
-        <h2>Full Stack Web Developer</h2>
-        <p>{t('Welcome to React')}</p>
+        <Intro />
       </section>
-
-      {/* Work Experience */}
+      <section ref={skills} className="App-section">
+        <Skills/>
+      </section>
       <section ref={work}className="App-section">
         <Work />
       </section>
-
-      {/* Projects */}
       <section ref={projects}className="App-section">
         <Projects />
       </section>
-
-      {/* Contact */}
       <section ref={contact} className="App-section">
         <Contact />
       </section>

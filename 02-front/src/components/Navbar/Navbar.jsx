@@ -1,4 +1,5 @@
-/* eslint-disable react/prop-types */
+
+import PropTypes from 'prop-types'
 export default function Navbar ({ handleclick, liElt }) {
   return (
     <nav>
@@ -9,4 +10,14 @@ export default function Navbar ({ handleclick, liElt }) {
       </ul>
     </nav>
   )
+}
+
+Navbar.propTypes = {
+  handleclick: PropTypes.func.isRequired,
+  liElt: PropTypes.arrayOf(
+    PropTypes.shape({
+      key: PropTypes.string.isRequired,
+      ref: PropTypes.object.isRequired
+    }).isRequired
+  ).isRequired
 }
