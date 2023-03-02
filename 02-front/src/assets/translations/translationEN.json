@@ -12,6 +12,14 @@
   "My Projects" : "My projects",
   "Contact Me" : "Contact",
 
+  "Position" : "Position",
+  "Company" : "Company",
+  "Date" : "Date",
+  "Description" : "Description",
+  "Location" : "Location",
+  "Technologies" : "Technologies",
+  
+
 
   "End" : "Fin"
 }

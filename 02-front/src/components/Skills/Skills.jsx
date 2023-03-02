@@ -1,15 +1,17 @@
-
+import { useTranslation } from 'react-i18next'
 export default function Skills () {
+  const { t } = useTranslation()
   // state
   // comportements
   // render
   return (
     <div>
-      <h2>Skills</h2>
+      <h2>{t('Skills')}</h2>
+      <br/>
       <ul>
-        <li>Skill 1 : <span className="email"> Javascript</span></li>
-        <li>Skill 2 : <span className="phone"> React</span></li>
-        <li>Skill 3 : NoSpan </li>
+        <li> Javascript</li>
+        <li> React</li>
+        <li> NoSpan </li>
       </ul>
     </div>
   )

@@ -1,10 +1,13 @@
+import { useTranslation } from 'react-i18next'
 export default function Projects () {
   // state
   // comportements
   // render
+  const { t } = useTranslation()
   return (
     <div>
-      <h2>My Projects</h2>
+      <h2>{t('My Projects')}</h2>
+      <br/>
       <ul>
         <li>
           <a href=" ">Project 1</a>
