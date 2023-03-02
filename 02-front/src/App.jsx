@@ -1,6 +1,7 @@
 
 import './App.css'
 import { useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 
 // components
 import Intro from './components/Intro/Intro'
@@ -13,15 +14,15 @@ import SwitchLanguage from './components/SwitchLanguage/SwitchLanguage'
 import languages from './assets/languages/languages.js'
 function App () {
   console.log('render app')
+  const { t } = useTranslation()
   // states
-
   const home = useRef(null)
   const skills = useRef(null)
   const work = useRef(null)
   const projects = useRef(null)
   const contact = useRef(null)
   const destinations = [
-    { key: 'Home', ref: home },
+    { key: t('Home'), ref: home },
     { key: 'Skills', ref: skills },
     { key: 'Work Experience', ref: work },
     { key: 'Personal projects', ref: projects },

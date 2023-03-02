@@ -1,7 +1,15 @@
 
-   {
-    "Hello World": "Hello World",
-    "Welcome to React": "Bienvenue à React et react-i18next"
+{
+  "ComponentIntro": "Introduction",
+  "Hello World": "Hello World, je suis ",
+  "Welcome": "Bienvenue sur mon portfolio",
+  "Intro": "Introduction blablabla",
 
-    }
+  "ComponentNavBar": "Introduction",
+  "Home" : "Accueil",
+
+
+  "End" : "Fin"
+}
+
   
