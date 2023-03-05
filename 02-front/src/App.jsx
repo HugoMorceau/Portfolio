@@ -81,6 +81,8 @@ function App () {
       </section>
       <section ref={work}className="App-section">
         <WorkXp />
+        <br/>
+        <div>{t('Download CV')}</div>
       </section>
       <section ref={projects}className="App-section">
         <Projects />
