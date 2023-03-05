@@ -2,10 +2,11 @@
 import PropTypes from 'prop-types'
 export default function Navbar ({ handleclick, liElt }) {
   return (
-    <nav>
+    <nav className='App-nav'>
       <ul className="App-nav--ul">
         {liElt.map(({ key, ref }) => {
-          return (<li key={key} className="App-nav--li App-link"><button id={key} onClick={(e) => handleclick(e, ref)}>{key}</button></li>)
+          // return (<li key={key} className="App-nav--li App-link"><button onClick={(e) => handleclick(e, ref)}>{key}</button></li>)
+          return (<li key={key} className="App-nav--li App-link" onClick={(e) => handleclick(e, ref)}>{key}</li>)
         })}
       </ul>
     </nav>
