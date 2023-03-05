@@ -5,24 +5,18 @@ export default function WorkCard (
 ) {
   const { t } = useTranslation()
   return (
-    <ul>
-      {resume.map((work) => {
-        return (
-          <li key={work.company}>
-            <br />
-            <h4>{work.company}</h4>
-            <ul>
-              <li>{t('Position')} : <span className="position">{work.position}</span></li>
-              <li>{t('Description')} :<span className="description">{work.description}</span></li>
-              <li>{t('Start Date')} : <span className="start-date">{work.startDate}</span></li>
-              <li>{t('End Date')} : <span className="end-date">{work.endDate}</span></li>
-              <li>{t('Location')} : <span className="location">{work.location}</span></li>
-            </ul>
-
-          </li>
-        )
-      })}
-    </ul>
+    resume.map((work) => {
+      return (
+        <div key={work.company} className='Work-container'>
+          <h4 className='Work-card'>{work.company}</h4>
+          <div className="Work-card position">{t('Position')} : {work.position}</div>
+          <div className="Work-card description">{t('Description')} : {work.description}</div>
+          <div className="Work-card start-date">{t('Start Date')} : {work.startDate}</div>
+          <div className="Work-card end-date">{t('End Date')} : {work.endDate}</div>
+          <div className="Work-card location">{t('Location')} : {work.location}</div>
+        </div>
+      )
+    })
   )
 }
 

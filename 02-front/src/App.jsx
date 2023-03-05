@@ -80,8 +80,8 @@ function App () {
         <Skills/>
       </section>
       <section ref={work}className="App-section">
+        <h2 className='App-section--title'>{t('Work Experience')}</h2>
         <WorkXp />
-        <br/>
         <div>{t('Download CV')}</div>
       </section>
       <section ref={projects}className="App-section">
