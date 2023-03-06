@@ -1,0 +1,28 @@
+
+{
+  "ComponentIntro": "Introduction",
+  "Hello World": "Hello World, I'm ",
+  "Welcome": "Welcome to my portfolio",
+  "Intro": "English version coming soon",
+
+  "ComponentNavBar": "Introduction",
+  "Home" : "Home",
+  "Skills" : "Skills",
+  "Work Experience" : "Work Experience",
+  "My Projects" : "My projects",
+  "Contact Me" : "Contact",
+
+  "Position" : "Position",
+  "Company" : "Company",
+  "Date" : "Date",
+  "Description" : "Description",
+  "Location" : "Location",
+  "Technologies" : "Technologies",
+  
+  "Download CV" : "Download CV",
+
+
+  "End" : "Fin"
+}
+
+  

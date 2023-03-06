@@ -1,0 +1,28 @@
+
+.Work-wrapper {
+  background-color: #343434;
+  display: flex; 
+  flex-direction: column;
+  align-items: left;
+  justify-content: flex-start;
+  padding: 0.5rem;
+  margin: 1rem;
+  max-width: fit-content;
+  text-align: left;
+  border-radius: 0.3rem;
+  border : 1px solid rgba(255, 255, 255, 0.1);
+  
+}
+
+.Work-wrapper:hover {
+  background-color: #535353;
+  border : 1px solid rgba(255, 255, 255, 0.3);
+  scale: 1.1;
+  transition: all 0.2s ease-in-out;
+
+} 
+
+.Work-details {
+  
+}
+
