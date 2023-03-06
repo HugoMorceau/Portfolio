@@ -1,0 +1,27 @@
+
+{
+  "ComponentIntro": "Introduction",
+  "Hello World": "Hello World, soy ",
+  "Welcome": "Benvenido a mi portfolio",
+  "Intro": "Español version",
+
+  "ComponentNavBar": "Navbar",
+  "Home" : "Inicio",
+  "Skills" : "Habilidades",
+  "Work Experience" : "Experiencia laboral",
+  "My Projects" : "Mis proyectos",
+  "Contact Me" : "Contactame",
+
+  "Position" : "Posición",
+  "Company" : "Empresa",
+  "Date" : "Fecha",
+  "Description" : "Descripción",
+  "Location" : "Ubicación",
+  "Technologies" : "Tecnologías",
+
+  "Download CV" : "Descargar CV",
+
+  "End" : "Fin"
+}
+
+  
