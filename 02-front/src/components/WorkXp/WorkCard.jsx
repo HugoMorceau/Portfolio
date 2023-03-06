@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import { useTranslation } from 'react-i18next'
+import './WorkCard.css'
 export default function WorkCard (
   { resume }
 ) {
@@ -7,13 +8,15 @@ export default function WorkCard (
   return (
     resume.map((work) => {
       return (
-        <div key={work.company} className='Work-container'>
-          <h4 className='Work-card'>{work.company}</h4>
-          <div className="Work-card position">{t('Position')} : {work.position}</div>
-          <div className="Work-card description">{t('Description')} : {work.description}</div>
-          <div className="Work-card start-date">{t('Start Date')} : {work.startDate}</div>
-          <div className="Work-card end-date">{t('End Date')} : {work.endDate}</div>
-          <div className="Work-card location">{t('Location')} : {work.location}</div>
+        <div key={work.company} className='Work-wrapper'>
+          <div className='Work-details'>
+            <h4>{work.company}</h4>
+            <div>{t('Position')} : {work.position}</div>
+            <div>{t('Description')} : {work.description}</div>
+            <div>{t('Start Date')} : {work.startDate}</div>
+            <div>{t('End Date')} : {work.endDate}</div>
+            <div>{t('Location')} : {work.location}</div>
+          </div>
         </div>
       )
     })

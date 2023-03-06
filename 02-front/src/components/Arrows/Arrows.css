@@ -1,0 +1,16 @@
+.App-arrow {
+    display: flex;
+    flex-direction: line;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .App-arrow--up {
+    cursor: pointer;
+    z-index: 1;
+  }
+  .App-arrow--down {
+    cursor: pointer;
+    z-index: 1;
+  }

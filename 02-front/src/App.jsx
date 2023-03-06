@@ -1,10 +1,11 @@
 
 import './App.css'
-import { useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 // components
 import {
+  // eslint-disable-next-line no-unused-vars
   Intro, Skills, WorkXp, Projects,
   Contact, Navbar, SwitchLanguage,
   Arrows
@@ -14,6 +15,7 @@ import {
 import arrowUp from './assets/arrow/arrowUp.svg'
 import arrowDown from './assets/arrow/arrowDown.svg'
 import languages from './assets/languages/languages.js'
+import Section from './components/Section/Section'
 
 function App () {
   console.log('render app')
@@ -76,20 +78,18 @@ function App () {
       <section className="App-section">
         <Intro />
       </section>
-      <section ref={skills} className="App-section">
+      <Section title='Skills' ref={skills}>
         <Skills/>
-      </section>
-      <section ref={work}className="App-section">
-        <h2 className='App-section--title'>{t('Work Experience')}</h2>
-        <WorkXp />
-        <div>{t('Download CV')}</div>
-      </section>
-      <section ref={projects}className="App-section">
+      </Section>
+      <Section title='Work Experience' ref={work}>
+        <WorkXp></WorkXp>
+      </Section>
+      <Section title='My Projects' ref={projects}>
         <Projects />
-      </section>
-      <section ref={contact} className="App-section">
+      </Section>
+      <Section title="Contact" ref={contact}>
         <Contact />
-      </section>
+      </Section>
       < Arrows handleClick={scrollTo} arrowUp={arrowUp} arrowDown={arrowDown}/>
     </div>
   )

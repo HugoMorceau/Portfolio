@@ -63,8 +63,11 @@
 .App-nav--li{
   list-style: none;
   margin: 0 1rem;
-  border-bottom: 2px solid white;
-  
+}
+
+.App-link:hover {
+  color: #e8842d;
+  cursor: pointer;
 }
 
 .App-section {
@@ -82,42 +85,6 @@
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1rem;
-}
-
-.App-arrow {
-  display: flex;
-  flex-direction: line;
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.App-arrow--up {
-  cursor: pointer;
-  z-index: 1;
-}
-.App-arrow--down {
-  cursor: pointer;
-  z-index: 1;
-}
-
-.App-link:hover {
-  color: #61dafb;
-  cursor: pointer;
-}
-
-.Work-container {
-  background-color: #343434;
-  display: flex; 
-  flex-direction: column;
-  align-items: left;
-  justify-content: center;
-  padding: 1rem;
-  margin: 1rem;
-  max-width: fit-content;
-  text-align: left;
-  border-radius: 0.3rem;
-  border : 1px solid rgba(255, 255, 255, 0.1);
 }
 
 

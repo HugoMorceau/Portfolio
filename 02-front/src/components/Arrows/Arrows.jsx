@@ -1,4 +1,5 @@
 import { PropTypes } from 'prop-types'
+import './Arrows.css'
 export default function Arrows ({ handleClick, arrowUp, arrowDown }) {
   // state
   // comportements
