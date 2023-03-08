@@ -1,5 +1,6 @@
 const resume = [
   {
+    id: 1,
     company: 'Euro Information',
     position: 'Analyste Développeur',
     description: 'Description',
@@ -7,7 +8,7 @@ const resume = [
     endDate: '2022',
     location: 'France, Paris'
   }, {
-
+    id: 2,
     company: 'E Quadra',
     position: 'Analyste Développeur',
     description: 'Description',
@@ -16,7 +17,7 @@ const resume = [
     location: 'France, Paris'
   },
   {
-
+    id: 3,
     company: 'Hardis Group',
     position: 'Analyste Développeur',
     description: 'Description',

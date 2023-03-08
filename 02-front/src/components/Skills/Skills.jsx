@@ -1,3 +1,5 @@
+
+import skills from '../../data/skills/skillsFR.js'
 export default function Skills () {
   // state
   // comportements
@@ -6,9 +8,14 @@ export default function Skills () {
   return (
     <div>
       <ul>
-        <li> Javascript</li>
-        <li> React</li>
-        <li> NoSpan </li>
+        {skills.map((skill) => {
+          return (
+            <li key={skill.id}>
+              <div>{skill.name}</div>
+            </li>
+          )
+        }
+        )}
       </ul>
     </div>
   )

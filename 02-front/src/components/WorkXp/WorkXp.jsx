@@ -1,5 +1,5 @@
-import WorkCard from './WorkCard'
-import resume from '../../data/resumeFR.js'
+import WorkCard from './WorkCard/WorkCard'
+import resume from '../../data/resumes/resumeFR.js'
 
 export default function WorkXp () {
   // state
