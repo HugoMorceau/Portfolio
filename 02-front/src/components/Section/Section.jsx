@@ -8,7 +8,7 @@ const Section = forwardRef(function Section (props, ref) {
   const { t } = useTranslation()
   return (
     <section ref={ref} className="App-section">
-      <h2 className='App-section--title'>{t(title)}</h2>
+      <h2 className='App-section--title'>{t(title).toUpperCase()}</h2>
       {props.children}
     </section>
   )

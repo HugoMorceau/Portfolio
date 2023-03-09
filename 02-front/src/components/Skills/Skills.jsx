@@ -6,17 +6,15 @@ export default function Skills () {
   // render
   console.log('render skills')
   return (
-    <div>
-      <ul>
-        {skills.map((skill) => {
-          return (
-            <li key={skill.id}>
-              <div>{skill.name}</div>
-            </li>
-          )
-        }
-        )}
-      </ul>
+    <div className='Skills-container'>
+      {skills.map((skill) => {
+        return (
+          <div key={skill.id} className = 'skill-wrapper'>
+            <div>{skill.name}</div>
+          </div>
+        )
+      }
+      )}
     </div>
   )
 }

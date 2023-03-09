@@ -27,11 +27,11 @@ function App () {
   const projects = useRef(null)
   const contact = useRef(null)
   const destinations = [
-    { key: t('Home'), ref: home },
-    { key: t('Skills'), ref: skills },
-    { key: t('Work Experience'), ref: work },
-    { key: t('My Projects'), ref: projects },
-    { key: t('Contact Me'), ref: contact }
+    { key: 1, title: t('Home'), ref: home },
+    { key: 2, title: t('Skills'), ref: skills },
+    { key: 3, title: t('Work Experience'), ref: work },
+    { key: 4, title: t('My Projects'), ref: projects },
+    { key: 5, title: t('Contact Me'), ref: contact }
   ]
   const [currentPosition, setCurrentPosition] = useState(home)
 
@@ -41,9 +41,9 @@ function App () {
    * @returns {void}
    * @description Scroll to the section of the page
     */
-  const executeScroll = (e) => {
-    const to = destinations.find((destination) => destination.key === e.target.innerText).ref
-    to.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
+  const executeScroll = (e, ref) => {
+    const to = destinations.find((destination) => destination.ref === ref)
+    to.ref.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
     setCurrentPosition(to)
   }
   /**
