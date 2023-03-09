@@ -7,6 +7,8 @@ export default function WorkXp () {
   // render
 
   return (
-    <WorkCard resume={resume}/>
+    <div className='Work-container'>
+      <WorkCard resume={resume}/>
+    </div>
   )
 }
