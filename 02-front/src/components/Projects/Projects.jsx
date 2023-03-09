@@ -13,6 +13,13 @@ export default function Projects () {
           <div key={project.id} className='Project-wrapper'>
             <div>{project.name.toUpperCase()}</div>
             <div>{project.description}</div>
+            <div className='tag-container'>
+              {/* TODO: Fil tag from real data */}
+              {project.tags.map((tag) => {
+                return (<div className='tag-wrapper' key={tag}>{tag}
+                </div>)
+              })}
+            </div>
             <div>View Code</div> <div>View Project</div>
           </div>
         )
