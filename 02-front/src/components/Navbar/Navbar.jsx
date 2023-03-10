@@ -7,7 +7,7 @@ export default function Navbar ({ handleclick, liElt }) {
         {liElt.map(({ key, title, ref }) => {
           // return (<li key={key} className="App-nav--li App-link"><button onClick={(e) => handleclick(e, ref)}>{key}</button></li>)
           return (<li key={key} ref={ref} className="App-nav--li App-link"
-            onClick={(e) => handleclick(e, ref)}>
+            onClick={(e) => handleclick(ref)}>
             {title.toUpperCase()}
           </li>)
         })}

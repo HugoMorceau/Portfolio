@@ -6,7 +6,7 @@ export default function Arrows ({ handleClick, arrowUp, arrowDown }) {
   // render
   return (
     <div className='App-arrow'>
-      <button className = "App-arrow--up" onClick={() => handleClick('previous')}>
+      <button className = "App-arrow--up" onClick={() => handleClick()}>
         <img src={arrowUp} alt='arrow up' height='40px' />
       </button>
       {/* <button className = "App-arrow--down" onClick={() => handleClick('next')}>

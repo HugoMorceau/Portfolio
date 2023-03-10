@@ -1,3 +1,6 @@
+/* body::-webkit-scrollbar {
+  display: none;
+ } */
 /* React */
 .App-logo {
   /* height: 40vmin; */ 
@@ -15,11 +18,15 @@
 .App {
   text-align: center;
   /*background-color: #282c34;*/
-  background-color: rgb(24, 24, 24);
+  background-color: #181818;
   color: rgba(255, 255, 255, 0.87);
   line-height: 1.5;
+  /* scroll-snap-type: y proximity;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  height: 100vh; */
   
-}
+  }
 
 .App-header {
   /* min-height: 10vh;*/
@@ -70,23 +77,26 @@
   color: #e8842d;
   cursor: pointer;
 }
-
+/* 
 .App-section {
   min-height: 100vh;
   max-width: 800px;
-  /* scroll-margin-top: 5rem;*/
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  scroll-snap-align: start;
+  height: 100vh;
 }
 
 .App-section--title {
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1rem;
-}
+  
+} */
 
 
 @keyframes App-logo-spin {

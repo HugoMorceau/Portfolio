@@ -1,6 +1,7 @@
+/* eslint-disable no-unused-vars */
 
 import './App.css'
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 // components
@@ -18,7 +19,7 @@ import languages from './assets/languages/languages.js'
 import Section from './components/Section/Section'
 
 function App () {
-  console.log('render app')
+  // console.log('render app')
   const { t } = useTranslation()
   // states
   const home = useRef(null)
@@ -33,51 +34,74 @@ function App () {
     { key: 4, title: t('My Projects'), ref: projects },
     { key: 5, title: t('Contact Me'), ref: contact }
   ]
-  const [currentPosition, setCurrentPosition] = useState(home)
+  const [currentPosition, setCurrentPosition] = useState('')
+  const [y, setY] = useState(0)
+  const [isScrolling, setIsScrolling] = useState(false)
 
   // comportements
-  /**
-   * @param {Event} e event
-   * @returns {void}
-   * @description Scroll to the section of the page
-    */
-  const executeScroll = (e, ref) => {
-    const to = destinations.find((destination) => destination.ref === ref)
-    to.ref.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
-    setCurrentPosition(to)
+
+  const executeScroll = (ref) => {
+    if (!ref.current) {
+      console.log('ref not found, scroll to home')
+      ref = home
+    }
+    console.log('scroll to ', ref.current)
+
+    console.log('currentPosition set to', currentPosition.current)
+
+    setY(window.scrollY)
+    ref.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
+    setCurrentPosition(ref)
+    setIsScrolling(false)
   }
-  /**
-   * @param {string} position
-   * @returns {void}
-   * @description Scroll to the next or previous section of the page
-   * @example scrollTo('next')
-   * @example scrollTo('previous')
-   **/
-  const scrollTo = (position) => {
-    const index = destinations.findIndex((destination) => destination.ref === currentPosition)
-    if (position === 'next') {
-      if (index < destinations.length - 1) {
-        destinations[index + 1].ref.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
-        setCurrentPosition(destinations[index + 1].ref)
-      }
-    } else {
-      if (index > 0) {
-        destinations[index - 1].ref.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
-        setCurrentPosition(destinations[index - 1].ref)
-      }
+
+  // eslint-disable-next-line no-unused-vars
+  const handleScroll = () => {
+    const index = destinations.findIndex((destination) => {
+      return destination.ref.current === currentPosition.current
+    }
+    )
+    // console.log('index found ', index, ' ', destinations[index].title)
+    // Scroll down
+    if (window.scrollY > y) {
+      // if (index < destinations.length - 1) {
+      console.log('Scroll down', destinations[index + 1].title)
+      executeScroll(destinations[index + 1].ref)
     }
   }
 
+  const scrollListener = (e) => {
+    if (!isScrolling) {
+      console.log('scrollListener')
+      // setIsScrolling(true)
+      // handleScroll()
+    }
+  }
+
+  // useEffect(() => {
+  //   window.addEventListener('wheel', (e) => scrollListener(e))
+  //   return () => {
+  //     window.removeEventListener('wheel', (e) => scrollListener(e))
+  //   }
+  // })
+
+  // useEffect(() => {
+  //   console.log('UseEffect currentPosition set to', currentPosition.current)
+  // }, [currentPosition])
+
   // render
   return (
-    <div ref={home} className="App">
+    <div className="App">
       <header className="App-header">
         <Navbar handleclick={executeScroll} liElt={destinations}/>
         <SwitchLanguage languages={languages}/>
       </header>
-      <section className="App-section">
+      {/* <section className="App-section" ref={home}>
         <Intro />
-      </section>
+      </section> */}
+      <Section title='Home' ref={home}>
+        <Intro />
+      </Section>
       <Section title='Skills' ref={skills}>
         <Skills/>
       </Section>
@@ -90,7 +114,7 @@ function App () {
       <Section title="Contact" ref={contact}>
         <Contact />
       </Section>
-      < Arrows handleClick={scrollTo} arrowUp={arrowUp} arrowDown={arrowDown}/>
+      < Arrows handleClick={executeScroll} arrowUp={arrowUp} arrowDown={arrowDown}/>
     </div>
   )
 }

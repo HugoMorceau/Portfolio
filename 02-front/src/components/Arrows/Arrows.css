@@ -3,9 +3,8 @@
     flex-direction: line;
     position: fixed;
     bottom: 0;
-    left: 30%;
+    right: 5%;
     transform: translateX(-50%);
-    background-color: #343434;
   }
   .App-arrow--up {
     cursor: pointer;
