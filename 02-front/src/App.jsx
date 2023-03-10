@@ -41,7 +41,7 @@ function App () {
   // comportements
 
   const executeScroll = (ref) => {
-    if (!ref.current) {
+    if (!ref) {
       console.log('ref not found, scroll to home')
       ref = home
     }
@@ -99,7 +99,7 @@ function App () {
       {/* <section className="App-section" ref={home}>
         <Intro />
       </section> */}
-      <Section title='Home' ref={home}>
+      <Section title='Hello World' ref={home}>
         <Intro />
       </Section>
       <Section title='Skills' ref={skills}>

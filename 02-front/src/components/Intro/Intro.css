@@ -1,0 +1,38 @@
+.Intro{
+    
+}
+
+.Intro h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.Intro h3{
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.photo-container{
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: #ffffffde 5px solid;
+    background-color: #eaeaea;
+    margin: 10px auto;
+    
+}
+
+.photo-container img{
+    position: absolute;
+    top: 10px;
+    left: -18px;
+    width: 110%;
+    height: 110%;
+    object-fit: contain;
+    object-position: center;
+}
