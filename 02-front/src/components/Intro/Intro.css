@@ -1,29 +1,49 @@
 .Intro{
-    
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    width: 100%;
+    margin: 40px 20px 20px 40px;
 }
 
-.Intro h1{
+ h1{
     font-size: 2.5rem;
     font-weight: 700;
     color: #fff;
-    margin-bottom: 1rem;
 }
 
-.Intro h3{
+ h3{
     font-size: 2rem;
     font-weight: 400;
-    margin-bottom: 1rem;
+}
+
+ h4{
+    font-size: 1.5rem;
+    font-weight: 350;
+}
+
+ p {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.titles{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 20px;
 }
 
 .photo-container{
-    width: 230px;
-    height: 230px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     position: relative;
     overflow: hidden;
     border: #ffffffde 5px solid;
     background-color: #eaeaea;
-    margin: 10px auto;
+    margin: 50px;
     
 }
 

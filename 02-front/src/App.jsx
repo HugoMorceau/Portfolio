@@ -96,25 +96,27 @@ function App () {
         <Navbar handleclick={executeScroll} liElt={destinations}/>
         <SwitchLanguage languages={languages}/>
       </header>
-      {/* <section className="App-section" ref={home}>
+      <main className="Main">
+        <section className="Section" ref={home}>
+          <Intro />
+        </section>
+        {/* <Section title='Hello World' ref={home}>
         <Intro />
-      </section> */}
-      <Section title='Hello World' ref={home}>
-        <Intro />
-      </Section>
-      <Section title='Skills' ref={skills}>
-        <Skills/>
-      </Section>
-      <Section title='Work Experience' ref={work}>
-        <WorkXp></WorkXp>
-      </Section>
-      <Section title='My Projects' ref={projects}>
-        <Projects />
-      </Section>
-      <Section title="Contact" ref={contact}>
-        <Contact />
-      </Section>
-      < Arrows handleClick={executeScroll} arrowUp={arrowUp} arrowDown={arrowDown}/>
+      </Section> */}
+        <Section title='Skills' ref={skills}>
+          <Skills/>
+        </Section>
+        <Section title='Work Experience' ref={work}>
+          <WorkXp></WorkXp>
+        </Section>
+        <Section title='My Projects' ref={projects}>
+          <Projects />
+        </Section>
+        <Section title="Contact" ref={contact}>
+          <Contact />
+        </Section>
+        < Arrows handleClick={executeScroll} arrowUp={arrowUp} arrowDown={arrowDown}/>
+      </main>
     </div>
   )
 }

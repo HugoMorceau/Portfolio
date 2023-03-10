@@ -1,5 +1,6 @@
 
 import PropTypes from 'prop-types'
+import './Navbar.css'
 export default function Navbar ({ handleclick, liElt }) {
   return (
     <nav className='App-nav'>
