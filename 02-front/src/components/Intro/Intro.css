@@ -6,22 +6,23 @@
     margin: 40px 20px 20px 40px;
 }
 
+.Intro .hello {
+    font-size: 1.5rem;
+    font-weight: 350;
+    color: #7fa8f6 ;
+}
+
+
  h1{
     font-size: 2.5rem;
     font-weight: 700;
     color: #fff;
 }
 
- h3{
+ h2{
     font-size: 2rem;
     font-weight: 400;
     
-}
-
- h4{
-    font-size: 1.5rem;
-    font-weight: 350;
-    color: #7fa8f6 ;
 }
 
  p {
@@ -43,7 +44,8 @@
     border-radius: 50%;
     position: relative;
     overflow: hidden;
-    border: #ffffffde 5px solid;
+    /* border: #470b2c  5px solid;*/
+    border: #ffff  5px solid;
     background-color: #eaeaea;
     margin: 50px;
     
@@ -96,7 +98,7 @@
     transition: all 0.2s ease 0s
 }
 
-/* .toto{
+ /* .toto{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -113,5 +115,5 @@
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
-    opacity: 0.1; 
-} */
+    opacity: 0.3; 
+}  */

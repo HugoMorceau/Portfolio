@@ -42,9 +42,9 @@ export default function Intro () {
   return (
     <div className='Intro'>
       <div className='titles' >
-        <h4 >{hello}</h4>
+        <div className='hello'>{hello}</div>
         <h1 className=' '>HUGO MORCEAU</h1>
-        <h3>Full Stack Web Developer</h3>
+        <h2>Full Stack Web Developer</h2>
       </div>
       <div className='toto'>
         <div className='photo-container'>
