@@ -1,18 +1,13 @@
-/* eslint-disable no-unused-vars */
 
 import { useState, useEffect } from 'react'
-import { useTranslation } from 'react-i18next'
 import './Intro.css'
 
 const profil = require('../../assets/images/profil.jpg')
 
 export default function Intro () {
-  const { t } = useTranslation()
-  const hellos = ['Bonjour, je suis', 'Hello, I am', 'Hola, soy']
-  const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-  const [hello, setHello] = useState('Hello, I am')
-
-  const [langIndex, setLangIndex] = useState(-1)
+  const hellos = ['Hello there, I am', 'Hola, soy', 'Bonjour, je suis']
+  const [hello, setHello] = useState(hellos[0])
+  const [langIndex, setLangIndex] = useState(0)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -25,6 +20,7 @@ export default function Intro () {
 
   const animateIntro = (nextLangIndex) => {
     const nextLang = hellos[nextLangIndex]
+    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     let iter = 0
     const interval = setInterval(() => {
       setHello(nextLang.split('')
@@ -32,7 +28,7 @@ export default function Intro () {
           if (index < iter) {
             return nextLang[index]
           }
-          return letters[Math.floor(Math.random() * 26)]
+          return letters[Math.floor(Math.random() * 26)].toLowerCase()
         }).join(''))
 
       if (iter >= nextLang.length) {

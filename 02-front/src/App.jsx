@@ -46,7 +46,11 @@ function App () {
     ref.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
     setCurrentPosition(ref)
   }
-
+  const style = {
+    fontSize: '2rem',
+    color: '#ffffffde',
+    fontWeight: 400
+  }
   // render
   return (
     <div className="App">
@@ -55,6 +59,7 @@ function App () {
         <SwitchLanguage languages={languages}/>
       </header>
       <main className="Main">
+        <div style={style}>Website Under Construction</div>
         <section className="Section" ref={home}>
           <Intro />
         </section>
