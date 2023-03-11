@@ -1,8 +1,17 @@
+
 /* React */
 .App-logo {
   /* height: 40vmin; */ 
   height: 10vmin;
   pointer-events: none;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -10,18 +19,16 @@
     animation: App-logo-spin infinite 3s linear;
   }
 }
-/* React */
 
 .App {
   text-align: center;
-  /*background-color: #282c34;*/
-  background-color: rgb(24, 24, 24);
+  background-color: #181818;
   color: rgba(255, 255, 255, 0.87);
+  line-height: 1.5;
   
-}
+  }
 
 .App-header {
-  /* min-height: 10vh;*/
   display: flex;
   flex-direction: line;
   align-items: center;
@@ -30,7 +37,7 @@
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: #363535;
+  background-color: #242424;
   padding: 1rem; 
 }
 
@@ -44,55 +51,27 @@
 
 .App-lang--button{
   cursor: pointer; 
-  margin: 0.5rem;
+  margin: 0.2rem;
+  
+}
+.App-lang--button img{
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: #ffffffde 2px solid;
 }
 
-.App-nav{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 0 1rem;
+.Main{
+  width: 80%;
+  margin:  auto;
 }
 
-.App-nav--ul{
-  display: flex;
-  flex-direction: row;
-  /* justify-content: space-between;*/ 
-  /* width: 100%;*/
-}
-.App-nav--li{
-  list-style: none;
-  margin: 0 1rem;
-}
+
 
 .App-link:hover {
   color: #e8842d;
   cursor: pointer;
 }
 
-.App-section {
-  min-height: 100vh;
-  max-width: 800px;
-  /* scroll-margin-top: 5rem;*/
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.App-section--title {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
 
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
