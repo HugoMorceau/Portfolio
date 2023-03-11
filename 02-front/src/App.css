@@ -52,6 +52,13 @@
 .App-lang--button{
   cursor: pointer; 
   margin: 0.2rem;
+  
+}
+.App-lang--button img{
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: #ffffffde 2px solid;
 }
 
 .Main{

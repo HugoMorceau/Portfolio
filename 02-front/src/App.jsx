@@ -1,12 +1,10 @@
-/* eslint-disable no-unused-vars */
 
 import './App.css'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 // components
 import {
-  // eslint-disable-next-line no-unused-vars
   Intro, Skills, WorkXp, Projects,
   Contact, Navbar, SwitchLanguage,
   Arrows
@@ -34,9 +32,8 @@ function App () {
     { key: 4, title: t('My Projects'), ref: projects },
     { key: 5, title: t('Contact Me'), ref: contact }
   ]
+  // eslint-disable-next-line no-unused-vars
   const [currentPosition, setCurrentPosition] = useState('')
-  const [y, setY] = useState(0)
-  const [isScrolling, setIsScrolling] = useState(false)
 
   // comportements
 
@@ -45,49 +42,10 @@ function App () {
       console.log('ref not found, scroll to home')
       ref = home
     }
-    console.log('scroll to ', ref.current)
 
-    console.log('currentPosition set to', currentPosition.current)
-
-    setY(window.scrollY)
     ref.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
     setCurrentPosition(ref)
-    setIsScrolling(false)
   }
-
-  // eslint-disable-next-line no-unused-vars
-  const handleScroll = () => {
-    const index = destinations.findIndex((destination) => {
-      return destination.ref.current === currentPosition.current
-    }
-    )
-    // console.log('index found ', index, ' ', destinations[index].title)
-    // Scroll down
-    if (window.scrollY > y) {
-      // if (index < destinations.length - 1) {
-      console.log('Scroll down', destinations[index + 1].title)
-      executeScroll(destinations[index + 1].ref)
-    }
-  }
-
-  const scrollListener = (e) => {
-    if (!isScrolling) {
-      console.log('scrollListener')
-      // setIsScrolling(true)
-      // handleScroll()
-    }
-  }
-
-  // useEffect(() => {
-  //   window.addEventListener('wheel', (e) => scrollListener(e))
-  //   return () => {
-  //     window.removeEventListener('wheel', (e) => scrollListener(e))
-  //   }
-  // })
-
-  // useEffect(() => {
-  //   console.log('UseEffect currentPosition set to', currentPosition.current)
-  // }, [currentPosition])
 
   // render
   return (
@@ -100,9 +58,6 @@ function App () {
         <section className="Section" ref={home}>
           <Intro />
         </section>
-        {/* <Section title='Hello World' ref={home}>
-        <Intro />
-      </Section> */}
         <Section title='Skills' ref={skills}>
           <Skills/>
         </Section>

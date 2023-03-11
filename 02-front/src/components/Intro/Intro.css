@@ -15,11 +15,13 @@
  h3{
     font-size: 2rem;
     font-weight: 400;
+    
 }
 
  h4{
     font-size: 1.5rem;
     font-weight: 350;
+    color: #7fa8f6 ;
 }
 
  p {
@@ -56,3 +58,60 @@
     object-fit: contain;
     object-position: center;
 }
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.button{
+    margin-top: 50px;
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(134deg, #6A98F0 0%, #4961DC 99%);    
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.button2{
+    margin-top: 50px;
+    margin-right: 20px;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.button:hover, .button2:hover {
+    scale : 1.07;
+    transition: all 0.2s ease 0s
+}
+
+/* .toto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: 40px 20px 20px 40px;
+}
+.background{
+    background-color: #616161;
+    min-height: fit-content;
+    width: 70%;
+    background-image: url(
+    "./Capture.PNG"
+    );
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    opacity: 0.1; 
+} */
