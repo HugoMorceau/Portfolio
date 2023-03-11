@@ -4,43 +4,37 @@ const skills = [
     id: 1,
     name: 'HTML',
     level: 99,
-    icon: 'fab fa-html5'
+    icon: 'FaHtml5'
   },
   {
     id: 2,
     name: 'CSS',
     level: 99,
-    icon: 'fab fa-css3-alt'
-  },
-  {
-    id: 3,
-    name: 'JavaScript',
-    level: 99,
-    icon: 'fab fa-js'
+    icon: 'FaCss3'
   },
   {
     id: 4,
     name: 'React',
     level: 99,
-    icon: 'fab fa-react'
+    icon: 'FaReact'
   },
   {
     id: 5,
     name: 'Node.js',
     level: 99,
-    icon: 'fab fa-node'
+    icon: 'FaNodeJs'
   },
   {
     id: 6,
     name: 'SQL',
     level: 99,
-    icon: 'fas fa-database'
+    icon: 'FaDatabase'
   },
   {
     id: 7,
     name: 'Git',
     level: 99,
-    icon: 'fab fa-git-alt'
+    icon: 'FaGithub'
   },
   {
     id: 8,
@@ -52,7 +46,7 @@ const skills = [
     id: 9,
     name: 'AS400',
     level: 99,
-    icon: 'fas fa-code'
+    icon: 'SiIbm'
   },
   {
     id: 10,
