@@ -1,5 +1,5 @@
-import WorkCard from './WorkCard'
-import resume from '../../data/resumeFR.js'
+import WorkCard from './WorkCard/WorkCard'
+import resume from '../../data/resumes/resumeFR.js'
 
 export default function WorkXp () {
   // state
@@ -7,6 +7,8 @@ export default function WorkXp () {
   // render
 
   return (
-    <WorkCard resume={resume}/>
+    <div className='Work-container'>
+      <WorkCard resume={resume}/>
+    </div>
   )
 }

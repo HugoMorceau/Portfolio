@@ -8,7 +8,7 @@ export default function WorkCard (
   return (
     resume.map((work) => {
       return (
-        <div key={work.company} className='Work-wrapper'>
+        <div key={work.id} className='Work-wrapper'>
           <div className='Work-details'>
             <h4>{work.company}</h4>
             <div>{t('Position')} : {work.position}</div>

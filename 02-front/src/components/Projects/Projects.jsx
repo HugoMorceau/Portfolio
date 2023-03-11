@@ -1,21 +1,31 @@
-import { useTranslation } from 'react-i18next'
+// import { useTranslation } from 'react-i18next'
+import projects from '../../data/projects/projectsFR.js'
+import './Projects.css'
 export default function Projects () {
   // state
   // comportements
   // render
-  const { t } = useTranslation()
+  // const { t } = useTranslation()
   return (
-    <div>
-      <h2>{t('My Projects')}</h2>
-      <br/>
-      <ul>
-        <li>
-          <a href=" ">Project 1</a>
-        </li>
-        <li>
-          <a href=" ">Project 1</a>
-        </li>
-      </ul>
+    <div className='Projects-container'>
+      {projects.map((project) => {
+        return (
+          <div key={project.id} className='Project-wrapper'>
+            <div>{project.name.toUpperCase()}</div>
+            <div>{project.description}</div>
+            <div className='tag-container'>
+              {/* TODO: Fil tag from real data */}
+              {project.tags.map((tag) => {
+                return (<div className='tag-wrapper' key={tag}>{tag}
+                </div>)
+              })}
+            </div>
+            <div>View Code</div> <div>View Project</div>
+          </div>
+        )
+      }
+      )}
+
     </div>
   )
 }
