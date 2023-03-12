@@ -2,6 +2,7 @@
 import './App.css'
 import React, { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { MdConstruction } from 'react-icons/md'
 
 // components
 import {
@@ -49,7 +50,10 @@ function App () {
   const style = {
     fontSize: '2rem',
     color: '#ffffffde',
-    fontWeight: 400
+    fontWeight: 400,
+    display: 'flex',
+    justifyContent: 'center'
+
   }
   // render
   return (
@@ -58,8 +62,13 @@ function App () {
         <Navbar handleclick={executeScroll} liElt={destinations}/>
         <SwitchLanguage languages={languages}/>
       </header>
+      <br/>
       <main className="Main">
-        <div style={style}>Website Under Construction</div>
+        <div style={style}>
+          <MdConstruction size= '3rem' color = 'orange'/>
+          Website Under Construction
+          <MdConstruction size= '3rem' color = 'orange'/>
+        </div>
         <section className="Section" ref={home}>
           <Intro />
         </section>

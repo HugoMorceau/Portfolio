@@ -5,7 +5,6 @@ export default function Contact () {
   // render
   return (
     <div>
-      <h2>Contact Me</h2>
       <ul>
         <li>Email : <span className="email"> hugo.morceau@gmail.com</span></li>
         <li>Phone : <span className="phone"> Phone</span></li>

@@ -1,14 +1,34 @@
-.Skills{
-
-}
 
 .Skills-container{
     display: flex;
+    width : 100%;
+    justify-content: space-around;
+    
+}
 
-    flex-wrap: wrap;
+
+.Skills-category{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background-color: #242424;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.Skills-category h2 {
+    margin-bottom: 20px;   
+    display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    max-width: 1000px;
-    padding: 0 20px;
+    
+ }
+
+ .skill-wrapper{
+    display: flex; 
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+.skill-wrapper svg{
+    margin-right: 10px;
 }
