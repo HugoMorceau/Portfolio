@@ -66,7 +66,7 @@ function App () {
       <main className="Main">
         <div style={style}>
           <MdConstruction size= '3rem' color = 'orange'/>
-          Website Under Construction
+          Site Under Construction
           <MdConstruction size= '3rem' color = 'orange'/>
         </div>
         <section className="Section" ref={home}>
