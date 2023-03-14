@@ -2,13 +2,12 @@
 import './App.css'
 import React, { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { MdConstruction } from 'react-icons/md'
 
 // components
 import {
   Intro, Skills, WorkXp, Projects,
   Contact, Navbar, SwitchLanguage,
-  Arrows
+  Arrows, Construction
 } from './components'
 
 // assets
@@ -47,14 +46,7 @@ function App () {
     ref.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
     setCurrentPosition(ref)
   }
-  const style = {
-    fontSize: '2rem',
-    color: '#ffffffde',
-    fontWeight: 400,
-    display: 'flex',
-    justifyContent: 'center'
 
-  }
   // render
   return (
     <div className="App">
@@ -64,11 +56,7 @@ function App () {
       </header>
       <br/>
       <main className="Main">
-        <div style={style}>
-          <MdConstruction size= '3rem' color = 'orange'/>
-          Site Under Construction
-          <MdConstruction size= '3rem' color = 'orange'/>
-        </div>
+        <Construction title='WebSite'/>
         <section className="Section" ref={home}>
           <Intro />
         </section>

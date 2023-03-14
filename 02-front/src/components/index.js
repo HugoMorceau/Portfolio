@@ -7,6 +7,7 @@ import Projects from './Projects/Projects'
 import Contact from './Contact/Contact'
 import SwitchLanguage from './SwitchLanguage/SwitchLanguage'
 import Arrows from './Arrows/Arrows'
+import Construction from './Construction/Construction'
 
 // export all components
 
@@ -19,5 +20,6 @@ export {
   Projects,
   Contact,
   SwitchLanguage,
-  Arrows
+  Arrows,
+  Construction
 }
