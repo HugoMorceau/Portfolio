@@ -23,4 +23,4 @@ jobs:
         npm i
         npm run build
     - name: PM2 restart
-    - run: pm2 restart portfolio-dev-front
+      run: pm2 restart portfolio-dev-front
