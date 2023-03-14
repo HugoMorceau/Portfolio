@@ -25,6 +25,7 @@
   background-color: #181818;
   color: rgba(255, 255, 255, 0.87);
   line-height: 1.5;
+  overflow-x: hidden;
   
   }
 

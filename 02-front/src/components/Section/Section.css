@@ -1,7 +1,7 @@
 .Section{
     min-height: 80vh;
     scroll-margin-top: 5rem;
-    margin: 2rem auto;
+    margin: 2rem auto 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
