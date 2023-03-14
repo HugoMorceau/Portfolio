@@ -1,4 +1,5 @@
 import Intro from './Intro/Intro'
+import About from './About/About'
 import Navbar from './Navbar/Navbar'
 import Section from './Section/Section'
 import WorkXp from './WorkXp/WorkXp'
@@ -13,6 +14,7 @@ import Construction from './Construction/Construction'
 
 export {
   Intro,
+  About,
   Navbar,
   Section,
   WorkXp,

@@ -7,9 +7,15 @@
 }
 
 .Intro .hello {
-    font-size: 1.5rem;
-    font-weight: 350;
-    color: #7fa8f6 ;
+    font-size: 2rem;
+    font-weight: 400;
+    /* color: #dda431; */
+    /* color: #7fa8f6 ; */
+    /* color: #243cb7 */
+    /* color:#39b3fe; */
+    color:#6498f1;
+    /* color:#1885fe; */
+    /* color: #5a79e4; */
 }
 
 
@@ -72,8 +78,10 @@
 .button{
     margin-top: 50px;
     width: 200px;
-    height: 50px;
-    background: linear-gradient(134deg, #6A98F0 0%, #4961DC 99%);    
+    height: 50px;  
+    background: linear-gradient(134deg, #79a3f0 0%, #4760dc 99%);     
+    /* background: linear-gradient(134deg, #e6b553 0%, #e8842d 99%);    */
+    /* background-image: linear-gradient(to right, #ffb347 0%, #ffcc33  51%, #ffb347  100%); */
     border-radius: 10px;
     border: none;
     color: #fff;
@@ -95,25 +103,5 @@
 
 .button:hover, .button2:hover {
     scale : 1.07;
-    transition: all 0.2s ease 0s
+    transition: scale 0.2s ease 0s 
 }
-
- /* .toto{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    margin: 40px 20px 20px 40px;
-}
-.background{
-    background-color: #616161;
-    min-height: fit-content;
-    width: 70%;
-    background-image: url(
-    "./Capture.PNG"
-    );
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
-    opacity: 0.3; 
-}  */

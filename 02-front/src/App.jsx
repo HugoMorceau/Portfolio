@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 
 // components
 import {
-  Intro, Skills, WorkXp, Projects,
+  Intro, About, Skills, WorkXp, Projects,
   Contact, Navbar, SwitchLanguage,
   Arrows, Construction
 } from './components'
@@ -61,6 +61,9 @@ function App () {
         <section className="Section" ref={home}>
           <Intro />
         </section>
+        <Section title='About' ref={about}>
+          <About/>
+        </Section>
         <Section title='Skills' ref={skills}>
           <Skills/>
         </Section>
