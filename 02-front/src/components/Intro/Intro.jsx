@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react'
 import './Intro.css'
+import { useTranslation } from 'react-i18next'
 
 const profil = require('../../assets/images/profil.jpg')
 
@@ -8,6 +9,7 @@ export default function Intro () {
   const hellos = ['Hello there, I am', 'Hola, soy', 'Bonjour, je suis']
   const [hello, setHello] = useState(hellos[0])
   const [langIndex, setLangIndex] = useState(0)
+  const { t } = useTranslation()
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -54,9 +56,10 @@ export default function Intro () {
         </div>
         <div className='background'></div>
       </div>
-      <p>
+      <p>{t('Intro')}</p>
+      {/* <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor praesentium quis asperiores dolorem inventore dolores ab tenetur numquam nobis. Dolorum iure assumenda, aperiam error ea nulla incidunt quos iusto nihil. Iis igitur est difficilius satis facere, qui se Latina scripta dicunt contemnere. in quibus hoc primum est in quo admirer, cur in gravissimis rebus non delectet eos sermo patrius, cum idem fabellas Latinas ad
-      </p>
+      </p> */}
       <div className='buttons-container'>
         <button className='button2'>View Resume</button>
         <button className='button'>Download Resume</button>

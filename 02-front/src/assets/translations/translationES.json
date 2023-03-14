@@ -7,10 +7,11 @@
 
   "ComponentNavBar": "Navbar",
   "Home" : "Inicio",
+  "About" : "Sobre mi",
   "Skills" : "Habilidades",
-  "Work Experience" : "Experiencia laboral",
-  "My Projects" : "Mis proyectos",
-  "Contact Me" : "Contactame",
+  "Work Experience" : "Experiencia",
+  "My Projects" : "Proyectos",
+  "Contact Me" : "Contacto",
 
   "Position" : "Posición",
   "Company" : "Empresa",
@@ -20,6 +21,7 @@
   "Technologies" : "Tecnologías",
 
   "Download CV" : "Descargar CV",
+  "View CV" : "Ver CV",
 
   "End" : "Fin"
 }

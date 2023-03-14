@@ -7,7 +7,7 @@ const Construction = ({ title }) => {
     <div className="Construction">
       <div className='icon'><MdConstruction size= '3rem' color = 'orange'/></div>
       {title} Under Construction
-      <MdConstruction size= '3rem' color = 'orange'/>
+      <div className='icon'><MdConstruction size= '3rem' color = 'orange'/></div>
     </div>
   )
 }
