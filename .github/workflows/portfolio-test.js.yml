@@ -1,0 +1,24 @@
+name: portfolio-dev
+
+on:
+  push: 
+    branches: [ develop ]
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  build: 
+    runs-on: [self-hosted, linux, x64, dev, front]
+  
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: |
+        npm i
+        cd 02-front
+        npm i
+        npm run build
