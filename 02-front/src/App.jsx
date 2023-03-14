@@ -56,8 +56,6 @@ function App () {
         <Navbar handleclick={executeScroll} liElt={destinations}/>
         <SwitchLanguage languages={languages} arrowDown={arrowDown}/>
       </header>
-
-      <br/>
       <main className="Main">
         <Construction title='WebSite'/>
         <section className="Section" ref={home}>

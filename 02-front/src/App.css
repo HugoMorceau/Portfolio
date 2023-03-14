@@ -19,15 +19,14 @@
     animation: App-logo-spin infinite 3s linear;
   }
 }
+/*****************************/
 
 .App {
   text-align: center;
   background-color: #181818;
   color: rgba(255, 255, 255, 0.87);
   line-height: 1.5;
-  overflow-x: hidden;
-  position: relative;
-  
+  overflow-x: hidden;  
   }
 
 .App-header {
@@ -35,23 +34,18 @@
   flex-direction: line;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1;
   background-color: #242424;
   padding: 1rem; 
   font-size: calc(10px + 2vmin);
+  width: 100%;
 }
-.header-container {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  background-color: #242424;
-  padding: 1rem;
-}
+
 .Main{
   width: 80%;
-  margin:  auto;
+  margin:  100px auto;
 }
 
 .App-link:hover {
