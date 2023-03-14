@@ -54,8 +54,9 @@ function App () {
     <div className="App">
       <header className="App-header">
         <Navbar handleclick={executeScroll} liElt={destinations}/>
-        <SwitchLanguage languages={languages}/>
+        <SwitchLanguage languages={languages} arrowDown={arrowDown}/>
       </header>
+
       <br/>
       <main className="Main">
         <Construction title='WebSite'/>

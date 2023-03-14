@@ -1,0 +1,21 @@
+
+.lang{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;  
+}
+
+.lang--button{
+  cursor: pointer; 
+  margin: 0.2rem;
+  
+}
+.lang--button img{
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: #ffffffde 2px solid;
+}
+
+
+
