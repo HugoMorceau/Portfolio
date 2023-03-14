@@ -1,14 +1,12 @@
-name: portfolio-dev
+name: portfolio-prod
 
 on:
   push: 
-    branches: [ develop ]
-  pull_request:
-    branches: [ develop ]
+    branches: [ main ]
 
 jobs:
   build: 
-    runs-on: [self-hosted, linux, x64, dev, front]
+    runs-on: [self-hosted, linux, x64, prod, front]
   
     steps:
     - uses: actions/checkout@v3
