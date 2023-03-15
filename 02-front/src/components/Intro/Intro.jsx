@@ -1,20 +1,30 @@
 
 import { useState, useEffect } from 'react'
 import './Intro.css'
+import { useTranslation } from 'react-i18next'
+import i18n from '../../i18n'
 
 const profil = require('../../assets/images/profil.jpg')
 
 export default function Intro () {
   const hellos = ['Hello there, I am', 'Hola, soy', 'Bonjour, je suis']
+  const { t } = useTranslation()
+
+  // States
   const [hello, setHello] = useState(hellos[0])
   const [langIndex, setLangIndex] = useState(0)
+  const [flashReverse, setFlashState] = useState(true)
 
+  // Hooks
+  // Animate and changes lang of the hello message every 2.5s
   useEffect(() => {
+    console.log(i18n.language)
     const interval = setInterval(() => {
       const nextLangIndex = langIndex === hellos.length - 1 ? 0 : langIndex + 1
       animateIntro(nextLangIndex)
       setLangIndex(nextLangIndex)
     }, 2500)
+
     return () => clearInterval(interval)
   }, [langIndex])
 
@@ -39,6 +49,14 @@ export default function Intro () {
     }, 30)
   }
 
+  const handleMouseEnter = () => {
+    setFlashState(false)
+  }
+
+  const handleMouseLeave = () => {
+    setFlashState(true)
+  }
+
   return (
     <div className='Intro'>
       <div className='titles' >
@@ -54,13 +72,24 @@ export default function Intro () {
         </div>
         <div className='background'></div>
       </div>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor praesentium quis asperiores dolorem inventore dolores ab tenetur numquam nobis. Dolorum iure assumenda, aperiam error ea nulla incidunt quos iusto nihil. Iis igitur est difficilius satis facere, qui se Latina scripta dicunt contemnere. in quibus hoc primum est in quo admirer, cur in gravissimis rebus non delectet eos sermo patrius, cum idem fabellas Latinas ad
-      </p>
+      <p>{t('Intro')}</p>
       <div className='buttons-container'>
-        <button className='button2'>View Resume</button>
-        <button className='button'>Download Resume</button>
+        <a href={`${process.env.PUBLIC_URL}/resume/${t('CV file')}`} target="_blank" rel="noopener noreferrer">
+          <button className='button2'>View Resume</button></a>
+
+        <a
+          href={`${process.env.PUBLIC_URL}/resume/${t('CV file')}`}
+          download={t('CV file')}
+        >
+          <button
+            className={`button ${flashReverse ? 'button-flash-reverse' : ''}`}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            Download Resume
+          </button></a>
       </div>
+      <p><br/>{t('CV switch lang')}</p>
     </div>
   )
 }

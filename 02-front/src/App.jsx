@@ -2,13 +2,12 @@
 import './App.css'
 import React, { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { MdConstruction } from 'react-icons/md'
 
 // components
 import {
-  Intro, Skills, WorkXp, Projects,
+  Intro, About, Skills, WorkXp, Projects,
   Contact, Navbar, SwitchLanguage,
-  Arrows
+  Arrows, Construction
 } from './components'
 
 // assets
@@ -26,12 +25,14 @@ function App () {
   const work = useRef(null)
   const projects = useRef(null)
   const contact = useRef(null)
+  const about = useRef(null)
   const destinations = [
     { key: 1, title: t('Home'), ref: home },
-    { key: 2, title: t('Skills'), ref: skills },
-    { key: 3, title: t('Work Experience'), ref: work },
-    { key: 4, title: t('My Projects'), ref: projects },
-    { key: 5, title: t('Contact Me'), ref: contact }
+    { key: 2, title: t('About'), ref: about },
+    { key: 3, title: t('Skills'), ref: skills },
+    { key: 4, title: t('Work Experience'), ref: work },
+    { key: 5, title: t('My Projects'), ref: projects },
+    { key: 6, title: t('Contact Me'), ref: contact }
   ]
   // eslint-disable-next-line no-unused-vars
   const [currentPosition, setCurrentPosition] = useState('')
@@ -47,31 +48,22 @@ function App () {
     ref.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
     setCurrentPosition(ref)
   }
-  const style = {
-    fontSize: '2rem',
-    color: '#ffffffde',
-    fontWeight: 400,
-    display: 'flex',
-    justifyContent: 'center'
 
-  }
   // render
   return (
     <div className="App">
       <header className="App-header">
         <Navbar handleclick={executeScroll} liElt={destinations}/>
-        <SwitchLanguage languages={languages}/>
+        <SwitchLanguage languages={languages} arrowDown={arrowDown}/>
       </header>
-      <br/>
       <main className="Main">
-        <div style={style}>
-          <MdConstruction size= '3rem' color = 'orange'/>
-          Site Under Construction
-          <MdConstruction size= '3rem' color = 'orange'/>
-        </div>
         <section className="Section" ref={home}>
+          <Construction title='WebSite'/>
           <Intro />
         </section>
+        <Section title='About' ref={about}>
+          <About/>
+        </Section>
         <Section title='Skills' ref={skills}>
           <Skills/>
         </Section>

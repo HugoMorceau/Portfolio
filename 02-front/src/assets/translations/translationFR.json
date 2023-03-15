@@ -3,14 +3,15 @@
   "ComponentIntro": "Introduction",
   "Hello World": "Bonjour, je suis ",
   "Welcome": "Bienvenue sur mon portfolio",
-  "Intro": "Développeur Cobol, Adélia et RPG4 depuis 10 ans, j'ai effectué une reconversion en 2022 vers le développement web et mobile et suis donc à la recherche d'une première expérience de développeur web JavaScript,  back et/ou front",
+  "Intro": "Après 10 ans d'expérience en tant que développeur adélia/rpg/cobol sur AS400 j'ai effectué une reconversion en 2022 vers le développement web et mobile. Je suis à la recherche d'une première expérience de développeur web JavaScript, back et/ou front",
 
   "Home" : "Accueil",
+  "About" : "Présentation",
   "Skills" : "Compétences",
-  "My Projects" : "Mes projets",
+  "My Projects" : "projets",
   "Contact Me" : "Contact",
 
-  "Work Experience": "Expérience professionnelle",
+  "Work Experience": "Expérience",
   "Position" : "Rôle",
   "Company" : "Société",
   "Date" : "Date",
@@ -19,6 +20,8 @@
   "Technologies" : "Technologies",
 
   "Download CV" : "Télécharger mon CV",
+  "CV file" : "CV-FR.pdf",
+  "CV switch lang" : "Site en construction : Changer la langue du site en haut à droite pour télécharger le cv dans la langue correspondante",
 
   "End" : "Fin"
 }

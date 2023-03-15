@@ -3,13 +3,14 @@
   "ComponentIntro": "Introduction",
   "Hello World": "Hello there, I'm",
   "Welcome": "Welcome to my portfolio",
-  "Intro": "English version coming soon",
+  "Intro": "After 10 years of experience as a software engineer in Adelia/RPG/Cobol on AS400, I reconverted in 2022 to web and mobile development. Therefore I'am looking for my first experience as a web developer in JavaScript, back and/or front-end",
 
   "ComponentNavBar": "Introduction",
   "Home" : "Home",
+  "About" : "About",
   "Skills" : "Skills",
-  "Work Experience" : "Work Experience",
-  "My Projects" : "My projects",
+  "Work Experience" : "Experience",
+  "My Projects" : "Projects",
   "Contact Me" : "Contact",
 
   "Position" : "Position",
@@ -20,6 +21,9 @@
   "Technologies" : "Technologies",
   
   "Download CV" : "Download CV",
+  "View CV" : "View CV",
+  "CV file" : "CV-EN.pdf",
+  "CV switch lang" : "Website under construction: Change the language of the site at the top right to download the CV in the corresponding language",
 
 
   "End" : "Fin"
