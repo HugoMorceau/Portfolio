@@ -46,7 +46,7 @@ const skills = [
     type: 'back',
     category: 'multi',
     level: 99,
-    icon: ''
+    icon: 'TbRelationOneToMany'
   },
   {
     id: 8,
@@ -70,7 +70,7 @@ const skills = [
     type: 'back',
     category: 'old',
     level: 99,
-    icon: 'SiIbm'
+    icon: 'IoCodeSlash'
   },
 
   {
@@ -87,7 +87,7 @@ const skills = [
     type: 'back',
     category: 'old',
     level: 99,
-    icon: 'SiIbm'
+    icon: 'IoCodeSlash'
   },
   {
     id: 13,
