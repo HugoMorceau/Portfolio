@@ -57,12 +57,13 @@ export default function Intro () {
         <div className='background'></div>
       </div>
       <p>{t('Intro')}</p>
-      {/* <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor praesentium quis asperiores dolorem inventore dolores ab tenetur numquam nobis. Dolorum iure assumenda, aperiam error ea nulla incidunt quos iusto nihil. Iis igitur est difficilius satis facere, qui se Latina scripta dicunt contemnere. in quibus hoc primum est in quo admirer, cur in gravissimis rebus non delectet eos sermo patrius, cum idem fabellas Latinas ad
-      </p> */}
       <div className='buttons-container'>
-        <button className='button2'>View Resume</button>
-        <button className='button'>Download Resume</button>
+        <button className='button2'>
+          <a href={`${process.env.PUBLIC_URL}/resume/CV-ESP.pdf`} target="_blank" rel="noopener noreferrer">View Resume</a>
+        </button>
+        <button className='button'>
+          <a href={`${process.env.PUBLIC_URL}/resume/CV-ESP.pdf`} download="CV-ESP.pdf">Download Resume</a>
+        </button>
       </div>
     </div>
   )
