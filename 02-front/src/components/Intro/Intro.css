@@ -75,20 +75,74 @@
     margin-left: 20px;
 }
 
-.button{
+/* .button{
     margin-top: 50px;
     width: 200px;
     height: 50px;  
     background: linear-gradient(134deg, #79a3f0 0%, #4760dc 99%);     
     /* background: linear-gradient(134deg, #e6b553 0%, #e8842d 99%);    */
     /* background-image: linear-gradient(to right, #ffb347 0%, #ffcc33  51%, #ffb347  100%); */
+   /* border-radius: 10px;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+} */
+.button {
+    margin-top: 50px;
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(134deg, #79a3f0 0%, #4760dc 99%);
     border-radius: 10px;
     border: none;
     color: #fff;
     font-size: 1rem;
     font-weight: 500;
-}
+    position: relative;
+    overflow: hidden;
+  }
+  .button a {
+    position: relative;
+    z-index: 2;
+  }
+  .button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+    background-size: 200px 100%;
+    background-repeat: no-repeat;
+    background-position: -200px 0;
+    z-index: 1;
+  }
+  .button:hover::before {
+    animation: flash 0.3s linear;
+  }
+  .button-flash-reverse::before {
+    animation: flashReverse 0.3s linear;
+  }
+  
 
+  @keyframes flash {
+    0% {
+      background-position: -200px 0;
+    }
+    100% {
+      background-position: 200px 0;
+    }
+  }
+
+  @keyframes flashReverse {
+    0% {
+      background-position: 200px 0;
+    }
+    100% {
+      background-position: -200px 0;
+    }
+  }
 .button2{
     margin-top: 50px;
     margin-right: 20px;
@@ -101,7 +155,7 @@
     font-weight: 500;
 }
 
-.button:hover, .button2:hover {
+/* .button:hover, .button2:hover {
     scale : 1.07;
     transition: scale 0.2s ease 0s 
-}
+} */
