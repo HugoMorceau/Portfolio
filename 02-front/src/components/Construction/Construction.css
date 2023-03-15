@@ -1,0 +1,22 @@
+.Construction {
+    font-size: 2rem;
+    color: #ffffffde;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    
+}
+
+.Construction .icon {
+    animation: shake 2s infinite;
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    5% { transform: rotate(10deg); }
+    10% { transform: rotate(0eg); }
+    15% { transform: rotate(-10deg); }
+    20% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+  }

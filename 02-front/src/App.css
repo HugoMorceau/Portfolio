@@ -19,13 +19,14 @@
     animation: App-logo-spin infinite 3s linear;
   }
 }
+/*****************************/
 
 .App {
   text-align: center;
   background-color: #181818;
   color: rgba(255, 255, 255, 0.87);
   line-height: 1.5;
-  
+  overflow-x: hidden;  
   }
 
 .App-header {
@@ -33,43 +34,23 @@
   flex-direction: line;
   align-items: center;
   justify-content: space-between;
-  font-size: calc(10px + 2vmin);
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1;
   background-color: #242424;
   padding: 1rem; 
-}
-
-.App-lang{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  /* width: 100%; */
-  
-}
-
-.App-lang--button{
-  cursor: pointer; 
-  margin: 0.2rem;
-  
-}
-.App-lang--button img{
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  border: #ffffffde 2px solid;
+  font-size: calc(10px + 2vmin);
+  width: 100%;
 }
 
 .Main{
   width: 80%;
-  margin:  auto;
+  margin:  100px auto;
 }
 
-
-
 .App-link:hover {
-  color: #e8842d;
+  /* color: #e8842d; */
+  color: #6498f1;;
   cursor: pointer;
 }
 

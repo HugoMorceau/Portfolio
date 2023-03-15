@@ -1,40 +1,49 @@
-import React from 'react'
+import { useState } from 'react'
 import PropTypes from 'prop-types'
 import { useTranslation } from 'react-i18next'
+import './SwitchLanguage.css'
 
-/**
- * @param {Object} props
- * @param {Array} props.languages Array of objects
- * * @param {Array} props.languages.name language name
- * * @param {Array} props.languages.code language code
- * * @param {Array} props.languages.flag language flag
- * @returns {JSX.Element}
- * @description Switch language component
- * @example
- * const languages = [
- * {
- *  name: 'English',
-*   code: 'en',
-*   flag: 'https://www.countryflags.io/gb/flat/64.png'
-* },
-* {
-*   name: 'Français',
-*   code: 'fr',
-*   flag: 'https://www.countryflags.io/fr/flat/64.png'
-* }
-* ]
-  */
-export default function SwitchLanguage ({ languages }) {
+export default function SwitchLanguage ({ languages, arrowDown }) {
   const { i18n } = useTranslation()
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+  const [activeLanguage, setActiveLanguage] = useState(languages.find((language) => language.code === i18n.language))
+
+  const handleLanguageChange = (language) => {
+    i18n.changeLanguage(language.code)
+    setActiveLanguage(language)
+    setIsDropdownOpen(false)
+  }
+
+  const handleDropdownToggle = () => {
+    setIsDropdownOpen(!isDropdownOpen)
+  }
+
   return (
-    <div className="App-lang">
-      {languages.map((language) => {
-        return (
-          <button className="App-lang--button" key={language.code} onClick={() => i18n.changeLanguage(language.code)}>
-            <img src={language.flag} alt={language.name} height='25px' width= '25px' />
-          </button>
-        )
-      })}
+    <div className="lang">
+      <img className="lang--arrow" src={arrowDown} alt='arrow down' height='20px' />
+      <button className="lang--button" onMouseEnter={handleDropdownToggle} onMouseLeave={handleDropdownToggle}>
+
+        {/* <span className="lang--button-label">v</span> */}
+
+        <img src={activeLanguage.flag} alt={activeLanguage.name} height='25px' width= '25px' />
+
+        {isDropdownOpen &&
+          <ul className="lang--dropdown">
+            {languages.map((language) => {
+              if (language.code === activeLanguage.code) {
+                return null
+              }
+              return (
+                <li className="lang--dropdown-item" key={language.code} onClick={() => handleLanguageChange(language)}>
+                  <img src={language.flag} alt={language.name} height='25px' width= '25px' />
+                  {/* <span className="lang--dropdown-label">{language.name}</span> */}
+                </li>
+              )
+            })}
+          </ul>
+        }
+      </button>
+
     </div>
   )
 }
@@ -46,5 +55,6 @@ SwitchLanguage.propTypes = {
       code: PropTypes.string.isRequired,
       flag: PropTypes.string
     }).isRequired
-  ).isRequired
+  ).isRequired,
+  arrowDown: PropTypes.string.isRequired
 }

@@ -3,14 +3,15 @@
   "ComponentIntro": "Introduction",
   "Hello World": "Hola, soy",
   "Welcome": "Benvenido a mi portfolio",
-  "Intro": "Español version",
+  "Intro": "Tras 10 años de experiencia como analista programador en Adelia/RPG/Cobol en sistemas AS400, hice una reconversión en desarrollo web y móvil JavaScript en 2022. Estoy actualmente en la búsqueda de una primera experiencia en Javascript back y/o front-end",
 
   "ComponentNavBar": "Navbar",
   "Home" : "Inicio",
+  "About" : "Sobre mi",
   "Skills" : "Habilidades",
-  "Work Experience" : "Experiencia laboral",
-  "My Projects" : "Mis proyectos",
-  "Contact Me" : "Contactame",
+  "Work Experience" : "Experiencia",
+  "My Projects" : "Proyectos",
+  "Contact Me" : "Contacto",
 
   "Position" : "Posición",
   "Company" : "Empresa",
@@ -20,6 +21,9 @@
   "Technologies" : "Tecnologías",
 
   "Download CV" : "Descargar CV",
+  "View CV" : "Ver CV",
+  "CV file" : "CV-ES.pdf",
+  "CV switch lang": "Sitio en construcción: Cambia el idioma del sitio en la parte superior derecha para descargar el CV en el idioma correspondiente",
 
   "End" : "Fin"
 }

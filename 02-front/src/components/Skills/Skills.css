@@ -2,19 +2,25 @@
 .Skills-container{
     display: flex;
     width : 100%;
-    justify-content: space-around;
-    
+    justify-content: space-around;   
+    flex-wrap: wrap; 
 }
-
 
 .Skills-category{
     display: flex;
     flex-direction: column;
-    width: 30%;
+    min-width: 30%;
     background-color: #242424;
     padding-top: 10px;
     padding-bottom: 20px;
 }
+
+@media screen and (max-width: 768px) {
+    .Skills-category{
+        min-width: 100%;
+    }
+}
+    
 
 .Skills-category h2 {
     margin-bottom: 20px;   
