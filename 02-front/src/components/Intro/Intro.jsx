@@ -72,25 +72,20 @@ export default function Intro () {
       </div>
       <p>{t('Intro')}</p>
       <div className='buttons-container'>
-        {/*
-        <button className='button'>
-          <a href={`${process.env.PUBLIC_URL}/resume/CV-ESP.pdf`} download="CV-ESP.pdf">Download Resume</a>
-        </button> */}
-        <button className='button2'>
-          <a href={`${process.env.PUBLIC_URL}/resume/CV-ESP.pdf`} target="_blank" rel="noopener noreferrer">View Resume</a>
-        </button>
-        <button
-          className={`button ${flashReverse ? 'button-flash-reverse' : ''}`}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
+        <a href={`${process.env.PUBLIC_URL}/resume/CV-ESP.pdf`} target="_blank" rel="noopener noreferrer">
+          <button className='button2'>View Resume</button></a>
+
+        <a
+          href={`${process.env.PUBLIC_URL}/resume/CV-ESP.pdf`}
+          download="CV-ESP.pdf"
         >
-          <a
-            href={`${process.env.PUBLIC_URL}/resume/CV-ESP.pdf`}
-            download="CV-ESP.pdf"
+          <button
+            className={`button ${flashReverse ? 'button-flash-reverse' : ''}`}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
             Download Resume
-          </a>
-        </button>
+          </button></a>
       </div>
     </div>
   )
