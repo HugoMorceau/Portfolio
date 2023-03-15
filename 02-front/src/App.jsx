@@ -79,7 +79,7 @@ function App () {
         < Arrows handleClick={executeScroll} arrowUp={arrowUp} arrowDown={arrowDown}/>
       </main>
       <footer className="App-footer">
-        <p>© Made from scratch with Love && Passion by Hugo Morceau @2023</p>
+        <p> 2023</p>
       </footer>
     </div>
   )
