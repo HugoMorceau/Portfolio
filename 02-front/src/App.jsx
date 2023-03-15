@@ -57,8 +57,8 @@ function App () {
         <SwitchLanguage languages={languages} arrowDown={arrowDown}/>
       </header>
       <main className="Main">
-        <Construction title='WebSite'/>
         <section className="Section" ref={home}>
+          <Construction title='WebSite'/>
           <Intro />
         </section>
         <Section title='About' ref={about}>
