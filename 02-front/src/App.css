@@ -51,7 +51,17 @@
 .App-link:hover {
   /* color: #e8842d; */
   color: #6498f1;;
+  /* color: #6590ed;*/ 
   cursor: pointer;
+}
+
+.App-footer {
+  font-style: italic;
+  z-index: 1;
+  background-color: #242424;
+  padding: 1rem; 
+  font-size: 1rem;
+  width: 100%;
 }
 
 
