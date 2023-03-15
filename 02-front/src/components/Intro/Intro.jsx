@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import './Intro.css'
 import { useTranslation } from 'react-i18next'
+import i18n from '../../i18n'
 
 const profil = require('../../assets/images/profil.jpg')
 
@@ -17,6 +18,7 @@ export default function Intro () {
   // Hooks
   // Animate and changes lang of the hello message every 2.5s
   useEffect(() => {
+    console.log(i18n.language)
     const interval = setInterval(() => {
       const nextLangIndex = langIndex === hellos.length - 1 ? 0 : langIndex + 1
       animateIntro(nextLangIndex)
@@ -72,12 +74,12 @@ export default function Intro () {
       </div>
       <p>{t('Intro')}</p>
       <div className='buttons-container'>
-        <a href={`${process.env.PUBLIC_URL}/resume/CV-ESP.pdf`} target="_blank" rel="noopener noreferrer">
+        <a href={`${process.env.PUBLIC_URL}/resume/${t('CV file')}`} target="_blank" rel="noopener noreferrer">
           <button className='button2'>View Resume</button></a>
 
         <a
-          href={`${process.env.PUBLIC_URL}/resume/CV-ESP.pdf`}
-          download="CV-ESP.pdf"
+          href={`${process.env.PUBLIC_URL}/resume/${t('CV file')}`}
+          download={t('CV file')}
         >
           <button
             className={`button ${flashReverse ? 'button-flash-reverse' : ''}`}
@@ -87,6 +89,7 @@ export default function Intro () {
             Download Resume
           </button></a>
       </div>
+      <p><br/>{t('CV switch lang')}</p>
     </div>
   )
 }
