@@ -20,3 +20,8 @@ jobs:
         cd 02-front
         npm i
         npm run build
+    - name: PM2 restart
+      run: |
+        pm2 stop portfolio-prod-front
+        pm2 start portfolio-prod-front
+        pm2 save --force

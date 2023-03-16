@@ -1,6 +1,8 @@
 
 import { useState, useEffect } from 'react'
 import './Intro.css'
+import ButtonFlashy from '../Buttons/ButtonFlashy/ButtonFlashy'
+import Button from '../Buttons/Button/Button'
 import { useTranslation } from 'react-i18next'
 import i18n from '../../i18n'
 
@@ -13,9 +15,9 @@ export default function Intro () {
   // States
   const [hello, setHello] = useState(hellos[0])
   const [langIndex, setLangIndex] = useState(0)
-  const [flashReverse, setFlashState] = useState(true)
 
   // Hooks
+
   // Animate and changes lang of the hello message every 2.5s
   useEffect(() => {
     console.log(i18n.language)
@@ -49,14 +51,6 @@ export default function Intro () {
     }, 30)
   }
 
-  const handleMouseEnter = () => {
-    setFlashState(false)
-  }
-
-  const handleMouseLeave = () => {
-    setFlashState(true)
-  }
-
   return (
     <div className='Intro'>
       <div className='titles' >
@@ -74,22 +68,16 @@ export default function Intro () {
       </div>
       <p>{t('Intro')}</p>
       <div className='buttons-container'>
+        {/* View Resume */}
         <a href={`${process.env.PUBLIC_URL}/resume/${t('CV file')}`} target="_blank" rel="noopener noreferrer">
-          <button className='button2'>View Resume</button></a>
-
-        <a
-          href={`${process.env.PUBLIC_URL}/resume/${t('CV file')}`}
-          download={t('CV file')}
-        >
-          <button
-            className={`button ${flashReverse ? 'button-flash-reverse' : ''}`}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
-            Download Resume
-          </button></a>
+          <Button text={t('View CV')} />
+        </a>
+        {/* Download Resume */}
+        <a href={`${process.env.PUBLIC_URL}/resume/${t('CV file')}`}
+          download={t('CV file')}>
+          <ButtonFlashy text={t('Download CV')}/>
+        </a>
       </div>
-      <p><br/>{t('CV switch lang')}</p>
     </div>
   )
 }

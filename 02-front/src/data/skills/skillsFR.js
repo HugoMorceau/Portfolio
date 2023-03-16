@@ -36,7 +36,7 @@ const skills = [
     id: 6,
     name: 'SQL',
     type: 'back',
-    category: 'multi',
+    category: 'db',
     level: 99,
     icon: 'FaDatabase'
   },
@@ -44,9 +44,9 @@ const skills = [
     id: 7,
     name: 'UML',
     type: 'back',
-    category: 'multi',
+    category: 'db',
     level: 99,
-    icon: ''
+    icon: 'TbRelationOneToMany'
   },
   {
     id: 8,
@@ -70,7 +70,7 @@ const skills = [
     type: 'back',
     category: 'old',
     level: 99,
-    icon: 'SiIbm'
+    icon: 'IoCodeSlash'
   },
 
   {
@@ -87,7 +87,7 @@ const skills = [
     type: 'back',
     category: 'old',
     level: 99,
-    icon: 'SiIbm'
+    icon: 'IoCodeSlash'
   },
   {
     id: 13,
@@ -95,7 +95,47 @@ const skills = [
     type: 'management',
     category: 'other',
     level: 99,
-    icon: 'fas fa-code'
+    icon: ''
+  },
+  {
+    id: 14,
+    name: 'Typescript',
+    type: 'Javascript',
+    category: 'learning',
+    level: 99,
+    icon: ''
+  },
+  {
+    id: 15,
+    name: 'Vue.js',
+    type: 'front',
+    category: 'learning',
+    level: 99,
+    icon: ''
+  },
+  {
+    id: 16,
+    name: 'GraphQL',
+    type: 'back',
+    category: 'learningNext',
+    level: 99,
+    icon: ''
+  },
+  {
+    id: 16,
+    name: 'Three.js',
+    type: 'Javascript',
+    category: 'learningNext',
+    level: 99,
+    icon: ''
+  },
+  {
+    id: 16,
+    name: 'noSQL',
+    type: 'back',
+    category: 'learningNext',
+    level: 99,
+    icon: ''
   }
 ]
 

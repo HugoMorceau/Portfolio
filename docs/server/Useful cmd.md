@@ -6,7 +6,8 @@ PM2 STATUS
 PM2 STOP deamonName
 PM2 START deamonName
 
-pm2 serve build 4000 --spa --name front serv
+pm2 serve build 3100 --spa --name portfolio-dev-front
+pm2 serve build 3000 --spa --name portfolio-prod-front
 ```
 replace deamonName with metrixserv or frontserv for examples
 
@@ -15,6 +16,12 @@ replace deamonName with metrixserv or frontserv for examples
 cat /var/log/nginx/access.log
 
 cat /var/log/nginx/error.log
+
+Disable launch at startup Apache2
+sudo update-rc.d apache2 disable
+
+Stop
+/etc/init.d/apache2 stop
 ```
 ```
 systemctl restart nginx

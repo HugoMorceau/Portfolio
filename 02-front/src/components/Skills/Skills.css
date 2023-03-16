@@ -2,8 +2,9 @@
 .Skills-container{
     display: flex;
     width : 100%;
-    justify-content: space-around;   
+    justify-content: center;   
     flex-wrap: wrap; 
+
 }
 
 .Skills-category{
@@ -13,11 +14,15 @@
     background-color: #242424;
     padding-top: 10px;
     padding-bottom: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
 }
 
 @media screen and (max-width: 768px) {
     .Skills-category{
         min-width: 100%;
+        margin-bottom: 20px;
     }
 }
     
@@ -33,6 +38,7 @@
     display: flex; 
     margin-left: 40px;
     margin-top: 10px;
+    
 }
 
 .skill-wrapper svg{

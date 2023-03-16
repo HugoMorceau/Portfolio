@@ -111,6 +111,14 @@ systemctl restart nginx
 sudo fuser -k 80/tcp
 sudo fuser -k 443/tcp
 systemctl restart nginx 
+
+OR 
+Disable launch at startup Apache2
+sudo update-rc.d apache2 disable
+
+Stop
+/etc/init.d/apache2 stop
+systemctl restart nginx 
 ```
 Another solution may be 
 ```
