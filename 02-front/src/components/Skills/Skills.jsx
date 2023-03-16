@@ -22,8 +22,10 @@ export default function Skills () {
   // Todo translate categories
   const categories = {
     web: { label: 'Web', skills: [] },
-    multi: { label: 'Database', skills: [] },
-    old: { label: 'Legacy Systems', skills: [] }
+    db: { label: 'Database', skills: [] },
+    old: { label: 'Legacy Systems', skills: [] },
+    learning: { label: 'Currently learning', skills: [] },
+    learningNext: { label: 'Want to learn', skills: [] }
   }
 
   skills.forEach((skill) => {
