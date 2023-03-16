@@ -6,7 +6,8 @@ PM2 STATUS
 PM2 STOP deamonName
 PM2 START deamonName
 
-pm2 serve build 4000 --spa --name front serv
+pm2 serve build 3100 --spa --name portfolio-dev-front
+pm2 serve build 3000 --spa --name portfolio-prod-front
 ```
 replace deamonName with metrixserv or frontserv for examples
 
