@@ -6,11 +6,11 @@ import Construction from '../Construction/Construction'
 import './Section.css'
 
 const Section = forwardRef(function Section (props, ref) {
-  const { title } = props
+  const { title, inConstruction } = props
   const { t } = useTranslation()
   return (
     <section ref={ref} className= {'Section'}>
-      <Construction title={'Section'}/>
+      {inConstruction && < Construction title={'Section'}/>}
       <h2 className='Section--title'>{t(title).toUpperCase()}</h2>
       {props.children}
     </section>
@@ -20,7 +20,8 @@ const Section = forwardRef(function Section (props, ref) {
 // PropTypes
 Section.propTypes = {
   title: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  inConstruction: PropTypes.bool.isRequired
 }
 
 export default Section

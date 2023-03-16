@@ -61,22 +61,22 @@ function App () {
           <Construction title='WebSite'/>
           <Intro />
         </section>
-        <Section title='About' ref={about}>
+        <Section title='About' inConstruction={false} ref={about}>
           <About/>
         </Section>
-        <Section title='Skills' ref={skills}>
+        <Section title='Skills' inConstruction={true} ref={skills}>
           <Skills/>
         </Section>
-        <Section title='Work Experience' ref={work}>
+        <Section title='Work Experience' inConstruction={true} ref={work}>
           <WorkXp></WorkXp>
         </Section>
-        <Section title='My Projects' ref={projects}>
+        <Section title='My Projects' inConstruction={true} ref={projects}>
           <Projects />
         </Section>
-        <Section title="Contact" ref={contact}>
+        <Section title="Contact" inConstruction={true} ref={contact}>
           <Contact />
         </Section>
-        < Arrows handleClick={executeScroll} arrowUp={arrowUp} arrowDown={arrowDown}/>
+        <Arrows handleClick={executeScroll} arrowUp={arrowUp} arrowDown={arrowDown}/>
       </main>
       <footer className="App-footer">
         <p> 2023</p>
