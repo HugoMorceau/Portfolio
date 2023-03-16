@@ -15,6 +15,12 @@ replace deamonName with metrixserv or frontserv for examples
 cat /var/log/nginx/access.log
 
 cat /var/log/nginx/error.log
+
+Disable launch at startup Apache2
+sudo update-rc.d apache2 disable
+
+Stop
+/etc/init.d/apache2 stop
 ```
 ```
 systemctl restart nginx

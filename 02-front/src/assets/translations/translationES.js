@@ -8,11 +8,11 @@ const translationsES = {
   ComponentNavBar: 'Navbar',
   Home: 'Inicio',
   About: 'Sobre mi',
-  Aboutme: `Hola, me llamo Hugo, un apasionado desarrollador francés con 10 años de experiencia en desarrollo de lenguajes Adélia, RPG4 y COBOL en sistemas AS/400.
-  En 2022, decidí explorar nuevos horizontes y sumergirme en el fascinante mundo del desarrollo web, cambiando así mi enfoque profesional. Para lograrlo, realicé un intenso curso de 6 meses con la escuela O'Clock en formato de telepresencia. Esta experiencia me permitió adquirir habilidades en lenguajes de programación modernos.
-  Esta transición también coincidió con mi mudanza de París a Barcelona, una maravillosa ciudad en la que he decidido instalarme y vivir una aventura tanto profesional como personal.
-  Con curiosidad y pasión, estoy listo para enfrentar nuevos desafíos y contribuir a proyectos ambiciosos e innovadores con entusiasmo.
-  Actualmente en busca de oportunidades profesionales, no dudes en descargar mi CV y contactarme para discutir posibles colaboraciones.`,
+  Aboutme: `Hola, me llamo Hugo, desarrollador francés con 10 años de experiencia en desarrollo de lenguajes Adélia, RPG4 y COBOL en sistemas AS/400.
+  \nEn 2022, decidí explorar nuevos horizontes y sumergirme en el mundo del desarrollo web, cambiando así mi enfoque profesional. Para lograrlo, realicé un curso intensivo de 6 meses en la escuela O'Clock en formato  telepresencial, adquiriendo asi habilidades en lenguajes de programación modernos tales como Javascript.
+  \nEsta transición coincidió con mi mudanza de París a Barcelona, una maravillosa ciudad en la que he decidido instalarme y vivir una aventura tanto profesional como personal. 
+  \nCon curiosidad y pasión, estoy listo para enfrentarme a nuevos desafíos y contribuir a proyectos ambiciosos e innovadores. 
+  \nActualmente estoy en busca de una oportunidad profesional: no dudes en descargar mi CV y contactarme.`,
   Skills: 'Habilidades',
   'Work Experience': 'Experiencia',
   'My Projects': 'Proyectos',
