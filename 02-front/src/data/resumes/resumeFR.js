@@ -2,7 +2,8 @@ const resume = [
   {
     id: 1,
     company: 'Euro Information',
-    position: 'Analyste Développeur',
+    title: 'Analyste Développeur',
+    type: 'Experience',
     description: 'Description',
     startDate: '2019',
     endDate: '2022',
@@ -10,7 +11,8 @@ const resume = [
   }, {
     id: 2,
     company: 'E Quadra',
-    position: 'Analyste Développeur',
+    title: 'Analyste Développeur',
+    type: 'Experience',
     description: 'Description',
     startDate: '2017',
     endDate: '2019',
@@ -19,12 +21,24 @@ const resume = [
   {
     id: 3,
     company: 'Hardis Group',
-    position: 'Analyste Développeur',
+    title: 'Analyste Développeur',
+    type: 'Experience',
     description: 'Description',
     startDate: '2012',
     endDate: '2016',
     location: 'France, Paris'
+  },
+  {
+    id: 4,
+    company: 'O\'Clock',
+    title: 'Développeur Web et Mobile',
+    type: 'Formation',
+    description: 'Description',
+    startDate: '2022',
+    endDate: '2023',
+    location: 'France, Téléprésentiel'
   }
+
 ]
 
 export default resume
