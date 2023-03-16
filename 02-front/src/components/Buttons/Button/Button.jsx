@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
-import './ButtonFlashy.css'
-export default function ButtonFlashy ({ text, onClick }) {
+import './Button.css'
+export default function Button ({ text, onClick }) {
   const [flashReverse, setFlashState] = useState(true)
 
   const handleMouseEnter = () => {
@@ -27,7 +27,7 @@ export default function ButtonFlashy ({ text, onClick }) {
     </button>
   )
 }
-ButtonFlashy.propTypes = {
-  text: PropTypes.string.isRequired,
+Button.propTypes = {
+  text: PropTypes.string,
   onClick: PropTypes.func
 }

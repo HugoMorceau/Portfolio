@@ -1,4 +1,4 @@
-.button {
+.buttonFlashy {
     margin-top: 50px;
     width: 200px;
     height: 50px;
@@ -11,11 +11,11 @@
     position: relative;
     overflow: hidden;
   }
-  .button a {
+  .buttonFlashy a {
     position: relative;
     z-index: 2;
   }
-  .button::before {
+  .buttonFlashy::before {
     content: "";
     position: absolute;
     top: 0;
@@ -28,10 +28,10 @@
     background-position: -200px 0;
     z-index: 1;
   }
-  .button:hover::before {
+  .buttonFlashy:hover::before {
     animation: flash 0.3s linear;
   }
-  .button-flash-reverse::before {
+  .buttonFlashy-flash-reverse::before {
     animation: flashReverse 0.3s linear;
   }
   

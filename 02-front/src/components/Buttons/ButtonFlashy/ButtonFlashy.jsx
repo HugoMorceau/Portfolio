@@ -18,7 +18,7 @@ export default function ButtonFlashy ({ text, onClick }) {
 
   return (
     <button
-      className={`button ${flashReverse ? 'button-flash-reverse' : ''}`}
+      className={`buttonFlashy ${flashReverse ? 'buttonFlashy-flash-reverse' : ''}`}
       onClick={handleClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -28,6 +28,6 @@ export default function ButtonFlashy ({ text, onClick }) {
   )
 }
 ButtonFlashy.propTypes = {
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
   onClick: PropTypes.func
 }
