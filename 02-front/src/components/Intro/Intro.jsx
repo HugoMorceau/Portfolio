@@ -78,7 +78,6 @@ export default function Intro () {
           <ButtonFlashy text='Download Resume' />
         </a>
       </div>
-      <p><br/>{t('CV switch lang')}</p> {/* TODO: remove this line when about section have all resume */}
     </div>
   )
 }
