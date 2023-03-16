@@ -25,6 +25,7 @@ const translationsFR = {
   Technologies: 'Technologies',
 
   'Download CV': 'Télécharger mon CV',
+  'View CV': 'Voir mon CV',
   'CV file': 'CV-FR.pdf',
   'CV switch lang': 'Site en construction : Changer la langue du site en haut à droite pour télécharger le cv dans la langue correspondante',
 

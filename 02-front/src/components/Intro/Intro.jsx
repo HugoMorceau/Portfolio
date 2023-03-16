@@ -70,12 +70,12 @@ export default function Intro () {
       <div className='buttons-container'>
         {/* View Resume */}
         <a href={`${process.env.PUBLIC_URL}/resume/${t('CV file')}`} target="_blank" rel="noopener noreferrer">
-          <Button text='View Resume' />
+          <Button text={t('View CV')} />
         </a>
         {/* Download Resume */}
         <a href={`${process.env.PUBLIC_URL}/resume/${t('CV file')}`}
           download={t('CV file')}>
-          <ButtonFlashy text='Download Resume' />
+          <ButtonFlashy text={t('Download CV')}/>
         </a>
       </div>
     </div>
