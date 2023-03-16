@@ -1,7 +1,10 @@
 import skills from '../../data/skills/skillsFR.js'
 import './Skills.css'
 // import logo from '../../logo.svg'
-import { FaHtml5, FaCss3, FaNodeJs, FaReact, FaDatabase, FaGithub, SiIbm } from '../../assets/icons/icons.js'
+import {
+  FaHtml5, FaCss3, FaNodeJs, FaReact, FaDatabase, FaGithub,
+  SiIbm, IoCodeSlash, TbRelationOneToMany
+} from '../../assets/icons/icons.js'
 
 const iconMap = {
   fahtml5: FaHtml5,
@@ -10,15 +13,19 @@ const iconMap = {
   fareact: FaReact,
   fadatabase: FaDatabase,
   fagithub: FaGithub,
-  siibm: SiIbm
+  siibm: SiIbm,
+  iocodeslash: IoCodeSlash,
+  tbrelationonetomany: TbRelationOneToMany
 }
 
 export default function Skills () {
   // Todo translate categories
   const categories = {
     web: { label: 'Web', skills: [] },
-    multi: { label: 'Database', skills: [] },
-    old: { label: 'Legacy Systems', skills: [] }
+    db: { label: 'Database', skills: [] },
+    old: { label: 'Legacy Systems', skills: [] },
+    learning: { label: 'Currently learning', skills: [] },
+    learningNext: { label: 'Want to learn', skills: [] }
   }
 
   skills.forEach((skill) => {

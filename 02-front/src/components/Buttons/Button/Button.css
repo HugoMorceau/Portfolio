@@ -1,0 +1,17 @@
+.button {
+    margin-top: 50px;
+    margin-right: 20px;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .button a {
+    position: relative;
+    z-index: 2;
+  }
+
+ 
