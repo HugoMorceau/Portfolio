@@ -4,16 +4,17 @@ const resume = [
     company: 'Euro Information',
     title: 'Analyste Développeur',
     category: 'Experience',
-    description: 'Description',
+    description: 'Description Euro Information',
     startDate: '20190701',
     endDate: '20220401',
     location: 'France, Paris'
-  }, {
+  },
+  {
     id: 2,
     company: 'E Quadra',
     title: 'Analyste Développeur',
     category: 'Experience',
-    description: 'Description',
+    description: 'Description E Quadra',
     startDate: '20171001',
     endDate: '20190630',
     location: 'France, Paris'
@@ -23,7 +24,7 @@ const resume = [
     company: 'Hardis Group',
     title: 'Analyste Développeur',
     category: 'Experience',
-    description: 'Description',
+    description: 'Description Hardis Group',
     startDate: '20120630',
     endDate: '20160930',
     location: 'France, Paris'
@@ -33,7 +34,7 @@ const resume = [
     company: 'O\'Clock',
     title: 'Développeur Web et Mobile',
     category: 'Formation',
-    description: 'Description',
+    description: 'Description O\'Clock',
     startDate: '20220401',
     endDate: '20230101',
     location: 'France, Téléprésentiel'
@@ -43,7 +44,7 @@ const resume = [
     company: 'Ecole Cesi',
     title: 'Manager des Systèmes d\'Information',
     category: 'Formation',
-    description: 'Description',
+    description: 'Description Ecole Cesi',
     startDate: '20120901',
     endDate: '20130901',
     location: 'France, Chateauroux'
@@ -57,7 +58,7 @@ const resume = [
     startDate: '2022',
     endDate: '2023',
     location: 'France, Téléprésentiel'
-  }
+  },
   {
     id: 7,
     company: 'Perso',
