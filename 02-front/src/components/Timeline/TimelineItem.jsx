@@ -13,6 +13,7 @@ const TimelineItem = ({
         </span>
         <time>{startDate}</time>
         {/* <time>{endDate}</time> */}
+        <p>{title}</p>
         <p>{description}</p>
         <span className='circle'></span>
       </div>

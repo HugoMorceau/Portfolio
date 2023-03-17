@@ -134,7 +134,15 @@ const skills = [
     name: 'noSQL',
     type: 'back',
     category: 'learningNext',
-    level: 99,
+    level: -1,
+    icon: ''
+  },
+  {
+    id: 19,
+    name: 'Docker',
+    type: 'back',
+    category: 'learning',
+    level: 1,
     icon: ''
   }
 ]

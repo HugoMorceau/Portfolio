@@ -55,8 +55,8 @@ const resume = [
     title: 'Unimetrix',
     category: 'Projet',
     description: 'Blockchain Analizer',
-    startDate: '2022',
-    endDate: '2023',
+    startDate: '20221101',
+    endDate: '20230101',
     location: 'France, Téléprésentiel'
   },
   {
@@ -65,8 +65,8 @@ const resume = [
     title: 'Portfolio',
     category: 'Projet',
     description: 'My Personnal Website',
-    startDate: '2022',
-    endDate: '2023',
+    startDate: '20230103',
+    endDate: '',
     location: 'France, Téléprésentiel'
   }
 
