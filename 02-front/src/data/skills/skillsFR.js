@@ -122,7 +122,7 @@ const skills = [
     icon: ''
   },
   {
-    id: 16,
+    id: 17,
     name: 'Three.js',
     type: 'Javascript',
     category: 'learningNext',
@@ -130,11 +130,19 @@ const skills = [
     icon: ''
   },
   {
-    id: 16,
+    id: 18,
     name: 'noSQL',
     type: 'back',
     category: 'learningNext',
-    level: 99,
+    level: -1,
+    icon: ''
+  },
+  {
+    id: 19,
+    name: 'Docker',
+    type: 'back',
+    category: 'learning',
+    level: 1,
     icon: ''
   }
 ]

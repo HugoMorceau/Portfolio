@@ -1,0 +1,17 @@
+.timeline-container{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* border: 1px solid #cc0c0c; */
+  width: 800px; 
+}
+
+/* The vertical Line */
+.timeline-container::after{
+  content: "";
+  position: absolute;
+  background-color: #ccc;
+  width: 4px;
+  height: 100%;
+  left: calc(50% - 4px);
+}
