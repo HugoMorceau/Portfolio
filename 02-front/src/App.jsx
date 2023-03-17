@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next'
 import {
   Intro, About, Skills, WorkXp, Projects,
   Contact, Navbar, SwitchLanguage,
-  Arrows, Construction
+  Arrows /* Construction */
 } from './components'
 
 // assets
@@ -58,7 +58,7 @@ function App () {
       </header>
       <main className="Main">
         <section className="Section" ref={home}>
-          <Construction title='WebSite'/>
+          {/* <Construction title='WebSite'/> */}
           <Intro />
         </section>
         <Section title='About' inConstruction={false} ref={about}>

@@ -7,16 +7,16 @@ import { MdOutlineSchool, MdOutlineWorkOutline, MdLightbulbOutline }
   from '../../assets/icons/icons.js'
 
 const iconMap = {
-  experience: MdOutlineWorkOutline,
-  education: MdOutlineSchool,
-  project: MdLightbulbOutline
+  experience: { icon: MdOutlineWorkOutline, color: '#6498f1' },
+  education: { icon: MdOutlineSchool, color: 'green' },
+  project: { icon: MdLightbulbOutline, color: 'orange' }
 }
 
 const TimelineItem = ({
   title, category, company, startDate, endDate, description, side
 }) => {
-  const iconName = category.toLowerCase()
-  const IconComponent = iconMap[iconName]
+  const iconCategory = category.toLowerCase()
+  const IconComponent = iconMap[iconCategory].icon
   const formatedStartDate = moment(startDate).format('MMM YYYY')
 
   return (
@@ -24,7 +24,7 @@ const TimelineItem = ({
       <div className="timeline-item-content">
         <div className="timeline-item-header">
           <span className={'category ' + category}>
-            {IconComponent && <IconComponent size="1.5rem" />}
+            {IconComponent && <IconComponent size="1.5rem" color= {iconMap[iconCategory].color}/>}
           </span>
           <time>{formatedStartDate}</time>
           <span className="company">{company}</span>
