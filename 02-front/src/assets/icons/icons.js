@@ -8,3 +8,5 @@ export { SiIbm } from 'react-icons/si'
 export { IoCodeSlash } from 'react-icons/io5'
 
 export { TbRelationOneToMany } from 'react-icons/tb'
+
+export { MdOutlineSchool, MdOutlineWorkOutline, MdLightbulbOutline } from 'react-icons/md'
