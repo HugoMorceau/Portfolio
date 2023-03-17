@@ -10,8 +10,9 @@ const Section = forwardRef(function Section (props, ref) {
   const { t } = useTranslation()
   return (
     <section ref={ref} className= {'Section'}>
-      {inConstruction && < Construction title={'Section'}/>}
+
       <h2 className='Section--title'>{t(title).toUpperCase()}</h2>
+      {inConstruction && < Construction title={'Section'}/>}
       {props.children}
     </section>
   )

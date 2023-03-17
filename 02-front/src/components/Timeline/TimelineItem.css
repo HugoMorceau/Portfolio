@@ -69,6 +69,14 @@
   right: auto;
 }
 
-.category{
-  
+.timeline-item-content .category{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+.timeline-item:nth-child(odd) .timeline-item-content .category{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  left: auto;
 }
