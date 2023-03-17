@@ -51,7 +51,7 @@ const resume = [
   },
   {
     id: 6,
-    company: 'Perso',
+    company: '',
     title: 'Unimetrix',
     category: 'Project',
     description: 'Blockchain Analizer',
@@ -61,7 +61,7 @@ const resume = [
   },
   {
     id: 7,
-    company: 'Perso',
+    company: '',
     title: 'Portfolio',
     category: 'Project',
     description: 'My Personnal Website very long description very long description ',
