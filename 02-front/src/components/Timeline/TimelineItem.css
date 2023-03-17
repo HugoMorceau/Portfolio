@@ -12,17 +12,23 @@
   align-self: flex-end;
   justify-content: flex-start;
   padding-left: 50px;
-  padding-right: 0px;
 }
 /* The actual item content*/
 .timeline-item-content {
   background-color: #242424;
-  max-width: 70%;
   width: 400px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   position: relative;
+  border-radius: 10px;
+  z-index: 2;
+  padding: 20px;
+  text-align: right;
+}
+.timeline-item:nth-child(odd) .timeline-item-content{
+  align-items: flex-start;
+  text-align: left;
 }
 
 /* Item arrow */
@@ -35,13 +41,14 @@
   height: var(--height);
   top: calc(50% - var(--height)/2);
   right: calc(var(--width)/-2); 
-  background-color: #e80808;
-  /* background-color: #242424; */
+  background-color: #242424; 
   transform: rotate(45deg);
+  z-index: -1;
 }
 .timeline-item:nth-child(odd) .timeline-item-content::after {
-  /* left: calc(var(--width)/2);
-  right: auto */
+  left: calc(var(--width)/-2);
+  right: auto ;
+  z-index: -1;
 }
 
 /* Circle centered on the timeline at the item height*/ 
@@ -53,9 +60,13 @@
   border-radius: 50%;
   position: absolute;
   top: calc(50% - var(--height)/2);
-  left: -40px;
-  
+  right: -58px;
   z-index: 1;
+}
+
+.timeline-item:nth-child(odd) .circle{
+  left: -62px;
+  right: auto;
 }
 
 .category{

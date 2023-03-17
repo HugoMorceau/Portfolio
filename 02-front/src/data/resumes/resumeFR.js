@@ -64,7 +64,7 @@ const resume = [
     company: 'Perso',
     title: 'Portfolio',
     category: 'Projet',
-    description: 'My Personnal Website',
+    description: 'My Personnal Website very long description very long description ',
     startDate: '20230103',
     endDate: '',
     location: 'France, Téléprésentiel'

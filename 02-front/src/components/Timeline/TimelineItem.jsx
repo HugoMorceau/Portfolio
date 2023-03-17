@@ -3,7 +3,7 @@ import './TimelineItem.css'
 import { PropTypes } from 'prop-types'
 
 const TimelineItem = ({
-  date, title, category, startDate, endDate, description, side
+  title, category, startDate, endDate, description, side
 }) => {
   return (
     <div className="timeline-item">

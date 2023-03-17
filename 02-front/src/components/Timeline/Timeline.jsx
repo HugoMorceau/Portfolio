@@ -14,6 +14,7 @@ const Timeline = ({ data }) => {
           key={item.id}
           date={`${item.startDate} - ${item.endDate}`}
           title={item.title}
+          category={item.category}
           company={item.company}
           startDate={item.startDate}
           endDate={item.endDate}
@@ -31,7 +32,7 @@ Timeline.propTypes = {
     PropTypes.shape({
       title: PropTypes.string.isRequired,
       company: PropTypes.string.isRequired,
-      type: PropTypes.string.isRequired,
+      category: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
       startDate: PropTypes.string.isRequired,
       endDate: PropTypes.string.isRequired,
