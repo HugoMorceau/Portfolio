@@ -4,11 +4,12 @@ import { PropTypes } from 'prop-types'
 
 const TimelineItem = ({ date, title, description, side }) => {
   return (
-    <div className={`timeline-item ${side}`}>
-      <div className="timeline-date">{date}</div>
-      <div className="timeline-content">
-        <h3>{title}</h3>
-        <p>{description}</p>
+    <div className="timeline-item">
+      <div className={'timeline-item-content'}>
+        <span className="category">
+          {category}
+        </span>
+        <time></time>
       </div>
     </div>
   )

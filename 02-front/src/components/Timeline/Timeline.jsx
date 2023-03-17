@@ -15,7 +15,12 @@ const Timeline = ({ data }) => {
           key={index}
           date={`${item.startDate} - ${item.endDate}`}
           title={item.title}
+          company={item.company}
+          startDate={item.startDate}
+          endDate={item.endDate}
+
           description={item.description}
+          location={item.location}
           side={item.type === 'Experience' ? 'left' : 'right'}
         />
       ))}
