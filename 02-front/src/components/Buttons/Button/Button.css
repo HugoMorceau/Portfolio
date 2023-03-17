@@ -5,6 +5,7 @@
     height: 50px;
     border-radius: 10px;
     border: 2px solid #fff;
+    background-color: #181818;
     color: #ffffff;
     font-size: 1rem;
     font-weight: 500;
@@ -13,5 +14,9 @@
     position: relative;
     z-index: 2;
   }
+.button:hover{
+  background-color:#fff ;
+  color: #181818;
+}
 
  
