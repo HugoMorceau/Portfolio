@@ -6,6 +6,7 @@ $timeline-circle-size: 20px;
   padding-right: 50px;
   margin: 10px 0;
   width: 50%;
+  
 
   &:nth-child(odd) {
     align-self: flex-end;
@@ -25,6 +26,7 @@ $timeline-circle-size: 20px;
   z-index: 2;
   padding: 20px;
   text-align: right;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 
   .timeline-item:nth-child(odd) & {
     align-items: flex-start;
@@ -53,11 +55,14 @@ $timeline-circle-size: 20px;
   background-color: var(--secondary-color);
   transform: rotate(45deg);
   z-index: -1;
+  box-shadow: 2px -1px 1px  rgba(0, 0, 0, 0.1);
+  
 
   .timeline-item:nth-child(odd) & {
     left: calc(var(--width) / -2);
     right: auto;
     z-index: -1;
+    box-shadow: -1px 2px 3px  rgba(0, 0, 0, 0.1);
   }
 }
 
