@@ -1,5 +1,64 @@
 
-/* React */
+html{
+  font-size: 16px;
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.App {
+  text-align: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.5;
+  overflow-x: hidden;  
+  box-sizing: border-box;
+  }
+
+.App-header {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-color: var(--secondary-color);
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2); 
+  padding: 1rem; 
+  font-size: calc(10px + 2vmin);
+  width: 100%;
+}
+
+.theme-button {
+  cursor: pointer;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.Main{
+  width: 80%;
+  margin:  100px auto;
+}
+
+.App-link:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.App-footer {
+  font-style: italic;
+  z-index: 1;
+  background-color: var(--secondary-color);
+  padding: 0.5rem; 
+  font-size: 1rem;
+  width: 100%;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+}
+
+/* TODO: Remove this *****************************/
 .App-logo {
   /* height: 40vmin; */ 
   height: 10vmin;
@@ -20,50 +79,4 @@
   }
 }
 /*****************************/
-
-.App {
-  text-align: center;
-  background-color: #181818;
-  color: rgba(255, 255, 255, 0.87);
-  line-height: 1.5;
-  overflow-x: hidden;  
-  box-sizing: border-box;
-  }
-
-.App-header {
-  display: flex;
-  flex-direction: line;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  z-index: 10;
-  background-color: #242424;
-  padding: 1rem; 
-  font-size: calc(10px + 2vmin);
-  width: 100%;
-}
-
-.Main{
-  width: 80%;
-  margin:  100px auto;
-}
-
-.App-link:hover {
-  /* color: #e8842d; */
-  color: #6498f1;;
-  /* color: #6590ed;*/ 
-  cursor: pointer;
-}
-
-.App-footer {
-  font-style: italic;
-  z-index: 1;
-  background-color: #242424;
-  padding: 0.5rem; 
-  font-size: 1rem;
-  width: 100%;
-}
-
-
 
