@@ -20,7 +20,18 @@
   }
 }
 /*****************************/
-
+html{
+  font-size: 16px;
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #212121;
+  background-color: #fff;
+}
 .App {
   text-align: center;
   background-color: #181818;

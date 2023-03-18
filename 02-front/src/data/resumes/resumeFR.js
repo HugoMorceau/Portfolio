@@ -51,22 +51,22 @@ const resume = [
   },
   {
     id: 6,
-    company: '',
+    company: 'Group Project',
     title: 'Unimetrix',
     category: 'Project',
     description: 'Blockchain Analizer',
     startDate: '20221101',
-    endDate: '20230101',
+    endDate: '20221231',
     location: 'France, Téléprésentiel'
   },
   {
     id: 7,
-    company: '',
+    company: 'Personal Project',
     title: 'Portfolio',
     category: 'Project',
     description: 'My Personnal Website very long description very long description ',
-    startDate: '20230103',
-    endDate: '',
+    startDate: '20230301',
+    endDate: 'Present',
     location: 'France, Téléprésentiel'
   }
 
