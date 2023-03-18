@@ -1,25 +1,4 @@
 
-/* React */
-.App-logo {
-  /* height: 40vmin; */ 
-  height: 10vmin;
-  pointer-events: none;
-}
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 3s linear;
-  }
-}
-/*****************************/
 html{
   font-size: 16px;
 }
@@ -60,9 +39,7 @@ body{
 }
 
 .App-link:hover {
-  
   color: var(--primary-color);
-  
   cursor: pointer;
 }
 
@@ -73,9 +50,28 @@ body{
   padding: 0.5rem; 
   font-size: 1rem;
   width: 100%;
-  /* shadow*/
   box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
 }
 
+/* TODO: Remove this *****************************/
+.App-logo {
+  /* height: 40vmin; */ 
+  height: 10vmin;
+  pointer-events: none;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 3s linear;
+  }
+}
+/*****************************/
 
