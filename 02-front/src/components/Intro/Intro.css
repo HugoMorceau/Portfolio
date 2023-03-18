@@ -9,20 +9,14 @@
 .Intro .hello {
     font-size: 2rem;
     font-weight: 400;
-    /* color: #dda431; */
-    /* color: #7fa8f6 ; */
-    /* color: #243cb7 */
-    /* color:#39b3fe; */
-    color:#6498f1;
-    /* color:#1885fe; */
-    /* color: #5a79e4; */
+    color: var(--primary-color)
+
 }
 
 
  h1{
     font-size: 2.5rem;
     font-weight: 700;
-    color: #ffffffde;
 }
 
  h2{
@@ -51,7 +45,7 @@
     position: relative;
     overflow: hidden;
     /* border: #470b2c  5px solid;*/
-    border: #ffff  5px solid;
+    border: var(--text-color)  5px solid;
     background-color: #eaeaea;
     margin: 50px;
     

@@ -1,0 +1,21 @@
+:root{
+    --blueGradient: linear-gradient(120deg, #79a3f0 0%, #4760dc 99%);
+}
+
+
+.dark-theme{
+    --primary-color: #6498f1; /* blue  */
+    --secondary-color: #242424; /* header, footer,  rectangles */
+    --tertiary-color: '';
+    --background-color: #181818;
+    --text-color: #eee;
+}
+
+.light-theme {
+    --primary-color: #6498f1; /* blue  */
+    /*--secondary-color: #fefefefe; /* header, rectangles */
+    --secondary-color: #f7f7f7; /* header, rectangles */
+    --tertiary-color: '';
+    --background-color: #fefefefe;
+    --text-color: #181818;
+}

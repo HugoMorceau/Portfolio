@@ -6,6 +6,7 @@ $timeline-circle-size: 20px;
   padding-right: 50px;
   margin: 10px 0;
   width: 50%;
+  
 
   &:nth-child(odd) {
     align-self: flex-end;
@@ -15,7 +16,7 @@ $timeline-circle-size: 20px;
 }
 
 .timeline-item-content {
-  background-color: #242424;
+  background-color: var(--secondary-color);
   width: 400px;
   display: flex;
   flex-direction: column;
@@ -25,33 +26,23 @@ $timeline-circle-size: 20px;
   z-index: 2;
   padding: 20px;
   text-align: right;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 
   .timeline-item:nth-child(odd) & {
     align-items: flex-start;
     text-align: left;
   }
-}
-
-.timeline-item-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row-reverse;
-
-  .timeline-item:nth-child(odd) & {
-    flex-direction: row;
-  }
 
   time {
-    margin-left: 10px;
+    font-style: italic;
 
-    .timeline-item:nth-child(odd) & {
-      margin-right: 10px;
-      margin-left: auto;
-    }
+  }
+  .company {
+    font-weight: bold;
   }
 }
 
+// Arrow pointing from the content to the circle
 .timeline-item-content::after {
   content: "";
   position: absolute;
@@ -60,20 +51,23 @@ $timeline-circle-size: 20px;
   width: var(--width);
   height: var(--height);
   top: calc(50% - var(--height) / 2);
-  right: calc(var(--width) / -2);
-  background-color: #242424;
+  right: calc(var(--width) / -2); // half of the width converted to negative value to move it to the left
+  background-color: var(--secondary-color);
   transform: rotate(45deg);
   z-index: -1;
+  box-shadow: 2px -1px 1px  rgba(0, 0, 0, 0.1);
+  
 
   .timeline-item:nth-child(odd) & {
     left: calc(var(--width) / -2);
     right: auto;
     z-index: -1;
+    box-shadow: -1px 2px 3px  rgba(0, 0, 0, 0.1);
   }
 }
 
 .circle {
-  background-color: white;
+  background-color: var(--text-color);
   width: $timeline-circle-size;
   height: $timeline-circle-size;
   border-radius: 50%;
@@ -88,6 +82,7 @@ $timeline-circle-size: 20px;
   }
 }
 
+// Category Icon
 .category {
   position: absolute;
   top: 15px;
