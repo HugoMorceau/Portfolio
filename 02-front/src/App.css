@@ -33,7 +33,7 @@ body{
 .App {
   text-align: center;
   /* background-color: #181818; */
-  background-color: var(--background-color-dark);
+  background-color: var(--background-color);
   color: #ffffffde;
   line-height: 1.5;
   overflow-x: hidden;  

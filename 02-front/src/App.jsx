@@ -57,7 +57,7 @@ function App () {
     <div className="App">
       <header className="App-header">
         <Navbar handleclick={executeScroll} liElt={destinations}/>
-        <button onClick={toggleTheme}>test</button>
+        <button onClick={toggleTheme}>Theme</button>
         <SwitchLanguage languages={languages} arrowDown={arrowDown}/>
       </header>
       <main className="Main">
