@@ -1,3 +1,7 @@
+
+// NOT USED ANYMORE
+// TO REMOVE
+
 import PropTypes from 'prop-types'
 import { useTranslation } from 'react-i18next'
 import './WorkCard.css'

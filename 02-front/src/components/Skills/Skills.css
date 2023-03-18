@@ -11,7 +11,8 @@
     display: flex;
     flex-direction: column;
     min-width: 30%;
-    background-color: #242424;
+    /* background-color: #242424; */
+    background-color: var(--secondary-color);
     padding-top: 10px;
     padding-bottom: 20px;
     border-radius: 10px;

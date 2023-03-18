@@ -1,6 +1,6 @@
-
+/* NOT USED  ANYMORE */
+/* TO REMOVE */
 .Work-wrapper {
-  background-color: #343434;
   display: flex; 
   flex-direction: column;
   align-items: left;
@@ -9,9 +9,7 @@
   margin: 1rem;
   max-width: fit-content;
   text-align: left;
-  border-radius: 0.3rem;
-  border : 1px solid rgba(255, 255, 255, 0.1);
-  
+  border-radius: 0.3rem;  
 }
 
 .Work-wrapper:hover {

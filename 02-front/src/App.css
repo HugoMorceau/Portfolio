@@ -32,9 +32,8 @@ body{
 }
 .App {
   text-align: center;
-  /* background-color: #181818; */
   background-color: var(--background-color);
-  color: #ffffffde;
+  color: var(--text-color);
   line-height: 1.5;
   overflow-x: hidden;  
   box-sizing: border-box;
@@ -48,7 +47,8 @@ body{
   position: fixed;
   top: 0;
   z-index: 10;
-  background-color: #242424;
+  background-color: var(--secondary-color);
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2); 
   padding: 1rem; 
   font-size: calc(10px + 2vmin);
   width: 100%;
@@ -60,19 +60,21 @@ body{
 }
 
 .App-link:hover {
-  /* color: #e8842d; */
-  color: #6498f1;
-  /* color: #6590ed;*/ 
+  
+  color: var(--primary-color);
+  
   cursor: pointer;
 }
 
 .App-footer {
   font-style: italic;
   z-index: 1;
-  background-color: #242424;
+  background-color: var(--secondary-color);
   padding: 0.5rem; 
   font-size: 1rem;
   width: 100%;
+  /* shadow*/
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
 }
 
 

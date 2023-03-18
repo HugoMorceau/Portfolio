@@ -1,13 +1,3 @@
-/*
-    blue color: #6498f1
-        link hoover
-        Construction icon
-        intro
-
-   blue #79a3f0  #4760dc
-       button flashy
-
-*/
 :root{
     --blueGradient: linear-gradient(120deg, #79a3f0 0%, #4760dc 99%);
 }
@@ -15,16 +5,17 @@
 
 .dark-theme{
     --primary-color: #6498f1; /* blue  */
-    --secondary-color: #242424; /* header, rectangles */
+    --secondary-color: #242424; /* header, footer,  rectangles */
     --tertiary-color: '';
     --background-color: #181818;
-    --text-color: #ffffffde;
+    --text-color: #f7f7f7;
 }
 
 .light-theme {
     --primary-color: #6498f1; /* blue  */
-    --secondary-color: #242424; /* header, rectangles */
+    /*--secondary-color: #fefefefe; /* header, rectangles */
+    --secondary-color: #f7f7f7; /* header, rectangles */
     --tertiary-color: '';
-    --background-color: #fff;
-    --text-color: #000;
+    --background-color: #fefefefe;
+    --text-color: #181818;
 }

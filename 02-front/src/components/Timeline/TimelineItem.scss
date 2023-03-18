@@ -15,7 +15,7 @@ $timeline-circle-size: 20px;
 }
 
 .timeline-item-content {
-  background-color: #242424;
+  background-color: var(--secondary-color);
   width: 400px;
   display: flex;
   flex-direction: column;
@@ -62,7 +62,7 @@ $timeline-circle-size: 20px;
 }
 
 .circle {
-  background-color: white;
+  background-color: var(--text-color);
   width: $timeline-circle-size;
   height: $timeline-circle-size;
   border-radius: 50%;
