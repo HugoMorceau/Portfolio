@@ -29,13 +29,12 @@ body{
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   line-height: 1.5;
-  color: #212121;
-  background-color: #fff;
 }
 .App {
   text-align: center;
-  background-color: #181818;
-  color: rgba(255, 255, 255, 0.87);
+  /* background-color: #181818; */
+  background-color: var(--background-color-dark);
+  color: #ffffffde;
   line-height: 1.5;
   overflow-x: hidden;  
   box-sizing: border-box;
@@ -62,7 +61,7 @@ body{
 
 .App-link:hover {
   /* color: #e8842d; */
-  color: #6498f1;;
+  color: #6498f1;
   /* color: #6590ed;*/ 
   cursor: pointer;
 }

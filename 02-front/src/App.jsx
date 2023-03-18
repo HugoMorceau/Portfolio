@@ -2,6 +2,7 @@
 import './App.css'
 import React, { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useTheme } from './themes/ThemeContext'
 
 // components
 import {
@@ -19,6 +20,8 @@ import Section from './components/Section/Section'
 function App () {
   // console.log('render app')
   const { t } = useTranslation()
+  const { theme, toggleTheme } = useTheme()
+  console.log('theme', theme)
   // states
   const home = useRef(null)
   const skills = useRef(null)
@@ -54,6 +57,7 @@ function App () {
     <div className="App">
       <header className="App-header">
         <Navbar handleclick={executeScroll} liElt={destinations}/>
+        <button onClick={toggleTheme}>test</button>
         <SwitchLanguage languages={languages} arrowDown={arrowDown}/>
       </header>
       <main className="Main">
