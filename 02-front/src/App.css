@@ -20,9 +20,8 @@ body{
 
 .App-header {
   display: flex;
-  flex-direction: line;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   position: fixed;
   top: 0;
   z-index: 10;
@@ -31,6 +30,12 @@ body{
   padding: 1rem; 
   font-size: calc(10px + 2vmin);
   width: 100%;
+}
+
+.theme-button {
+  cursor: pointer;
+  margin-right: 50px;
+  margin-left: 50px;
 }
 
 .Main{

@@ -3,6 +3,7 @@ import './App.css'
 import React, { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useTheme } from './themes/ThemeContext'
+import ButtonTheme from './components/Buttons/ButtonTheme/ButtonTheme'
 
 // components
 import {
@@ -22,7 +23,7 @@ import Section from './components/Section/Section'
 function App () {
   // console.log('render app')
   const { t } = useTranslation()
-  const { theme, toggleTheme } = useTheme()
+  const { theme } = useTheme()
   const arrowMap = {
     arrowUp: {
       light: arrowUpLight,
@@ -72,7 +73,7 @@ function App () {
     <div className="App">
       <header className="App-header">
         <Navbar handleclick={executeScroll} liElt={destinations}/>
-        <button onClick={toggleTheme}>Theme</button>
+        <ButtonTheme className ="theme-button" />
         <SwitchLanguage languages={languages} arrowDown={arrowDown}/>
       </header>
       <main className="Main">
