@@ -1,6 +1,6 @@
 .Construction {
     font-size: 2rem;
-    color: #ffffffde;
+    
     font-weight: 400;
     display: flex;
     justify-content: center;
@@ -10,7 +10,6 @@
 
 .Construction .icon {
     animation: shake 2s infinite;
-    color: red;
 }
 
 @keyframes shake {
