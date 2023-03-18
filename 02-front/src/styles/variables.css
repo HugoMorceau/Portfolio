@@ -8,7 +8,7 @@
     --secondary-color: #242424; /* header, footer,  rectangles */
     --tertiary-color: '';
     --background-color: #181818;
-    --text-color: #f7f7f7;
+    --text-color: #eee;
 }
 
 .light-theme {

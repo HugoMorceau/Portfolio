@@ -50,7 +50,7 @@ $timeline-circle-size: 20px;
   height: var(--height);
   top: calc(50% - var(--height) / 2);
   right: calc(var(--width) / -2); // half of the width converted to negative value to move it to the left
-  background-color: #242424;
+  background-color: var(--secondary-color);
   transform: rotate(45deg);
   z-index: -1;
 

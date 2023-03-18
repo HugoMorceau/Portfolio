@@ -12,8 +12,10 @@ import {
 } from './components'
 
 // assets
-import arrowUp from './assets/arrow/arrowUp.svg'
-import arrowDown from './assets/arrow/arrowDown.svg'
+import arrowUpLight from './assets/arrow/arrowUpLight.svg'
+import arrowUpDark from './assets/arrow/arrowUpDark.svg'
+import arrowDownLight from './assets/arrow/arrowDownLight.svg'
+import arrowDownDark from './assets/arrow/arrowDownDark.svg'
 import languages from './assets/languages/languages.js'
 import Section from './components/Section/Section'
 
@@ -21,7 +23,20 @@ function App () {
   // console.log('render app')
   const { t } = useTranslation()
   const { theme, toggleTheme } = useTheme()
-  console.log('theme', theme)
+  const arrowMap = {
+    arrowUp: {
+      light: arrowUpLight,
+      dark: arrowUpDark
+    },
+    arrowDown: {
+      light: arrowDownLight,
+      dark: arrowDownDark
+    }
+  }
+  const arrowUp = arrowMap.arrowUp[theme]
+  const arrowDown = arrowMap.arrowDown[theme]
+  console.log('arrowUp', arrowUp)
+
   // states
   const home = useRef(null)
   const skills = useRef(null)
@@ -80,7 +95,7 @@ function App () {
         <Section title="Contact" inConstruction={true} ref={contact}>
           <Contact />
         </Section>
-        <Arrows handleClick={executeScroll} arrowUp={arrowUp} arrowDown={arrowDown}/>
+        <Arrows handleClick={executeScroll} arrowUp={arrowUp}/>
       </main>
       <footer className="App-footer">
         <p> 2023</p>

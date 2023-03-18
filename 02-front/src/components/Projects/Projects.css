@@ -8,7 +8,7 @@
 /* TODO : Factorise =>  Identical to work wrapper =>  */ 
 
 .Project-wrapper {
-  background-color: #343434;
+  background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -18,17 +18,13 @@
   max-width: fit-content;
   text-align: left;
   border-radius: 0.3rem;
-  border : 1px solid rgba(255, 255, 255, 0.1);
+  border : 1px solid var(--text-color);
 }
 
 
 /* TODO : Factorise =>  Identical to work wrapper =>  */ 
 .Project-wrapper:hover {
-    background-color: #535353;
-    border : 1px solid rgba(255, 255, 255, 0.3);
-    scale: 1.1;
-    transition: all 0.2s ease-in-out;
-  
+    background-color: var(--primary-color);
   } 
 
 .tag-container {
@@ -38,7 +34,7 @@
 }
 
 .tag-wrapper {
-  background-color: #343434;
+  background-color: var(--secondary-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,6 +43,6 @@
   max-width: fit-content;
   text-align: left;
   border-radius: 0.3rem;
-  border : 1px solid rgba(255, 255, 255, 0.1);
+  border : 1px solid var(--text-color);
 }
 
