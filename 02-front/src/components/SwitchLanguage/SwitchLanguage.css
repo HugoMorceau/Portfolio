@@ -45,3 +45,14 @@
   height: 2rem;
 }
 
+/* Mobile */
+.lang-mobile{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 20px auto;
+}
+
+.lang-mobile--item{
+  cursor: pointer;
+}

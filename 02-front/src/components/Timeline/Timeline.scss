@@ -3,13 +3,21 @@
   flex-direction: column;
   position: relative;
   width: 800px; 
+  max-width: 100%;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    
+      width: 100%;
+  }
 }
 
 /* The vertical Line */
 .timeline-container::after{
   content: "";
   position: absolute;
-  background-color: var(--text-color);
+  background-color: var(--secondary-color);
   width: 4px;
   height: 100%;
   left: calc(50% - 4px);

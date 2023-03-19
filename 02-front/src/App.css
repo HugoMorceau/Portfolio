@@ -18,20 +18,43 @@ body{
   box-sizing: border-box;
   }
 
-.App-header {
-  display: flex;
-  align-items: center;
-  /* justify-content: space-between; */
-  position: fixed;
-  top: 0;
-  z-index: 10;
-  background-color: var(--secondary-color);
-  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2); 
-  padding: 1rem; 
-  font-size: calc(10px + 2vmin);
-  width: 100%;
+  
+.App-header--top {
+  display: none
 }
 
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .Main{
+    width: 80%;
+    margin:  -50px auto; /* TODO: handle it in section css */
+  }
+}
+
+
+
+@media screen and (min-width: 768px) {
+  .Main{
+    width: 80%;
+    margin:  100px auto;
+  }
+  .App-header--top {
+    display: flex;
+    align-items: center;
+    
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2); 
+    padding: 1rem; 
+    font-size: calc(10px + 2vmin);
+    width: 100%;
+  }
+  .App-header--mobile{
+    display: none;
+  }
+}
 .theme-button {
   cursor: pointer;
   margin-right: 50px;
@@ -39,11 +62,6 @@ body{
 }
 .theme-button:hover {
   scale : 1.15;
-}
-
-.Main{
-  width: 80%;
-  margin:  100px auto;
 }
 
 .App-link:hover {
@@ -60,6 +78,7 @@ body{
   width: 100%;
   box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
 }
+
 
 /* TODO: Remove this *****************************/
 .App-logo {
