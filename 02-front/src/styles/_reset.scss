@@ -158,6 +158,9 @@ button {
 }
 
 input,
+input::placeholder,
+textarea,
+textarea::placeholder,
 button {
     outline: 0;
 }
