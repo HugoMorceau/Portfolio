@@ -9,7 +9,8 @@ import ButtonTheme from './components/Buttons/ButtonTheme/ButtonTheme'
 import {
   Intro, About, Skills, WorkXp, Projects,
   Contact, Navbar, SwitchLanguage,
-  Arrows /* Construction */
+  Arrows, /* Construction */
+  Sidebar
 } from './components'
 
 // assets
@@ -77,6 +78,7 @@ function App () {
         <SwitchLanguage languages={languages} arrowDown={arrowDown}/>
       </header>
       <main className="Main">
+        <Sidebar/>
         <section className="Section" ref={home}>
           {/* <Construction title='WebSite'/> */}
           <Intro />
