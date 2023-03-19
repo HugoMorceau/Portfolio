@@ -93,7 +93,7 @@ function App () {
         <Section title='My Projects' inConstruction={true} ref={projects}>
           <Projects />
         </Section>
-        <Section title="Contact" inConstruction={true} ref={contact}>
+        <Section title="Contact" inConstruction={false} ref={contact}>
           <Contact />
         </Section>
         <Arrows handleClick={executeScroll} arrowUp={arrowUp}/>

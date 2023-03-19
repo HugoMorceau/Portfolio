@@ -30,6 +30,13 @@ const translationEN = {
   'CV file': 'CV-EN.pdf',
   'CV switch lang': 'Website under construction: Change the language of the site at the top right to download the CV in the corresponding language',
 
+  // Contact form
+  Name: 'Name',
+  Email: 'Email',
+  Send: 'Send',
+  'Message sent': 'Your message has been sent successfully',
+  'Message not sent': 'Message not sent, please try again',
+
   End: 'Fin'
 }
 export default translationEN

@@ -1,11 +1,15 @@
 import React, { useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import Button from '../Buttons/Button/Button'
 
 const ContactForm = () => {
+  const { t } = useTranslation()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   })
+  const [returnMessage, setReturnMessage] = useState('')
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -23,14 +27,14 @@ const ContactForm = () => {
     })
 
     if (response.ok) {
-      alert('Votre message a été envoyé avec succès !')
+      setReturnMessage(t('Message sent'))
       setFormData({
         name: '',
         email: '',
         message: ''
       })
     } else {
-      alert('Une erreur est survenue. Veuillez réessayer.')
+      setReturnMessage(t('Message not sent'))
     }
   }
 
@@ -39,7 +43,7 @@ const ContactForm = () => {
       <input
         type="text"
         name="name"
-        placeholder="Name"
+        placeholder= {t('Name')}
         value={formData.name}
         onChange={handleChange}
         required
@@ -47,19 +51,20 @@ const ContactForm = () => {
       <input
         type="email"
         name="email"
-        placeholder="Email"
+        placeholder={t('Email')}
         value={formData.email}
         onChange={handleChange}
         required
       />
       <textarea
         name="message"
-        placeholder="Message"
+        placeholder={t('Message')}
         value={formData.message}
         onChange={handleChange}
         required
       />
-      <button type="submit">Send</button>
+      <Button type="submit" text={t('Send')}></Button>
+      {returnMessage && <p>{returnMessage}</p>}
     </form>
   )
 }
