@@ -9,7 +9,8 @@ import ButtonTheme from './components/Buttons/ButtonTheme/ButtonTheme'
 import {
   Intro, About, Skills, WorkXp, Projects,
   Contact, Navbar, SwitchLanguage,
-  Arrows /* Construction */
+  Arrows, /* Construction */
+  Sidebar
 } from './components'
 
 // assets
@@ -36,7 +37,6 @@ function App () {
   }
   const arrowUp = arrowMap.arrowUp[theme]
   const arrowDown = arrowMap.arrowDown[theme]
-  console.log('arrowUp', arrowUp)
 
   // states
   const home = useRef(null)
@@ -60,7 +60,6 @@ function App () {
 
   const executeScroll = (ref) => {
     if (!ref) {
-      console.log('ref not found, scroll to home')
       ref = home
     }
 
@@ -77,6 +76,7 @@ function App () {
         <SwitchLanguage languages={languages} arrowDown={arrowDown}/>
       </header>
       <main className="Main">
+        <Sidebar/>
         <section className="Section" ref={home}>
           {/* <Construction title='WebSite'/> */}
           <Intro />
@@ -84,7 +84,7 @@ function App () {
         <Section title='About' inConstruction={false} ref={about}>
           <About/>
         </Section>
-        <Section title='Skills' inConstruction={true} ref={skills}>
+        <Section title='Skills' inConstruction={false} ref={skills}>
           <Skills/>
         </Section>
         <Section title='Work Experience' inConstruction={true} ref={work}>
@@ -93,7 +93,7 @@ function App () {
         <Section title='My Projects' inConstruction={true} ref={projects}>
           <Projects />
         </Section>
-        <Section title="Contact" inConstruction={true} ref={contact}>
+        <Section title="Contact" inConstruction={false} ref={contact}>
           <Contact />
         </Section>
         <Arrows handleClick={executeScroll} arrowUp={arrowUp}/>

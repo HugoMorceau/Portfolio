@@ -4,7 +4,7 @@ import './Intro.css'
 import ButtonFlashy from '../Buttons/ButtonFlashy/ButtonFlashy'
 import Button from '../Buttons/Button/Button'
 import { useTranslation } from 'react-i18next'
-import i18n from '../../i18n'
+// import i18n from '../../i18n'
 
 const profil = require('../../assets/images/profil.jpg')
 
@@ -20,7 +20,6 @@ export default function Intro () {
 
   // Animate and changes lang of the hello message every 2.5s
   useEffect(() => {
-    console.log(i18n.language)
     const interval = setInterval(() => {
       const nextLangIndex = langIndex === hellos.length - 1 ? 0 : langIndex + 1
       animateIntro(nextLangIndex)

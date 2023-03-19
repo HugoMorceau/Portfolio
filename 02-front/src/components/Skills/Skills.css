@@ -43,3 +43,8 @@
 .skill-wrapper svg{
     margin-right: 10px;
 }
+
+.skill-wrapper:hover{
+    color: var(--primary-color);
+    cursor: default;
+}

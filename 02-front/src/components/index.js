@@ -9,6 +9,7 @@ import Contact from './Contact/Contact'
 import SwitchLanguage from './SwitchLanguage/SwitchLanguage'
 import Arrows from './Arrows/Arrows'
 import Construction from './Construction/Construction'
+import Sidebar from './SideBar/SideBar'
 
 // export all components
 
@@ -23,5 +24,6 @@ export {
   Contact,
   SwitchLanguage,
   Arrows,
-  Construction
+  Construction,
+  Sidebar
 }
