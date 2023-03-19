@@ -37,7 +37,6 @@ function App () {
   }
   const arrowUp = arrowMap.arrowUp[theme]
   const arrowDown = arrowMap.arrowDown[theme]
-  console.log('arrowUp', arrowUp)
 
   // states
   const home = useRef(null)
@@ -61,7 +60,6 @@ function App () {
 
   const executeScroll = (ref) => {
     if (!ref) {
-      console.log('ref not found, scroll to home')
       ref = home
     }
 

@@ -37,6 +37,9 @@ body{
   margin-right: 50px;
   margin-left: 50px;
 }
+.theme-button:hover {
+  scale : 1.15;
+}
 
 .Main{
   width: 80%;
