@@ -79,7 +79,7 @@ function App () {
           <SwitchLanguage languages={languages} arrowDown={arrowDown}/>
         </div>
         <div className="App-header--mobile">
-          <BurgerMenu menuItem={destinations} handleClick={executeScroll}/>
+          <BurgerMenu handleClick={executeScroll} menuItem={destinations} />
         </div>
       </header>
       <main className="Main">

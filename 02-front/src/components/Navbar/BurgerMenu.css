@@ -1,23 +1,39 @@
 /* Container div */
 .burger-menu{
-    border: 1px solid red;
-    background-color: var(--secondary-color);
-    width: 100px;
-    height: 60vh;
+    width: 200px;
+    height: 100%;
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: 0px;
+    right: -1px;
     display: flex;
     flex-direction: column-reverse;
     z-index: 100;
+    color: var(--secondary-color);
+    
 }
 
 /* Burger/Cross button */
 .burger-menu--button{
-    border: 1px solid var(--primary-color);    
+    
+    background-color: var(--tertiary-color);
 }
 
 .burger-menu-item-container{
-    border: 1px solid var(--primary-color);
+    /* border: 1px solid var(--primary-color); */
     height: 100%;
+    display: flex;
+    flex-direction: column-reverse;  
+    background-color: var(--tertiary-color);
+}
+.burger-menu-item-container--closed{
+    display: none;
+}
+.burger-menu-item{
+    margin : 10px auto;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.burger-menu--theme-button{
+    margin: 0 auto;
 }

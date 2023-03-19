@@ -6,7 +6,7 @@
 .dark-theme{
     --primary-color: #6498f1; /* blue  */
     --secondary-color: #242424; /* header, footer,  rectangles */
-    --tertiary-color: '';
+    --tertiary-color: #bebebe;
     --background-color: #181818;
     --text-color: #eee;
 }
@@ -15,7 +15,7 @@
     --primary-color: #6498f1; /* blue  */
     /*--secondary-color: #fefefefe; /* header, rectangles */
     --secondary-color: #f7f7f7; /* header, rectangles */
-    --tertiary-color: '';
+    --tertiary-color: #242424;
     --background-color: #fefefefe;
     --text-color: #181818;
 }
