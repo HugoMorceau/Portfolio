@@ -2,7 +2,7 @@ const resumeEN = [
   {
     id: 1,
     company: 'Euro Information',
-    title: 'Developer Analyst',
+    title: 'Software Engineer',
     category: 'Experience',
     description: '\nManagement of an international project in English' +
                    '\nDevelopment in Cobol / Adélia / SQL',
@@ -13,7 +13,7 @@ const resumeEN = [
   {
     id: 2,
     company: 'E Quadra',
-    title: 'Developer Analyst',
+    title: 'Software Engineer',
     category: 'Experience',
     description: '\nDevelopment in Cobol / Adélia / SQL',
     startDate: '20171001',
@@ -23,7 +23,7 @@ const resumeEN = [
   {
     id: 3,
     company: 'Hardis Group',
-    title: 'Developer Analyst',
+    title: 'Software Engineer',
     category: 'Experience',
     description: '\nDevelopment in Adélia IWS, Visual, CL, RPG, SQL',
     startDate: '20120630',
@@ -78,7 +78,7 @@ const resumeEN = [
   {
     id: 8,
     company: 'CCI Indre',
-    title: 'Developer Analyst',
+    title: 'Software Engineer',
     category: 'Education',
     description: '\nDeveloper analyst with specialization in Cobol/RPG on AS400',
     startDate: '20110901',
