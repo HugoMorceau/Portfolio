@@ -1,11 +1,14 @@
+import ContactForm from './ContactForm'
+import './contact.css'
 
 export default function Contact () {
   // state
   // comportements
   // render
   return (
-    <div>
-      <ul>
+    <div className='contact'>
+      <ContactForm/>
+      {/* <ul>
         <li>Email : <span className="email"> hugo.morceau@gmail.com</span></li>
         <li>Phone : <span className="phone"> Phone</span></li>
         <li>
@@ -15,7 +18,7 @@ export default function Contact () {
         <li>
           <a href="https://github.com/Morceau"
             className = "App-link">GitHub</a></li>
-      </ul>
+      </ul> */}
     </div>
   )
 }
