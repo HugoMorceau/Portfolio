@@ -1,8 +1,8 @@
 .contact {
-    /* display: flex;
-    flex-direction: line;
-    text-align: left; */
     width: 50%;
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
 }
 
 .contact form{
@@ -12,10 +12,8 @@
     width: 100%;
     margin-right: 20px;
     padding: 20px;
-    /* background-color: var(--secondary-color); */
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
     border-radius: 10px;
-    
+  
 }
 
 .contact form textarea {
@@ -24,18 +22,16 @@
     margin-bottom: 10px;
 }
 
-
-
 .contact form > input, textarea {
     background-color: var(--secondary-color); 
     padding: 5px;     
-    border: none;
-    
+    border: none;   
 }
 
 .contact form > button {
     align-self: center;
     margin-top: 0px;
+    margin-bottom: 40px;
 }
 
 .contact form textarea::placeholder {
