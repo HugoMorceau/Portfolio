@@ -4,6 +4,7 @@ import React, { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useTheme } from './themes/ThemeContext'
 import ButtonTheme from './components/Buttons/ButtonTheme/ButtonTheme'
+import BurgerMenu from './components/Navbar/BurgerMenu'
 
 // components
 import {
@@ -71,9 +72,15 @@ function App () {
   return (
     <div className="App">
       <header className="App-header">
-        <Navbar handleclick={executeScroll} liElt={destinations}/>
-        <ButtonTheme className ="theme-button" />
-        <SwitchLanguage languages={languages} arrowDown={arrowDown}/>
+        {/* Top Menu */}
+        <div className="App-header--top">
+          <Navbar handleclick={executeScroll} liElt={destinations}/>
+          <ButtonTheme className ="theme-button" />
+          <SwitchLanguage languages={languages} arrowDown={arrowDown}/>
+        </div>
+        <div className="App-header--mobile">
+          <BurgerMenu handleClick={executeScroll} menuItem={destinations} />
+        </div>
       </header>
       <main className="Main">
         <Sidebar/>

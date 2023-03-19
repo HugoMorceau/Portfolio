@@ -17,17 +17,14 @@ export default function SwitchLanguage ({ languages, arrowDown }) {
   const handleDropdownToggle = () => {
     setIsDropdownOpen(!isDropdownOpen)
   }
-
   return (
-    <div className="lang">
-      <img className="lang--arrow" src={arrowDown} alt='arrow down' height='20px' />
-      <button className="lang--button" onMouseEnter={handleDropdownToggle} onMouseLeave={handleDropdownToggle}>
+    <div>
+      {arrowDown && <div className="lang">
+        <img className="lang--arrow" src={arrowDown} alt='arrow down' height='20px' />
+        <button className="lang--button" onMouseEnter={handleDropdownToggle} onMouseLeave={handleDropdownToggle}>
+          <img src={activeLanguage.flag} alt={activeLanguage.name} height='25px' width= '25px' />
 
-        {/* <span className="lang--button-label">v</span> */}
-
-        <img src={activeLanguage.flag} alt={activeLanguage.name} height='25px' width= '25px' />
-
-        {isDropdownOpen &&
+          {isDropdownOpen &&
           <ul className="lang--dropdown">
             {languages.map((language) => {
               if (language.code === activeLanguage.code) {
@@ -36,15 +33,25 @@ export default function SwitchLanguage ({ languages, arrowDown }) {
               return (
                 <li className="lang--dropdown-item" key={language.code} onClick={() => handleLanguageChange(language)}>
                   <img src={language.flag} alt={language.name} height='25px' width= '25px' />
-                  {/* <span className="lang--dropdown-label">{language.name}</span> */}
                 </li>
               )
             })}
           </ul>
-        }
-      </button>
+          }
+        </button>
+      </div>}
+      {!arrowDown && <div className="lang-mobile">
 
+        {languages.map((language) => {
+          return (
+            <div className="lang-mobile--item" key={language.code} onClick={() => handleLanguageChange(language)}>
+              <img src={language.flag} alt={language.name} height='25px' width= '25px' />
+            </div>
+          )
+        })}
+      </div>}
     </div>
+
   )
 }
 

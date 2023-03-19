@@ -27,6 +27,7 @@ $timeline-circle-size: 20px;
   padding: 20px;
   text-align: right;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  white-space: pre-wrap;
 
   .timeline-item:nth-child(odd) & {
     align-items: flex-start;
@@ -38,6 +39,9 @@ $timeline-circle-size: 20px;
 
   }
   .company {
+    // font-weight: bold;
+  }
+  .title {
     font-weight: bold;
   }
 }
@@ -55,8 +59,7 @@ $timeline-circle-size: 20px;
   background-color: var(--secondary-color);
   transform: rotate(45deg);
   z-index: -1;
-  box-shadow: 2px -1px 1px  rgba(0, 0, 0, 0.1);
-  
+  box-shadow: 2px -1px 1px  rgba(0, 0, 0, 0.1); 
 
   .timeline-item:nth-child(odd) & {
     left: calc(var(--width) / -2);
@@ -67,7 +70,7 @@ $timeline-circle-size: 20px;
 }
 
 .circle {
-  background-color: var(--text-color);
+  background-color: var(--secondary-color);
   width: $timeline-circle-size;
   height: $timeline-circle-size;
   border-radius: 50%;
