@@ -4,10 +4,10 @@ import { useEffect, useState } from 'react'
 
 const Sidebar = () => {
   const socialMedia = [
-    { icon: FiGithub, label: 'Github' },
-    { icon: FiLinkedin, label: 'LinkedIn' },
-    { icon: FiTwitter, label: 'Twitter' },
-    { icon: FiMail, label: 'Email' }
+    { icon: FiGithub, label: 'Github', link: 'https://github.com/HugoMorceau' },
+    { icon: FiLinkedin, label: 'LinkedIn', link: 'https://www.linkedin.com/in/hugo-morceau-5b36051b7/' },
+    { icon: FiTwitter, label: 'Twitter', link: 'https://twitter.com/MorceauHugo' },
+    { icon: FiMail, label: 'Email', link: 'mailto:hugo.morceau@gmail.com' }
   ]
   const [isActive, setIsActive] = useState(false)
   useEffect(() => {
@@ -23,7 +23,15 @@ const Sidebar = () => {
         {socialMedia.map((media) => (
           <li key={media.label} className= "icon">
             <div className="icon-wrapper">
-              <media.icon size="1.5rem"/>
+              <a
+                key={media.label}
+                href={media.link}
+                target={media.link ? '_blank' : '_self'}
+                rel="noopener noreferrer"
+                title={media.label}
+              >
+                <media.icon size="1.5rem"/>
+              </a>
             </div>
           </li>
         ))}

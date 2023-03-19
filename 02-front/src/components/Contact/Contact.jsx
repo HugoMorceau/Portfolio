@@ -13,7 +13,7 @@ export default function Contact () {
             className = "App-link">Linkedin</a>
         </li>
         <li>
-          <a href="https://github.com/HugoMorceau"
+          <a href="https://github.com/Morceau"
             className = "App-link">GitHub</a></li>
       </ul>
     </div>
