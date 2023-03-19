@@ -1,4 +1,4 @@
-import './SideBar.css'
+import './SideBar.scss'
 import { FiGithub, FiLinkedin, FiTwitter, FiMail } from 'react-icons/fi'
 import { useEffect, useState } from 'react'
 

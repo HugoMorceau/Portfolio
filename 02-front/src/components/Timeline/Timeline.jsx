@@ -1,5 +1,5 @@
 import React from 'react'
-import './Timeline.css'
+import './Timeline.scss'
 import TimelineItem from './TimelineItem'
 import PropTypes from 'prop-types'
 

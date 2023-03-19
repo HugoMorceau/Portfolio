@@ -3,6 +3,14 @@
   flex-direction: column;
   position: relative;
   width: 800px; 
+  max-width: 100%;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    
+      width: 100%;
+  }
 }
 
 /* The vertical Line */
