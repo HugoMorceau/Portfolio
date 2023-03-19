@@ -9,9 +9,7 @@ import { MdOutlineSchool, MdOutlineWorkOutline, MdLightbulbOutline }
 const iconMap = {
   experience: { icon: MdOutlineWorkOutline, color: '#6498f1' },
   education: { icon: MdOutlineSchool, color: '#53c163' },
-  // project: { icon: MdLightbulbOutline, color: '#f1c649' }
-  // education: { icon: MdOutlineSchool, color: '#1ABC9C' },
-  project: { icon: MdLightbulbOutline, color: '#FFD700' }
+  project: { icon: MdLightbulbOutline, color: '#ffbf00' }
 }
 
 const TimelineItem = ({
@@ -22,7 +20,6 @@ const TimelineItem = ({
   const formatedStartDate = moment(startDate).format('MMM YYYY')
   const formatedEndDate = endDate === 'Present' ? endDate : moment(endDate).format('MMM YYYY')
   const period = formatedStartDate + ' - ' + formatedEndDate
-
   return (
     <div className="timeline-item">
       <div className="timeline-item-content">
@@ -31,7 +28,7 @@ const TimelineItem = ({
           {IconComponent && <IconComponent size="1.5rem" color= {iconMap[iconCategory].color}/>}
         </div>
         <div className='title'>{title}</div>
-        <div className="company">{company} </div>
+        <div className="company" style={{ color: iconMap[iconCategory].color }}>{company} </div>
         <time>{period}</time>
 
         <p>{description}</p>

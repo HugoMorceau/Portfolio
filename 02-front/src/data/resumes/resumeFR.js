@@ -1,14 +1,11 @@
-const resume = [
+const resumeFR = [
   {
     id: 1,
     company: 'Euro Information',
     title: 'Analyste Développeur',
     category: 'Experience',
-    description: `
-Gestion d'un projet international
-Rédaction de spécifications fonctionnelles et techniques en anglais
-Conf call et mails en anglais
-Supervision des développements et recettes fonctionnelles`,
+    description: '\nGestion d\'un projet international en anglais' +
+                 '\nDéveloppements en Cobol / Adélia / SQL',
     startDate: '20190701',
     endDate: '20220401',
     location: 'France, Paris'
@@ -18,9 +15,7 @@ Supervision des développements et recettes fonctionnelles`,
     company: 'E Quadra',
     title: 'Analyste Développeur',
     category: 'Experience',
-    description: `
-Développements en Cobol / Adélia / SQL`,
-
+    description: '\nDéveloppements en Cobol / Adélia / SQL',
     startDate: '20171001',
     endDate: '20190630',
     location: 'France, Paris'
@@ -30,7 +25,7 @@ Développements en Cobol / Adélia / SQL`,
     company: 'Hardis Group',
     title: 'Analyste Développeur',
     category: 'Experience',
-    description: 'Description Hardis Group',
+    description: '\nDéveloppements en Adélia IWS, Visual, CL, RPG, SQL',
     startDate: '20120630',
     endDate: '20160930',
     location: 'France, Paris'
@@ -40,7 +35,10 @@ Développements en Cobol / Adélia / SQL`,
     company: 'O\'Clock',
     title: 'Développeur Web et Mobile',
     category: 'Education',
-    description: 'Description O\'Clock',
+    description:
+    '\nReconversion en développement web et mobile' +
+    '\nFormation intensive de 6 mois en téléprésentiel' +
+    '\nSpécialisation en JavaScript (React, Node, Express)',
     startDate: '20220401',
     endDate: '20230101',
     location: 'France, Téléprésentiel'
@@ -50,17 +48,19 @@ Développements en Cobol / Adélia / SQL`,
     company: 'Ecole Cesi',
     title: 'Manager des Systèmes d\'Information',
     category: 'Education',
-    description: 'Description Ecole Cesi',
+    description: '\nFormation au management des SI' +
+    '\nEn alternance chez Hardis Group',
     startDate: '20120901',
     endDate: '20130901',
     location: 'France, Chateauroux'
   },
   {
     id: 6,
-    company: 'Group Project',
+    company: 'School Project',
     title: 'Unimetrix',
     category: 'Project',
-    description: 'Blockchain Analizer',
+    description: '\nProjet groupe de fin d\'études' +
+                 '\nBlockchain Analizer',
     startDate: '20221101',
     endDate: '20221231',
     location: 'France, Téléprésentiel'
@@ -70,12 +70,22 @@ Développements en Cobol / Adélia / SQL`,
     company: 'Personal Project',
     title: 'Portfolio',
     category: 'Project',
-    description: 'My Personnal Website very long description very long description ',
+    description: '\nMy Personnal Website made from scratch with React',
     startDate: '20230301',
     endDate: 'Present',
+    location: 'France, Téléprésentiel'
+  },
+  {
+    id: 8,
+    company: 'CCI Indre',
+    title: 'Analyste Développeur',
+    category: 'Education',
+    description: '\nFormation d\'analyste développeur avec spécialisation en Cobol/RPG sur AS400',
+    startDate: '20110901',
+    endDate: '20120630',
     location: 'France, Téléprésentiel'
   }
 
 ]
 
-export default resume
+export default resumeFR
