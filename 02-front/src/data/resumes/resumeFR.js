@@ -4,7 +4,11 @@ const resume = [
     company: 'Euro Information',
     title: 'Analyste Développeur',
     category: 'Experience',
-    description: 'Description Euro Information',
+    description: `
+Gestion d'un projet international
+Rédaction de spécifications fonctionnelles et techniques en anglais
+Conf call et mails en anglais
+Supervision des développements et recettes fonctionnelles`,
     startDate: '20190701',
     endDate: '20220401',
     location: 'France, Paris'
@@ -14,7 +18,9 @@ const resume = [
     company: 'E Quadra',
     title: 'Analyste Développeur',
     category: 'Experience',
-    description: 'Description E Quadra',
+    description: `
+Développements en Cobol / Adélia / SQL`,
+
     startDate: '20171001',
     endDate: '20190630',
     location: 'France, Paris'

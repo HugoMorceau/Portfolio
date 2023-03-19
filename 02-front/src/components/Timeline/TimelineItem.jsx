@@ -26,14 +26,14 @@ const TimelineItem = ({
   return (
     <div className="timeline-item">
       <div className="timeline-item-content">
-        {/* <div className="timeline-item-header"> */}
+
         <div className={'category ' + category}>
           {IconComponent && <IconComponent size="1.5rem" color= {iconMap[iconCategory].color}/>}
         </div>
-        <div className="company">{company}</div>
+        <div className='title'>{title}</div>
+        <div className="company">{company} </div>
         <time>{period}</time>
-        {/* </div> */}
-        <p>{title}</p>
+
         <p>{description}</p>
         <span className="circle"></span>
       </div>
