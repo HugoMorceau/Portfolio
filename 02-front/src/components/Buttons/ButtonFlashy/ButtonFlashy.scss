@@ -10,6 +10,11 @@
     font-weight: 500;
     position: relative;
     overflow: hidden;
+    @media screen and (max-width: 768px) {
+      width: 150px;
+      height: 35px;
+      margin-top: 20px;  
+    }
   }
   .buttonFlashy a {
     position: relative;

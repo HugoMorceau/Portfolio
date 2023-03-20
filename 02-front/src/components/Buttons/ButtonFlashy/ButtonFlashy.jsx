@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
-import './ButtonFlashy.css'
+import './ButtonFlashy.scss'
 export default function ButtonFlashy ({ text, onClick }) {
   const [flashReverse, setFlashState] = useState(true)
 

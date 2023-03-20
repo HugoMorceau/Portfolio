@@ -1,6 +1,6 @@
 // import { useTranslation } from 'react-i18next'
 import projects from '../../data/projects/projectsFR.js'
-import './Projects.css'
+import './Projects.scss'
 export default function Projects () {
   // state
   // comportements
