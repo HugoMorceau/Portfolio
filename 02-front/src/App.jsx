@@ -73,6 +73,7 @@ function App () {
     <div className="App">
       <header className="App-header">
         {/* Top Menu */}
+        {/* TODO: Disable for mobile ? */}
         <div className="App-header--top">
           <Navbar handleclick={executeScroll} liElt={destinations}/>
           <ButtonTheme className ="theme-button" />

@@ -1,29 +1,24 @@
-/* Container div */
-.burger-menu{
+
+/* Burger/Cross button */
+.burger-menu--button{
+    background-color: var(--tertiary-color);
+    color: var(--background-color);
+    position: fixed;
+    bottom: 0px;
+    right: -1px;
+}
+
+.burger-menu-item-container{
+    background-color: var(--tertiary-color);
     width: 200px;
     height: 100%;
     position: fixed;
-    bottom: 0px;
+    bottom: 20px;
     right: -1px;
     display: flex;
     flex-direction: column-reverse;
     z-index: 100;
     color: var(--secondary-color);
-    
-}
-
-/* Burger/Cross button */
-.burger-menu--button{
-    
-    background-color: var(--tertiary-color);
-}
-
-.burger-menu-item-container{
-    /* border: 1px solid var(--primary-color); */
-    height: 100%;
-    display: flex;
-    flex-direction: column-reverse;  
-    background-color: var(--tertiary-color);
 }
 .burger-menu-item-container--closed{
     display: none;

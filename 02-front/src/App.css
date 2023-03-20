@@ -16,6 +16,7 @@ body{
   line-height: 1.5;
   overflow-x: hidden;  
   box-sizing: border-box;
+  height: 100vh;
   }
 
   
@@ -30,8 +31,6 @@ body{
     margin:  -50px auto; /* TODO: handle it in section css */
   }
 }
-
-
 
 @media screen and (min-width: 768px) {
   .Main{

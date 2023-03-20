@@ -8,7 +8,7 @@ import { useState } from 'react'
 const BurgerMenu = ({ handleClick, menuItem }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   return (
-    <div className='burger-menu'>
+    <div>
       <button className='burger-menu--button' onClick={() => setIsMenuOpen(!isMenuOpen)}>XXX</button>
       <div className= {isMenuOpen ? 'burger-menu-item-container' : 'burger-menu-item-container--closed'} >
         <ButtonTheme className ="burger-menu--theme-button burger-menu-item" size={'1.6rem'} />
@@ -21,7 +21,6 @@ const BurgerMenu = ({ handleClick, menuItem }) => {
             </li>)
           })}
         </ul>
-
       </div>
     </div>
   )
