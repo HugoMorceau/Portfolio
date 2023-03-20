@@ -19,17 +19,23 @@ const BurgerMenu = ({ handleClick, menuItem }) => {
   //   }
   // }
   const handleClickOutside = (e) => {
+    console.log(e.target)
+    console.log(menuContainerRef.current.contains(e.target))
     if (
       isMenuOpen &&
-      menuContainerRef.current &&
-      menuContainerRef.current.contains(e.target) &&
       burgerButtonRef.current &&
-      !burgerButtonRef.current.contains(e.target)
+      !burgerButtonRef.current.contains(e.target) &&
+       menuContainerRef.current &&
+       !menuContainerRef.current.contains(e.target) &&
+        !e.target.closest('svg')
     ) {
-      if (e.target.classList.contains('burger-menu-item')) {
-        setIsMenuOpen(false)
-      }
+      console.log(e.target)
+      setIsMenuOpen(false)
     }
+  }
+  const handleClickNavItem = (ref) => {
+    setIsMenuOpen(false)
+    handleClick(ref)
   }
   useEffect(() => {
     document.addEventListener('click', handleClickOutside)
@@ -39,7 +45,7 @@ const BurgerMenu = ({ handleClick, menuItem }) => {
   }, [isMenuOpen])
 
   return (
-    <div className='burger-menu-container' ref={menuContainerRef}>
+    <div className='burger-menu-container' >
       <div className='burger-menu-button' ref={burgerButtonRef}>
         <button className={isMenuOpen ? 'menu-button--open' : 'menu-button' }
           onClick={handleClickBurger}>
@@ -47,13 +53,13 @@ const BurgerMenu = ({ handleClick, menuItem }) => {
           </div>
         </button>
       </div>
-      <div className= {isMenuOpen ? 'burger-menu-item-container' : 'burger-menu-item-container--closed'} >
+      <div className= {isMenuOpen ? 'burger-menu-item-container' : 'burger-menu-item-container--closed'} ref={menuContainerRef} >
         <ButtonTheme className ="burger-menu--theme-button burger-menu-item" size={'1.6rem'} />
         <SwitchLanguage languages={languages}/>
         <ul className="App-nav--ul">
           {menuItem.map(({ key, title, ref }) => {
             return (<li key={key} ref={ref} className="burger-menu-item"
-              onClick={(e) => handleClick(ref)}>
+              onClick={(e) => handleClickNavItem(ref)}>
               {title.toUpperCase()}
             </li>)
           })}
