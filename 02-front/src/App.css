@@ -16,6 +16,7 @@ body{
   line-height: 1.5;
   overflow-x: hidden;  
   box-sizing: border-box;
+  height: 100vh;
   }
 
   
@@ -27,16 +28,16 @@ body{
 @media screen and (max-width: 768px) {
   .Main{
     width: 80%;
-    margin:  -50px auto; /* TODO: handle it in section css */
+    margin:  -120px auto 0 auto; /* TODO: handle it in section css */
+    
   }
 }
-
-
 
 @media screen and (min-width: 768px) {
   .Main{
     width: 80%;
     margin:  100px auto;
+
   }
   .App-header--top {
     display: flex;
@@ -71,12 +72,14 @@ body{
 
 .App-footer {
   font-style: italic;
-  z-index: 1;
+  z-index: 10;
   background-color: var(--secondary-color);
   padding: 0.5rem; 
   font-size: 1rem;
   width: 100%;
-  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);  
+  bottom: 0;
+  position: relative ;
 }
 
 

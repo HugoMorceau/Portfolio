@@ -1,0 +1,20 @@
+.App-arrow {
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: line;
+      position: fixed;
+      bottom: 5%;
+      right: 5%;
+      transform: translateX(-50%);
+    }    
+  }
+  .App-arrow--up {
+    cursor: pointer;
+    z-index: 1;
+  }
+ 
+  .App-arrow--down {
+    cursor: pointer;
+    z-index: 1;
+  }

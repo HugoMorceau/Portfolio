@@ -63,5 +63,5 @@ SwitchLanguage.propTypes = {
       flag: PropTypes.string
     }).isRequired
   ).isRequired,
-  arrowDown: PropTypes.string.isRequired
+  arrowDown: PropTypes.string
 }

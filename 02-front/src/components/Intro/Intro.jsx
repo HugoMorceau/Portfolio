@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react'
-import './Intro.css'
+import './Intro.scss'
 import ButtonFlashy from '../Buttons/ButtonFlashy/ButtonFlashy'
 import Button from '../Buttons/Button/Button'
 import { useTranslation } from 'react-i18next'
