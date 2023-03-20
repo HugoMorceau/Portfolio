@@ -1,23 +1,57 @@
 
-/* Burger/Cross button */
-.burger-menu--button{
-    background-color: var(--tertiary-color);
-    color: var(--background-color);
+.burger-menu{
     position: fixed;
     bottom: 0px;
     right: -1px;
+    z-index: 91;
+    
+}
+
+/* Burger/Cross button */
+.menu-button,
+.menu-button--closed{
+    position: relative;
+    display: flex;
+    border: 3px solid var(--text-color);
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    transition: all 1s ease-in-out ;
+    /* background-color: var(--tertiary-color); */
+    
+}
+.menu-button__line{
+    width: 30px;
+    height: 3px;
+    border-radius: 5px;
+    background: var(--text-color);    
+}
+.menu-button--closed > .menu-button__line{
+    background: red;   
+
+}
+.menu-button__line::before {
+    transform: translateY(-10px);
+}
+.menu-button__line::after {
+    transform: translateY(-10px);
+}
+.menu-button--closed .menu-button__line {
+    transform: translateX(-50px);
+    box-shadow: none;
 }
 
 .burger-menu-item-container{
     background-color: var(--tertiary-color);
     width: 200px;
-    height: 100%;
+    height: 100vh;
     position: fixed;
-    bottom: 20px;
+    bottom: 0px;
     right: -1px;
     display: flex;
     flex-direction: column-reverse;
-    z-index: 100;
+    z-index: 90;
     color: var(--secondary-color);
 }
 .burger-menu-item-container--closed{

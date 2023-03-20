@@ -7,9 +7,18 @@ import { useState } from 'react'
 
 const BurgerMenu = ({ handleClick, menuItem }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const handleClickBurger = () => {
+    setIsMenuOpen(prevIsMenuOpen => !prevIsMenuOpen)
+  }
   return (
     <div>
-      <button className='burger-menu--button' onClick={() => setIsMenuOpen(!isMenuOpen)}>XXX</button>
+      <div className='burger-menu'>
+        <button className={isMenuOpen ? 'menu-button' : 'menu-button--closed' }
+          onClick={handleClickBurger}>
+          <div className="menu-button__line">
+          </div>
+        </button>
+      </div>
       <div className= {isMenuOpen ? 'burger-menu-item-container' : 'burger-menu-item-container--closed'} >
         <ButtonTheme className ="burger-menu--theme-button burger-menu-item" size={'1.6rem'} />
         <SwitchLanguage languages={languages}/>
