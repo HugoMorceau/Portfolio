@@ -1,0 +1,20 @@
+.Section{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 auto 100px auto;
+
+    /* For Tablet and Desktop */
+    @media screen and (min-width: 768px) {
+           /* Make some space for the top navbar */
+            scroll-margin-top: 5rem;
+            margin: 100px auto 150px auto;
+    }
+}
+
+.Section--title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }

@@ -1,6 +1,6 @@
 
 import './App.css'
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useTheme } from './themes/ThemeContext'
 import ButtonTheme from './components/Buttons/ButtonTheme/ButtonTheme'
@@ -58,12 +58,17 @@ function App () {
   const [currentPosition, setCurrentPosition] = useState('')
 
   // comportements
+  useEffect(() => {
+    if (currentPosition !== null) {
+      console.log('new position: ', currentPosition)
+    }
+  }, [currentPosition])
 
   const executeScroll = (ref) => {
     if (!ref) {
       ref = home
     }
-
+    console.log('previous position: ', currentPosition)
     ref.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
     setCurrentPosition(ref)
   }

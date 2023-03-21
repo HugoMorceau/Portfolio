@@ -14,7 +14,7 @@ body{
   background-color: var(--background-color);
   color: var(--text-color);
   line-height: 1.5;
-  overflow-x: hidden;  
+  /* overflow-x: hidden;   */
   box-sizing: border-box;
   height: 100vh;
   }
@@ -28,7 +28,7 @@ body{
 @media screen and (max-width: 768px) {
   .Main{
     width: 80%;
-    margin:  -120px auto 0 auto; /* TODO: handle it in section css */
+    margin:  0 auto 0 auto; /* TODO: handle it in section css */
     
   }
 }

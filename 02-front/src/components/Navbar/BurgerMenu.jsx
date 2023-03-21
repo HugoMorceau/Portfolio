@@ -35,7 +35,10 @@ const BurgerMenu = ({ handleClick, menuItem }) => {
   }
   const handleClickNavItem = (ref) => {
     setIsMenuOpen(false)
+    console.log('before handleClickRef')
+    console.log(ref)
     handleClick(ref)
+    console.log('after handleClickRef')
   }
   useEffect(() => {
     document.addEventListener('click', handleClickOutside)
