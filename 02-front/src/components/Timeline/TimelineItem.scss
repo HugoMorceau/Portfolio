@@ -104,8 +104,9 @@ $timeline-circle-size: 20px;
   }
 
   @media (max-width: 768px) {
-    left: calc(50% - #{$timeline-circle-size} / 2);
-    right: auto;
+    // left: calc(50% - #{$timeline-circle-size} / 2);
+    // right: auto;
+    display: none;
   }
 }
 
@@ -120,11 +121,11 @@ $timeline-circle-size: 20px;
     top: 15px;
     right: 15px;
     left: auto;
+     @media screen and (max-width: 768px) {
+      position: static;
+     }
   }
   @media screen and (max-width: 768px) {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    left: auto;
+    position: static;
   }
 }
