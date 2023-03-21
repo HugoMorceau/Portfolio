@@ -1,18 +1,58 @@
 .Intro{
     display: flex;
     flex-direction: column;
+    justify-content: left;
     /* align-items: flex-start; */
     width: 100%;
-    margin: 40px 20px 20px 40px;
+    // margin: 20px 20px 80px 40px;
+    text-align: left
+}
+.titles{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 0px;
 }
 
 .Intro .hello {
-    font-size: 2rem;
-    font-weight: 400;
-    color: var(--primary-color)
-
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--primary-color);
 }
-
+  
+  /* Mobile Medium */
+  @media screen and (min-width: 375px) {
+    .Intro .hello {
+      font-size: 1.4rem;
+      font-weight: 300;
+    }
+  }
+  
+  /* Mobile Large */ 
+  @media screen and (min-width: 414px) {
+    .Intro .hello {
+      font-size: 1.6rem;
+      font-weight: 300;
+    }
+  }
+  
+  /* Tablet Portrait */
+  @media screen and (min-width: 768px) {
+    .Intro .hello {
+      font-size: 1.8rem;
+      font-weight: 400;
+    //   margin: 40px 20px 20px 40px;
+    }
+  }
+  
+  /* Tablet Landscape and Desktop */
+  @media screen and (min-width: 1024px) {
+    .Intro .hello {
+      font-size: 2rem;
+      font-weight: 400;
+    }
+  }
 
  h1{
     font-size: 2.5rem;
@@ -22,20 +62,11 @@
  h2{
     font-size: 2rem;
     font-weight: 400;
-    
 }
 
 .Intro p {
     font-size: 1.2rem;
     font-weight: 400;
-}
-
-.titles{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin-left: 20px;
 }
 
 .photo-container{
@@ -63,9 +94,6 @@
 
 .buttons-container{
     display: flex;
-    justify-content: center;  
-    
-
-    
+    justify-content: center;    
 }
 
