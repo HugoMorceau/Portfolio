@@ -7,8 +7,8 @@ export const useTheme = () => {
   return useContext(ThemeContext)
 }
 
-export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState('light')
+export const ThemeProvider = ({ defaultTheme, children }) => {
+  const [theme, setTheme] = useState(defaultTheme)
 
   useEffect(() => {
     const root = document.documentElement
@@ -28,5 +28,6 @@ export const ThemeProvider = ({ children }) => {
 }
 
 ThemeProvider.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  defaultTheme: PropTypes.string.isRequired
 }

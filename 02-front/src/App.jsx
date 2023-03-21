@@ -1,7 +1,8 @@
 
 import './App.css'
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useMatomo } from '@datapunt/matomo-tracker-react'
 import { useTheme } from './themes/ThemeContext'
 import ButtonTheme from './components/Buttons/ButtonTheme/ButtonTheme'
 import BurgerMenu from './components/Navbar/BurgerMenu'
@@ -23,9 +24,24 @@ import languages from './assets/languages/languages.js'
 import Section from './components/Section/Section'
 
 function App () {
-  // console.log('render app')
+  // Imports
+  const { trackPageView } = useMatomo()
   const { t } = useTranslation()
   const { theme } = useTheme()
+
+  // States
+  // eslint-disable-next-line no-unused-vars
+  const [currentPosition, setCurrentPosition] = useState('')
+
+  // Refs
+  const home = useRef(null)
+  const skills = useRef(null)
+  const work = useRef(null)
+  const projects = useRef(null)
+  const contact = useRef(null)
+  const about = useRef(null)
+
+  // Arrow maps
   const arrowMap = {
     arrowUp: {
       light: arrowUpLight,
@@ -39,13 +55,7 @@ function App () {
   const arrowUp = arrowMap.arrowUp[theme]
   const arrowDown = arrowMap.arrowDown[theme]
 
-  // states
-  const home = useRef(null)
-  const skills = useRef(null)
-  const work = useRef(null)
-  const projects = useRef(null)
-  const contact = useRef(null)
-  const about = useRef(null)
+  // Destinations
   const destinations = [
     { key: 1, title: t('Home'), ref: home },
     { key: 2, title: t('About'), ref: about },
@@ -54,10 +64,13 @@ function App () {
     { key: 5, title: t('My Projects'), ref: projects },
     { key: 6, title: t('Contact Me'), ref: contact }
   ]
-  // eslint-disable-next-line no-unused-vars
-  const [currentPosition, setCurrentPosition] = useState('')
 
-  // comportements
+  // Effects
+  useEffect(() => {
+    trackPageView()
+  }, [trackPageView])
+
+  // Functions
   const executeScroll = (ref) => {
     if (!ref) {
       ref = home
@@ -93,7 +106,7 @@ function App () {
         <Section title='Skills' inConstruction={false} ref={skills}>
           <Skills/>
         </Section>
-        <Section title='Work Experience' inConstruction={true} ref={work}>
+        <Section title='Work Experience' inConstruction={false} ref={work}>
           <WorkXp></WorkXp>
         </Section>
         <Section title='My Projects' inConstruction={true} ref={projects}>
