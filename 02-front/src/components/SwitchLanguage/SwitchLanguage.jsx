@@ -18,7 +18,7 @@ export default function SwitchLanguage ({ languages, arrowDown }) {
     setIsDropdownOpen(!isDropdownOpen)
   }
   return (
-    <div className= {arrowDown ? 'lang' : 'lang-mobile'}>
+    <div className= {arrowDown && 'lang'}>
       {/* desktop */}
       {arrowDown && <div className='lang-container'>
         <img className="lang--arrow" src={arrowDown} alt='arrow down' height='20px' />
@@ -42,7 +42,7 @@ export default function SwitchLanguage ({ languages, arrowDown }) {
         </button>
       </div>}
       {/* mobile */}
-      {!arrowDown && <div>
+      {!arrowDown && <div className='lang-mobile'>
         {languages.map((language) => {
           return (
             <div className="lang-mobile--item" key={language.code} onClick={() => handleLanguageChange(language)}>
