@@ -87,8 +87,10 @@ function App () {
         {/* TODO: Disable for mobile ? */}
         <div className="App-header--top">
           <Navbar handleclick={executeScroll} liElt={destinations}/>
-          <ButtonTheme className ="theme-button" />
-          <SwitchLanguage languages={languages} arrowDown={arrowDown}/>
+          <div className="App-header--top__right">
+            <ButtonTheme className ="theme-button" />
+            <SwitchLanguage languages={languages} arrowDown={arrowDown}/>
+          </div>
         </div>
         <div className="App-header--mobile">
           <BurgerMenu handleClick={executeScroll} menuItem={destinations} />

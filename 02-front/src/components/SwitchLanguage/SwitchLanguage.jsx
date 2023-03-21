@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
 import { useTranslation } from 'react-i18next'
-import './SwitchLanguage.css'
+import './SwitchLanguage.scss'
 
 export default function SwitchLanguage ({ languages, arrowDown }) {
   const { i18n } = useTranslation()
@@ -18,8 +18,9 @@ export default function SwitchLanguage ({ languages, arrowDown }) {
     setIsDropdownOpen(!isDropdownOpen)
   }
   return (
-    <div>
-      {arrowDown && <div className="lang">
+    <div className= {arrowDown ? 'lang' : 'lang-mobile'}>
+      {/* desktop */}
+      {arrowDown && <div className='lang-container'>
         <img className="lang--arrow" src={arrowDown} alt='arrow down' height='20px' />
         <button className="lang--button" onMouseEnter={handleDropdownToggle} onMouseLeave={handleDropdownToggle}>
           <img src={activeLanguage.flag} alt={activeLanguage.name} height='25px' width= '25px' />
@@ -40,8 +41,8 @@ export default function SwitchLanguage ({ languages, arrowDown }) {
           }
         </button>
       </div>}
-      {!arrowDown && <div className="lang-mobile">
-
+      {/* mobile */}
+      {!arrowDown && <div>
         {languages.map((language) => {
           return (
             <div className="lang-mobile--item" key={language.code} onClick={() => handleLanguageChange(language)}>

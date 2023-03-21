@@ -33,17 +33,16 @@ body{
     
   }
 }
-
+/* Desktop */
 @media screen and (min-width: 768px) {
   .Main{
     width: 80%;
     margin:  100px auto;
-
   }
   .App-header--top {
     display: flex;
     align-items: center;
-    
+    justify-content: space-between;
     position: fixed;
     top: 0;
     z-index: 10;
@@ -52,6 +51,10 @@ body{
     padding: 1rem; 
     /* font-size: calc(10px + 2vmin); */
     width: 100%;
+  }
+  .App-header--top__right{
+    display: flex;
+    align-items: center;
   }
   .App-header--mobile{
     display: none;
