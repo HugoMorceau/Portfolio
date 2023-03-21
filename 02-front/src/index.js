@@ -12,7 +12,7 @@ import './i18n'
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
-    <ThemeProvider>
+    <ThemeProvider defaultTheme='dark'>
       <App />
     </ThemeProvider>
   </React.StrictMode>

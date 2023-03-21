@@ -93,7 +93,7 @@ function App () {
         <Section title='Skills' inConstruction={false} ref={skills}>
           <Skills/>
         </Section>
-        <Section title='Work Experience' inConstruction={true} ref={work}>
+        <Section title='Work Experience' inConstruction={false} ref={work}>
           <WorkXp></WorkXp>
         </Section>
         <Section title='My Projects' inConstruction={true} ref={projects}>
