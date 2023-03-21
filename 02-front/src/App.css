@@ -22,7 +22,7 @@ body{
 
   
 .App-header--top {
-  display: none
+  display: none;
 }
 
 /* Mobile */
@@ -33,25 +33,28 @@ body{
     
   }
 }
-
+/* Desktop */
 @media screen and (min-width: 768px) {
   .Main{
     width: 80%;
     margin:  100px auto;
-
   }
   .App-header--top {
     display: flex;
     align-items: center;
-    
+    justify-content: space-between;
     position: fixed;
     top: 0;
     z-index: 10;
     background-color: var(--secondary-color);
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.2); 
     padding: 1rem; 
-    font-size: calc(10px + 2vmin);
+    /* font-size: calc(10px + 2vmin); */
     width: 100%;
+  }
+  .App-header--top__right{
+    display: flex;
+    align-items: center;
   }
   .App-header--mobile{
     display: none;
@@ -61,9 +64,11 @@ body{
   cursor: pointer;
   margin-right: 50px;
   margin-left: 50px;
+  font-size: 1.5rem;
 }
 .theme-button:hover {
   scale : 1.15;
+  color: var(--themeButtonColor);
 }
 
 .App-link:hover {

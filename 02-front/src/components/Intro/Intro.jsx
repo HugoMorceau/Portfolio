@@ -52,19 +52,21 @@ export default function Intro () {
 
   return (
     <div className='Intro'>
-      <div className='titles' >
-        <div className='hello'>{hello}</div>
-        <h1 className=' '>HUGO MORCEAU</h1>
-        <h2>Full Stack Web Developer</h2>
-      </div>
-      <div className='toto'>
+      <div className ='Intro--header'>
+        <div className='titles' >
+          <div className='hello'>{hello}</div>
+          <h1 className=' '>HUGO MORCEAU</h1>
+          <h2>Full Stack Web Developer</h2>
+        </div>
+        {/* <div> */}
         <div className='photo-container'>
           <img
             src= {profil}
             alt='Hugo Morceau' />
         </div>
-        <div className='background'></div>
       </div>
+      {/* <div className='background'></div> */}
+      {/* </div> */}
       <p>{t('Intro')}</p>
       <div className='buttons-container'>
         {/* View Resume */}

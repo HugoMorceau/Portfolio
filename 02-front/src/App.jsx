@@ -68,7 +68,7 @@ function App () {
   // Effects
   useEffect(() => {
     trackPageView()
-  }, [trackPageView])
+  }, [])
 
   // Functions
   const executeScroll = (ref) => {
@@ -87,8 +87,10 @@ function App () {
         {/* TODO: Disable for mobile ? */}
         <div className="App-header--top">
           <Navbar handleclick={executeScroll} liElt={destinations}/>
-          <ButtonTheme className ="theme-button" />
-          <SwitchLanguage languages={languages} arrowDown={arrowDown}/>
+          <div className="App-header--top__right">
+            <ButtonTheme className ="theme-button" />
+            <SwitchLanguage languages={languages} arrowDown={arrowDown}/>
+          </div>
         </div>
         <div className="App-header--mobile">
           <BurgerMenu handleClick={executeScroll} menuItem={destinations} />
@@ -109,7 +111,7 @@ function App () {
         <Section title='Work Experience' inConstruction={false} ref={work}>
           <WorkXp></WorkXp>
         </Section>
-        <Section title='My Projects' inConstruction={true} ref={projects}>
+        <Section title='My Projects' inConstruction={false} ref={projects}>
           <Projects />
         </Section>
         <Section title="Contact" inConstruction={false} ref={contact}>
