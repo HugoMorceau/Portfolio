@@ -10,17 +10,9 @@ const BurgerMenu = ({ handleClick, menuItem }) => {
   const menuContainerRef = useRef(null)
   const burgerButtonRef = useRef(null)
   const handleClickBurger = () => {
-    console.log('click burger')
     setIsMenuOpen(prevIsMenuOpen => !prevIsMenuOpen)
   }
-  // const handleClickOutside = (e) => {
-  //   if (isMenuOpen && !e.target.closest('.burger-menu-item-container') && !e.target.closest('.burger-menu-button')) {
-  //     setIsMenuOpen(false)
-  //   }
-  // }
   const handleClickOutside = (e) => {
-    console.log(e.target)
-    console.log(menuContainerRef.current.contains(e.target))
     if (
       isMenuOpen &&
       burgerButtonRef.current &&
@@ -29,16 +21,12 @@ const BurgerMenu = ({ handleClick, menuItem }) => {
        !menuContainerRef.current.contains(e.target) &&
         !e.target.closest('svg')
     ) {
-      console.log(e.target)
       setIsMenuOpen(false)
     }
   }
   const handleClickNavItem = (ref) => {
     setIsMenuOpen(false)
-    console.log('before handleClickRef')
-    console.log(ref)
     handleClick(ref)
-    console.log('after handleClickRef')
   }
   useEffect(() => {
     document.addEventListener('click', handleClickOutside)
