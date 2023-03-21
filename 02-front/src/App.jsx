@@ -58,12 +58,10 @@ function App () {
   const [currentPosition, setCurrentPosition] = useState('')
 
   // comportements
-
   const executeScroll = (ref) => {
     if (!ref) {
       ref = home
     }
-
     ref.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
     setCurrentPosition(ref)
   }
