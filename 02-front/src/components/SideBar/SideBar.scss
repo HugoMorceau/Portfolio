@@ -4,23 +4,20 @@
     left: 5%;
     height: 100%;
     z-index: 100;
-    transform: translateX(-100%);
-    transition: 2s ease-in-out;
+    transform: translateX(-300%);
+    // transition: 2s ease-in-out;
+    transition: transform 2s ease-in-out, top 2s ease-in-out;
     @media screen and (max-width: 768px) {
         left: 7%;
     }
 }
 
 .sidebar .icon-wrapper{
-    /* color: white;
-    background-color: black */
+
 }
 
 .sidebar .icon{
-    /* color: var(--text-color); */
     color: var(--primary-color);
-    /* border: 1px solid var(--text-color); */
-    /* background-color: white; */
     @media screen and (max-width: 768px) {
         font-size: 1.5rem;
         margin-top: 10px;
@@ -28,11 +25,11 @@
 }
 
 .sidebar .icon:hover {
-    /*color: var(--primary-color);*/
     color: var(--text-color); 
     scale: 1.2;
 }
 
 .sidebar.active {
-    top: 50%;
+    top: 30%;
+    transform: translateX(-80%);
   }

@@ -5,13 +5,18 @@
     /* align-items: flex-start; */
     width: 100%;
     // margin: 20px 20px 80px 40px;
-    text-align: left
+    text-align: left;
+
+    /* Desktop */
+    @media screen and (min-width: 768px) {
+        // align-items: center;      
+    }
 }
 .titles{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    // justify-content: center;
+    // align-items: flex-start;
     margin-left: 0px;
 }
 
@@ -97,3 +102,18 @@
     justify-content: center;    
 }
 
+
+.Intro--header{
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      align-items: center;
+    }
+}
