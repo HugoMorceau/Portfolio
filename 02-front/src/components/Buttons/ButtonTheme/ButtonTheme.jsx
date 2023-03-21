@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 
 const ButtonTheme = ({ className, size }) => {
   const { theme, toggleTheme } = useTheme()
-  console.log('theme', theme)
   const isLightTheme = theme === 'light'
 
   return (
