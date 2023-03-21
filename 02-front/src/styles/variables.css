@@ -13,9 +13,10 @@
 
 .light-theme {
     --primary-color: #6498f1; /* blue  */
-    /*--secondary-color: #fefefefe; /* header, rectangles */
-    --secondary-color: #f7f7f7; /* header, rectangles */
+    /* --secondary-color: #f7f7f7; */
+    --secondary-color: #f3f3f3; /* header, rectangles */
     --tertiary-color: #242424;
-    --background-color: #fefefefe;
+    /* --background-color: #fefefefe; */
+    --background-color: #f3f3f3;
     --text-color: #181818;
 }

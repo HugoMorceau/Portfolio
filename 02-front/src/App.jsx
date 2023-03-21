@@ -68,7 +68,7 @@ function App () {
   // Effects
   useEffect(() => {
     trackPageView()
-  }, [trackPageView])
+  }, [])
 
   // Functions
   const executeScroll = (ref) => {

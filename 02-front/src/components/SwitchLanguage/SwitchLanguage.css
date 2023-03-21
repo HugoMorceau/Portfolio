@@ -16,8 +16,8 @@
 }
 
 .lang--button img{
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
    /* border: var(--text-color) 2px solid;  */
 }

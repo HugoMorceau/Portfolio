@@ -22,7 +22,7 @@ body{
 
   
 .App-header--top {
-  display: none
+  display: none;
 }
 
 /* Mobile */
@@ -50,7 +50,7 @@ body{
     background-color: var(--secondary-color);
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.2); 
     padding: 1rem; 
-    font-size: calc(10px + 2vmin);
+    /* font-size: calc(10px + 2vmin); */
     width: 100%;
   }
   .App-header--mobile{
