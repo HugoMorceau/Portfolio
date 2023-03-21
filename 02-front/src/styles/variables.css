@@ -9,6 +9,7 @@
     --tertiary-color: #bebebe;
     --background-color: #181818;
     --text-color: #eee;
+    --themeButtonColor: #ffbf00;
 }
 
 .light-theme {
@@ -19,4 +20,5 @@
     /* --background-color: #fefefefe; */
     --background-color: #f3f3f3;
     --text-color: #181818;
+    --themeButtonColor: var(--primary-color);
 }
