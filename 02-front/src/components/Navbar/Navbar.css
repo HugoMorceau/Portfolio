@@ -1,37 +1,36 @@
 
-.App-nav{
+.Navbar{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 0 1rem;
 }
 
-.App-nav--ul{
+.Navbar--ul{
   display: flex;
   flex-direction: column;;
 }
-.App-nav--li{
+.Navbar--li{
   list-style: none;
   margin: 0 1rem;
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1rem;
 }
 
 @media screen and (min-width: 768px) {
-  .App-nav{
+  .Navbar{
     flex-direction: row;
     justify-content: space-between;
     margin: 0 1rem;
   }
   
-  .App-nav--ul{
+  .Navbar--ul{
     display: flex;
     flex-direction: row;
   }
-  .App-nav--li{
+  .Navbar--li{
     list-style: none;
     margin: 0 1rem;
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 15px;
+    /* font-weight: 600; */
   }
 }
