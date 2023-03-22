@@ -4,6 +4,7 @@ import './Intro.scss'
 import ButtonFlashy from '../Buttons/ButtonFlashy/ButtonFlashy'
 import Button from '../Buttons/Button/Button'
 import { useTranslation } from 'react-i18next'
+import { trackCVDownload, trackCVView } from '../../matomo/matomoTracker'
 // import i18n from '../../i18n'
 
 const profil = require('../../assets/images/profil.jpg')
@@ -70,12 +71,17 @@ export default function Intro () {
       <p>{t('Intro')}</p>
       <div className='buttons-container'>
         {/* View Resume */}
-        <a href={`${process.env.PUBLIC_URL}/resume/${t('CV file')}`} target="_blank" rel="noopener noreferrer">
+        <a href={`${process.env.PUBLIC_URL}/resume/${t('CV file')}`}
+          target="_blank" rel="noopener noreferrer"
+          onClick={() => trackCVView(t('CV file'))}
+        >
           <Button text={t('View CV')} />
         </a>
         {/* Download Resume */}
         <a href={`${process.env.PUBLIC_URL}/resume/${t('CV file')}`}
-          download={t('CV file')}>
+          download={t('CV file')}
+          onClick={() => trackCVDownload(t('CV file'))}
+        >
           <ButtonFlashy text={t('Download CV')}/>
         </a>
       </div>

@@ -5,14 +5,15 @@ import './styles/variables.css'
 import App from './App'
 import { ThemeProvider } from './themes/ThemeContext'
 import reportWebVitals from './reportWebVitals'
-import { MatomoProvider, createInstance } from '@datapunt/matomo-tracker-react'
+import { MatomoProvider } from '@datapunt/matomo-tracker-react'
+import matomoInstance from './matomo/matomoInstance'
 
 // Language translation
 import './i18n'
-const matomoInstance = createInstance({
-  urlBase: 'https://hugomorceau.com/matomo/',
-  siteId: 1
-})
+// const matomoInstance = createInstance({
+//   urlBase: 'https://hugomorceau.com/matomo/',
+//   siteId: 1
+// })
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
