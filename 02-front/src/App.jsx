@@ -26,7 +26,7 @@ import Section from './components/Section/Section'
 function App () {
   // Imports
   const { trackPageView } = useMatomo()
-  const { t } = useTranslation()
+  const { i18n, t } = useTranslation()
   const { theme } = useTheme()
 
   // States
@@ -69,6 +69,10 @@ function App () {
   useEffect(() => {
     trackPageView()
   })
+  useEffect(() => {
+    // Met à jour l'attribut `lang` de l'élément `<html>` en fonction de la langue actuelle
+    document.documentElement.lang = i18n.language
+  }, [i18n.language])
 
   // Functions
   const executeScroll = (ref) => {
