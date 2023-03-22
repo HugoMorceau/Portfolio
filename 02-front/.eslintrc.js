@@ -15,7 +15,7 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: [
-    'react'
+    'react', 'react-hooks'
   ],
   settings: {
     react: {
@@ -26,8 +26,8 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     indent: ['error', 2],
     'react/jsx-indent': ['error', 2],
-    'react/jsx-indent-props': ['error', 2]
-    // 'react-hooks/rules-of-hooks': 'error'
+    'react/jsx-indent-props': ['error', 2],
+    'react-hooks/rules-of-hooks': 'error'
     // 'react-hooks/exhaustive-deps': 'warn'
   }
 }
