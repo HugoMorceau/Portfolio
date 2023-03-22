@@ -3,9 +3,12 @@
     flex-direction: column;
     justify-content: left;
     /* align-items: flex-start; */
-    width: 100%;
+    width: 80%;
     // margin: 20px 20px 80px 40px;
     text-align: left;
+    p{
+      text-align: center;
+    }
 
     /* Desktop */
     @media screen and (min-width: 768px) {

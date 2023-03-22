@@ -4,7 +4,21 @@
     width: 100%;
 }
 
-/* TODO: RESPONSIVE*/
+
+.About{
+    @media screen and (min-width: 768px) {
+    
+        display: contents;
+        p {
+            width: 80%;
+            align-self: center;
+            margin: 0 auto;
+        }
+    }
+        
+
+}
+
 .resume-container{
     display: flex;
     justify-content: center;
