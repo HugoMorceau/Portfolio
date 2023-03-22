@@ -1,5 +1,5 @@
 import skills from '../../data/skills/skillsFR.js'
-import './Skills.css'
+import './Skills.scss'
 // import logo from '../../logo.svg'
 import {
   FaHtml5, FaCss3, FaNodeJs, FaReact, FaDatabase, FaGithub,

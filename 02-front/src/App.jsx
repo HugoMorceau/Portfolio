@@ -1,5 +1,5 @@
 
-import './App.css'
+import './App.scss'
 import React, { useRef, useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useMatomo } from '@datapunt/matomo-tracker-react'
@@ -68,7 +68,7 @@ function App () {
   // Effects
   useEffect(() => {
     trackPageView()
-  }, [])
+  })
 
   // Functions
   const executeScroll = (ref) => {
