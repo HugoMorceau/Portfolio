@@ -12,6 +12,7 @@ export default function Projects () {
         return (
           <div key={project.id} className='Project-wrapper'>
             <div>{project.name.toUpperCase()}</div>
+            <img src={project.image[0]} alt={project.name} />
             <div>{project.description}</div>
             <div className='tag-container'>
               {/* TODO: Fil tag from real data */}
