@@ -1,23 +1,36 @@
 .Projects {
-  max-width: 100%;
   width: 100%;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   margin: 0 -1rem;
+  @media screen and (min-width: 768px) {
+    // justify-content: flex-start;
+    
+  }
 }
 
 .Project {
+
   background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
+  
+  
+  // width: 100%;
+  min-width: 280px;
+  
   padding: 0.5rem;
   margin: 1rem;
-  max-width: 30%;
   text-align: left;
   border-radius: 0.3rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  @media screen and (min-width: 768px) {
+    width: 30%;    
+  }
+
 }
 
 .Project:hover {
@@ -26,9 +39,9 @@
 }
 
 .Project__image {
-  width: 250px;
-  height: 150px;
-  object-fit: cover;
+  max-width: 250px;
+  max-height: 150px;
+  object-fit: cover;;
 }
 
 .Project__tags {
@@ -59,10 +72,15 @@
 
 .Project__actions {
   display: flex;
-  justify-content: flex-start;
-  margin-top: 0.5rem;
+  margin-top: 2rem;
+  width: 100%;
+  align-items: baseline;
 }
 
 .Project__action {
-  margin-right: 1rem;
+  margin: 0 1rem;
+  :hover
+  {
+    color: var(--primary-color);
+  }
 }
