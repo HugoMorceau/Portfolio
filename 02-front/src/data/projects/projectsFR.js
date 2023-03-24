@@ -1,5 +1,4 @@
 import unimetrixImages from '../../assets/images/projects/unimetrix'
-console.log(unimetrixImages)
 const projects = [
   {
     id: 1,
