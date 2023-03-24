@@ -10,6 +10,7 @@
     --background-color: #181818;
     --text-color: #eee;
     --themeButtonColor: #ffbf00;
+    transition: all 0.5s ease;
 }
 
 .light-theme {
@@ -21,4 +22,5 @@
     --background-color: #f3f3f3;
     --text-color: #181818;
     --themeButtonColor: var(--primary-color);
+    transition: all 0.5s ease;
 }

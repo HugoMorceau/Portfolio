@@ -24,7 +24,7 @@ const TimelineItem = ({
     <div className="timeline-item">
       <div className="timeline-item-content">
 
-        <div className={'category ' + category}>
+        <div className={'category ' + category.toLowerCase()}>
           {IconComponent && <IconComponent size="1.5rem" color= {iconMap[iconCategory].color}/>}
         </div>
         <div className='title'>{title}</div>
