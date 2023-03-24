@@ -17,4 +17,4 @@ export { BsMoonStars, BsSun } from 'react-icons/bs'
 
 export { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa'
 
-export { FiGithub, FiLinkedin, FiTwitter, FiMail } from 'react-icons/fi'
+export { FiGithub, FiLinkedin, FiTwitter, FiMail, FiExternalLink, FiMoreHorizontal } from 'react-icons/fi'

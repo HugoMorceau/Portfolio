@@ -4,7 +4,7 @@ const projects = [
   {
     id: 1,
     name: 'mini games',
-    description: 'Description',
+    description: 'A collection of mini games',
     image: miniGamesImages,
     date: '20220801',
     link: 'mini-games.hugomorceau.com',
@@ -24,7 +24,7 @@ const projects = [
   {
     id: 3,
     name: 'Mark My Words',
-    description: 'Description',
+    description: 'Currently in development',
     image: [],
     date: '20230401',
     link: '',
@@ -34,7 +34,7 @@ const projects = [
   {
     id: 4,
     name: 'Portfolio',
-    description: 'Description',
+    description: 'This website',
     image: [],
     date: '20230301',
     link: 'hugomorceau.com',
