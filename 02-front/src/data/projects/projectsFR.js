@@ -8,7 +8,7 @@ const projects = [
     description: 'A collection of mini games',
     image: miniGamesImages,
     date: '20220801',
-    link: 'mini-games.hugomorceau.com',
+    link: 'https://mini-games.hugomorceau.com',
     github: 'https://github.com/HugoMorceau/HugoMorceau.github.io',
     tags: ['JavaScript', 'CSS', 'HTML', 'Node', 'Express', 'Postegresql']
   },
