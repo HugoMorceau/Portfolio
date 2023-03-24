@@ -18,7 +18,7 @@ const projects = [
     date: '2022',
     link: '',
     github: '',
-    tags: ['React', 'JavaScript', 'CSS']
+    tags: ['React', 'JavaScript', 'CSS', 'Nodejs', 'Express', 'Postegresql', 'Nginx', 'Pm2']
   },
   {
     id: 3,
