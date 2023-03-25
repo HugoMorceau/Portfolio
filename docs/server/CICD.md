@@ -3,28 +3,41 @@
 https://www.youtube.com/watch?v=6-RtA6FlbgQ
 
 ## User
-Namming conv : 
+Namming conv :
+pm2 process             user 
 portfolio-dev-front portfolio
 portfolio-prod-front portfolio-prod
 
 adduser username 
 sudo usermod -aG sudo username
-
 su username
-sudo chmod -R 777 /var/www/dev/portfolio 
+sudo chown -R user: /var/www/env/folder/
+sudo chmod -R 750 /var/www/env/folder/
+
 
 (si pb de droits Ou sudo chmod -R 777 /root/Portfolio || sudo chmod -R 777 /root )
 
- sudo ./svc.sh install
- sudo ./svc.sh start
+Create runner on github, see : https://youtu.be/6-RtA6FlbgQ?t=2316
+
+download runner inside the folder, validate hash and extract
+configure the runner via the cmd on github
+    runner group: enter to let to default
+    runner name : project-env-front/back/full
+             ex : portfolio-dev-front
+    labels : env front/back/full seprated by comma
+             ex : dev,front
+                  prod,back
+    work dir : enter to let to default
+sudo ./svc.sh install
+sudo ./svc.sh start
+
+NGINX 
+sudo visudo -f /etc/sudoers.d/diablo
+diablo ALL=(ALL) NOPASSWD: /usr/sbin/service nginx start,/usr/sbin/service nginx stop,/user/sbin/service nginx restart
  
- sudo visudo -f /etc/sudoers.d/diablo
- diablo ALL=(ALL) NOPASSWD: /usr/sbin/service nginx start,/usr/sbin/service nginx stop,/user/sbin/service nginx restart
- 
- 
- uninstall : 
- sudo ./svc.sh uninstall
- ./config.sh remove --token ENTERTOKENHERE
+For uninstall runner : 
+sudo ./svc.sh uninstall
+./config.sh remove --token ENTERTOKENHERE
  
  
 
