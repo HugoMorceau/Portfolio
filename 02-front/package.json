@@ -7,8 +7,10 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "env-cmd": "^10.1.0",
     "i18next": "^22.4.10",
     "moment": "^2.29.4",
+    "next": "^13.2.4",
     "node-sass": "^7.0.3",
     "react": "^18.2.0",
     "react-burger-menu": "^3.0.9",
@@ -16,18 +18,24 @@
     "react-i18next": "^12.2.0",
     "react-icons": "^4.8.0",
     "react-responsive-carousel": "^3.2.23",
-    "react-scripts": "^5.0.1",
     "sass-loader": "^13.2.0",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },
-  "scripts": {
+  "scriptssav": {
     "start": "react-scripts start",
     "start:test": "react-scripts start",
     "build": "react-scripts build",
     "build:test": "PORT=3100 react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build:test": "env-cmd -f .env.test.local next build",
+    "start": "next start -p $NEXT_PUBLIC_PORT",
+    "start:test": "env-cmd -f .env.test.local next start -p $NEXT_PUBLIC_PORT"
   },
   "eslintConfig": {
     "extends": [
