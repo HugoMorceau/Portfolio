@@ -14,9 +14,8 @@ import {
 } from '../components'
  
 // assets
-import languages from '/public/assets/languages/languages.js'
+import languages from '../config/languages/languages.js'
 import Section from '../components/Section/Section'
-
 function App () {
   // Imports
   const { trackPageView } = useMatomo()

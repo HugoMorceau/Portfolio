@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react'
-import './Intro.module.scss'
+import styles from './Intro.module.scss'
 import ButtonFlashy from '../Buttons/ButtonFlashy/ButtonFlashy'
 import Button from '../Buttons/Button/Button'
 import { useTranslation } from 'react-i18next'
 import { trackCVDownload, trackCVView } from '../../config/matomo/matomoTracker'
+import Image from 'next/image'
 // import i18n from '../../i18n'
 
-const profil = require('../../public/assets/images/profil.jpg')
+// const profil = require('../../public/assets/images/profil.jpg')
 
 export default function Intro () {
   const hellos = ['Hello there, I am', 'Hola, soy', 'Bonjour, je suis']
@@ -51,8 +52,8 @@ export default function Intro () {
   }
 
   return (
-    <div className='Intro'>
-      <div className ='Intro--header'>
+    <div className= {styles.Intro}>
+    <div className={styles.Intro--header}>
         <div className='titles' >
           <div className='hello'>{hello}</div>
           <h1 className='h1'>HUGO MORCEAU</h1>
@@ -60,9 +61,16 @@ export default function Intro () {
         </div>
         {/* <div> */}
         <div className='photo-container'>
-          <img
+          {/* <img
             src= {profil}
-            alt='Hugo Morceau' />
+            alt='Hugo Morceau' /> */}
+          <Image
+            src={'/assets/images/profil.jpg'}
+            alt='Hugo Morceau'
+            width={200}
+            height={200}
+            
+          />
         </div>
       </div>
       {/* <div className='background'></div> */}
