@@ -14,12 +14,6 @@ import {
 } from '../components'
  
 // assets
-// import arrowUpLight from '/assets/arrow/arrowUpLight.svg'
-import arrowUpLight from '/public/assets/arrow/arrowUpLight.svg'
-
-import arrowUpDark from '/public/assets/arrow/arrowUpDark.svg'
-import arrowDownLight from '/public/assets/arrow/arrowDownLight.svg'
-import arrowDownDark from '/public/assets/arrow/arrowDownDark.svg'
 import languages from '/public/assets/languages/languages.js'
 import Section from '../components/Section/Section'
 
@@ -43,12 +37,12 @@ function App () {
   // Arrow maps
   const arrowMap = {
     arrowUp: {
-      light: arrowUpLight,
-      dark: arrowUpDark
+      light:'assets/arrow/arrowUpLight.svg',
+      dark: 'assets/arrow/arrowUpDark.svg'
     },
     arrowDown: {
-      light: arrowDownLight,
-      dark: arrowDownDark
+      light: 'assets/arrow/arrowDownLight.svg',
+      dark: 'assets/arrow/arrowDownDark.svg'
     }
   }
   const arrowUp = arrowMap.arrowUp[theme]
