@@ -1,10 +1,10 @@
 import React from 'react'
-import './TimelineItem.scss'
+import './TimelineItem.module.scss'
 import { PropTypes } from 'prop-types'
 import moment from 'moment'
 
 import { MdOutlineSchool, MdOutlineWorkOutline, MdLightbulbOutline }
-  from '../../assets/icons/icons.js'
+  from '../../config/icons/icons.js'
 
 const iconMap = {
   experience: { icon: MdOutlineWorkOutline, color: '#6498f1' },

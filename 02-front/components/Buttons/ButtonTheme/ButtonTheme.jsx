@@ -1,5 +1,5 @@
-import { useTheme } from '../../../themes/ThemeContext'
-import { BsMoonStars, BsSun } from '../../../assets/icons/icons'
+import { useTheme } from '../../../config/themes/ThemeContext'
+import { BsMoonStars, BsSun } from '../../../config/icons/icons'
 import PropTypes from 'prop-types'
 
 const ButtonTheme = ({ className, size }) => {

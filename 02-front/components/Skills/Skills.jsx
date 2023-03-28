@@ -1,10 +1,10 @@
 import skills from '../../data/skills/skillsFR.js'
-import './Skills.scss'
+import './Skills.module.scss'
 // import logo from '../../logo.svg'
 import {
   FaHtml5, FaCss3, FaNodeJs, FaReact, FaDatabase, FaGithub,
   SiIbm, IoCodeSlash, TbRelationOneToMany
-} from '../../assets/icons/icons.js'
+} from '../../config/icons/icons.js'
 
 const iconMap = {
   fahtml5: FaHtml5,

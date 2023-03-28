@@ -1,5 +1,5 @@
 import ContactForm from './ContactForm'
-import './contact.scss'
+import './contact.module.scss'
 
 export default function Contact () {
   // state

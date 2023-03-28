@@ -1,8 +1,8 @@
 // import { useTranslation } from 'react-i18next'
 import projects from '../../data/projects/projectsFR.js'
-import './Projects.scss'
-import { FiGithub, FiExternalLink } from '../../assets/icons/icons'
-import noImage from '../../assets/images/Image_not_available.png'
+import './Projects.module.scss'
+import { FiGithub, FiExternalLink } from '../../config/icons/icons'
+import noImage from '../../public/assets/images/Image_not_available.png'
 
 export default function Projects () {
   return (

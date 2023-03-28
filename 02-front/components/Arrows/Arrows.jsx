@@ -1,5 +1,5 @@
 import { PropTypes } from 'prop-types'
-import './Arrows.scss'
+import './Arrows.module.scss'
 export default function Arrows ({ handleClick, arrowUp }) {
   return (
     <div className='App-arrow'>

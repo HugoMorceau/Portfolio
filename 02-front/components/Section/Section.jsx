@@ -2,7 +2,7 @@ import { PropTypes } from 'prop-types'
 import { forwardRef } from 'react'
 import { useTranslation } from 'react-i18next' // Importez useTranslation depuis react-i18next
 import Construction from '../Construction/Construction'
-import './Section.scss'
+import './Section.module.scss'
 
 const Section = forwardRef(function Section (props, ref) {
   const { title, inConstruction } = props

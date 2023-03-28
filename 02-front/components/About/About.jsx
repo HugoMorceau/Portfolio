@@ -1,4 +1,4 @@
-import './About.scss'
+import './About.module.scss'
 import Button from '../Buttons/Button/Button'
 import { useTranslation } from 'react-i18next'
 

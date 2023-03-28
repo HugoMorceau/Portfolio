@@ -22,10 +22,12 @@
     margin-bottom: 10px;
 }
 
-.contact form > input, textarea {
+.contact form {
+    > input, textarea {
     background-color: var(--secondary-color); 
     padding: 5px;     
     border: none;   
+    }
 }
 
 .contact form > button {

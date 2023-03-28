@@ -1,12 +1,11 @@
 import '../styles/index.scss'
 import '../styles/variables.css'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
-import { ThemeProvider } from '../themes/ThemeContext'
+import { ThemeProvider } from '../config/themes/ThemeContext'
 import { MatomoProvider } from '@datapunt/matomo-tracker-react'
-import matomoInstance from '../matomo/matomoInstance'
-import '../i18n'
+import matomoInstance from '../config/matomo/matomoInstance'
+import '../config/i18n'
 
-// eslint-disable-next-line react/prop-types
 function MyApp ({ Component, pageProps }) {
   return (
     <MatomoProvider value={matomoInstance}>

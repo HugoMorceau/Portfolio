@@ -1,4 +1,4 @@
-import './Construction.scss'
+import './Construction.module.scss'
 import { MdConstruction } from 'react-icons/md'
 import PropTypes from 'prop-types'
 

@@ -1,13 +1,12 @@
-
 import { useState, useEffect } from 'react'
-import './Intro.scss'
+import './Intro.module.scss'
 import ButtonFlashy from '../Buttons/ButtonFlashy/ButtonFlashy'
 import Button from '../Buttons/Button/Button'
 import { useTranslation } from 'react-i18next'
-import { trackCVDownload, trackCVView } from '../../matomo/matomoTracker'
+import { trackCVDownload, trackCVView } from '../../config/matomo/matomoTracker'
 // import i18n from '../../i18n'
 
-const profil = require('../../assets/images/profil.jpg')
+const profil = require('../../public/assets/images/profil.jpg')
 
 export default function Intro () {
   const hellos = ['Hello there, I am', 'Hola, soy', 'Bonjour, je suis']
@@ -56,8 +55,8 @@ export default function Intro () {
       <div className ='Intro--header'>
         <div className='titles' >
           <div className='hello'>{hello}</div>
-          <h1 className=' '>HUGO MORCEAU</h1>
-          <h2>Full Stack Web Developer</h2>
+          <h1 className='h1'>HUGO MORCEAU</h1>
+          <h2 className='h2'>Full Stack Web Developer</h2>
         </div>
         {/* <div> */}
         <div className='photo-container'>

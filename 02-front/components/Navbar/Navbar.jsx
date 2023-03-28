@@ -1,6 +1,6 @@
 
 import PropTypes from 'prop-types'
-import './Navbar.scss'
+import './Navbar.module.scss'
 
 export default function Navbar ({ handleclick, liElt }) {
   return (

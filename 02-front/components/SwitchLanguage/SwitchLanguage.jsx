@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
 import { useTranslation } from 'react-i18next'
-import './SwitchLanguage.scss'
+import './SwitchLanguage.module.scss'
 
 export default function SwitchLanguage ({ languages, arrowDown }) {
   const { i18n } = useTranslation()
@@ -61,8 +61,8 @@ SwitchLanguage.propTypes = {
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       code: PropTypes.string.isRequired,
-      flag: PropTypes.string
+      flag: PropTypes.object
     }).isRequired
   ).isRequired,
-  arrowDown: PropTypes.string
+  arrowDown: PropTypes.object
 }

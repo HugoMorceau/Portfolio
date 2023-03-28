@@ -1,7 +1,7 @@
-import './BurgerMenu.scss'
+import './BurgerMenu.module.scss'
 import PropTypes from 'prop-types'
 import ButtonTheme from '../Buttons/ButtonTheme/ButtonTheme'
-import languages from '../../assets/languages/languages.js'
+import languages from '../../public/assets/languages/languages.js'
 import SwitchLanguage from '../SwitchLanguage/SwitchLanguage'
 import { useState, useEffect, useRef } from 'react'
 

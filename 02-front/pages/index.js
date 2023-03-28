@@ -1,11 +1,9 @@
-
-import './App.scss'
 import React, { useRef, useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useMatomo } from '@datapunt/matomo-tracker-react'
-import { useTheme } from './themes/ThemeContext'
-import ButtonTheme from './components/Buttons/ButtonTheme/ButtonTheme'
-import BurgerMenu from './components/Navbar/BurgerMenu'
+import { useTheme } from '../config/themes/ThemeContext'
+import ButtonTheme from '../components/Buttons/ButtonTheme/ButtonTheme'
+import BurgerMenu from '../components/Navbar/BurgerMenu'
 
 // components
 import {
@@ -13,15 +11,17 @@ import {
   Contact, Navbar, SwitchLanguage,
   Arrows, /* Construction */
   Sidebar
-} from './components'
-
+} from '../components'
+ 
 // assets
-import arrowUpLight from './assets/arrow/arrowUpLight.svg'
-import arrowUpDark from './assets/arrow/arrowUpDark.svg'
-import arrowDownLight from './assets/arrow/arrowDownLight.svg'
-import arrowDownDark from './assets/arrow/arrowDownDark.svg'
-import languages from './assets/languages/languages.js'
-import Section from './components/Section/Section'
+// import arrowUpLight from '/assets/arrow/arrowUpLight.svg'
+import arrowUpLight from '/public/assets/arrow/arrowUpLight.svg'
+
+import arrowUpDark from '/public/assets/arrow/arrowUpDark.svg'
+import arrowDownLight from '/public/assets/arrow/arrowDownLight.svg'
+import arrowDownDark from '/public/assets/arrow/arrowDownDark.svg'
+import languages from '/public/assets/languages/languages.js'
+import Section from '../components/Section/Section'
 
 function App () {
   // Imports
@@ -30,7 +30,6 @@ function App () {
   const { theme } = useTheme()
 
   // States
-  // eslint-disable-next-line no-unused-vars
   const [currentPosition, setCurrentPosition] = useState('')
 
   // Refs

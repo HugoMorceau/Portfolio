@@ -1,8 +1,8 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
-import translationEN from './assets/translations/translationEN'
-import translationES from './assets/translations/translationES'
-import translationFR from './assets/translations/translationFR'
+import translationEN from './translations/translationEN'
+import translationES from './translations/translationES'
+import translationFR from './translations/translationFR'
 // the translations
 // (tip move them in a JSON file and import them,
 // or even better, manage them separated from your code: https://react.i18next.com/guides/multiple-translation-files)
