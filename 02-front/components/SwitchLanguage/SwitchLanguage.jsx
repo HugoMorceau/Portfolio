@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
 import { useTranslation } from 'react-i18next'
-import './SwitchLanguage.module.scss'
+import styles from './SwitchLanguage.module.scss'
 
 export default function SwitchLanguage ({ languages, arrowDown }) {
   const { i18n } = useTranslation()
@@ -18,21 +18,21 @@ export default function SwitchLanguage ({ languages, arrowDown }) {
     setIsDropdownOpen(!isDropdownOpen)
   }
   return (
-    <div className= {arrowDown && 'lang'}>
+    <div className={arrowDown ? styles.lang : ''}>
       {/* desktop */}
-      {arrowDown && <div className='lang-container'>
-        <img className="lang--arrow" src={arrowDown} alt='arrow down' height='20px' />
-        <button className="lang--button" onMouseEnter={handleDropdownToggle} onMouseLeave={handleDropdownToggle}>
+      {arrowDown && <div className={styles.langContainer}>
+        <img className={styles.langArrow} src={arrowDown} alt='arrow down' height='20px' />
+        <button className={styles.langButton} onMouseEnter={handleDropdownToggle} onMouseLeave={handleDropdownToggle}>
           <img src={activeLanguage.flag} alt={activeLanguage.name} height='25px' width= '25px' />
 
           {isDropdownOpen &&
-          <ul className="lang--dropdown">
+          <ul className={styles.langDropdown}>
             {languages.map((language) => {
               if (language.code === activeLanguage.code) {
                 return null
               }
               return (
-                <li className="lang--dropdown-item" key={language.code} onClick={() => handleLanguageChange(language)}>
+                <li className={styles.langDropdownItem} key={language.code} onClick={() => handleLanguageChange(language)}>
                   <img src={language.flag} alt={language.name} height='25px' width= '25px' />
                 </li>
               )
@@ -42,10 +42,10 @@ export default function SwitchLanguage ({ languages, arrowDown }) {
         </button>
       </div>}
       {/* mobile */}
-      {!arrowDown && <div className='lang-mobile'>
+      {!arrowDown && <div className={styles.langMobile}>
         {languages.map((language) => {
           return (
-            <div className="lang-mobile--item" key={language.code} onClick={() => handleLanguageChange(language)}>
+            <div className={styles.langMobileItem} key={language.code} onClick={() => handleLanguageChange(language)}>
               <img src={language.flag} alt={language.name} height='25px' width= '25px' />
             </div>
           )

@@ -1,5 +1,5 @@
 import React from 'react'
-import './Timeline.module.scss'
+import styles from './Timeline.module.scss'
 import TimelineItem from './TimelineItem'
 import PropTypes from 'prop-types'
 
@@ -8,7 +8,7 @@ const Timeline = ({ data }) => {
   const sortedData = [...data].sort((a, b) => b.startDate.localeCompare(a.startDate))
 
   return (
-    <div className="timeline-container">
+    <div className={styles.timelineContainer}>
       {sortedData.map((item, index) => (
         <TimelineItem
           key={item.id}

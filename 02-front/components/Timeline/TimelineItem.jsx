@@ -1,5 +1,5 @@
 import React from 'react'
-import './TimelineItem.module.scss'
+import styles from './TimelineItem.module.scss'
 import { PropTypes } from 'prop-types'
 import moment from 'moment'
 
@@ -21,18 +21,18 @@ const TimelineItem = ({
   const formatedEndDate = endDate === 'Present' ? endDate : moment(endDate).format('MMM YYYY')
   const period = formatedStartDate + ' - ' + formatedEndDate
   return (
-    <div className="timeline-item">
-      <div className="timeline-item-content">
+    <div className={styles.timelineItem}>
+      <div className={styles.timelineItemContent}>
 
-        <div className={'category ' + category.toLowerCase()}>
+        <div className={styles.category + ' ' + category.toLowerCase()}>
           {IconComponent && <IconComponent size="1.5rem" color= {iconMap[iconCategory].color}/>}
         </div>
-        <div className='title'>{title}</div>
-        <div className="company" style={{ color: iconMap[iconCategory].color }}>{company} </div>
+        <div className={styles.title}>{title}</div>
+        <div className={styles.company} style={{ color: iconMap[iconCategory].color }}>{company} </div>
         <time>{period}</time>
 
         <p>{description}</p>
-        <span className="circle"></span>
+        <span className={styles.circle}></span>
       </div>
     </div>
   )

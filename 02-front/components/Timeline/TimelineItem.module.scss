@@ -1,6 +1,6 @@
 $timeline-circle-size: 20px;
 /* TODO: Mobile first */
-.timeline-item {
+.timelineItem {
   display: flex;
   justify-content: flex-end;
   padding-right: 50px;
@@ -27,7 +27,7 @@ $timeline-circle-size: 20px;
   }
 }
 
-.timeline-item-content {
+.timelineItemContent {
   background-color: var(--secondary-color);
   width: 400px;
   max-width: 100%;
@@ -42,7 +42,7 @@ $timeline-circle-size: 20px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   white-space: pre-wrap;
 
-  .timeline-item:nth-child(odd) & {
+  .timelineItem:nth-child(odd) & {
     align-items: flex-start;
     text-align: left;
   }
@@ -67,7 +67,7 @@ $timeline-circle-size: 20px;
 
 // Arrow pointing from the content to the circle
 @media screen and (min-width: 768px) {
-  .timeline-item-content::after {
+  .timelineItemContent::after {
     content: "";
     position: absolute;
     --width: 15px;
@@ -81,7 +81,7 @@ $timeline-circle-size: 20px;
     z-index: -1;
     box-shadow: 2px -1px 1px  rgba(0, 0, 0, 0.1);
 
-    .timeline-item:nth-child(odd) & {
+    .timelineItem:nth-child(odd) & {
       left: calc(var(--width) / -2);
       right: auto;
       z-index: -1;
@@ -99,7 +99,7 @@ $timeline-circle-size: 20px;
   right: -58px;
   z-index: 1;
 
-  .timeline-item:nth-child(odd) & {
+  .timelineItem:nth-child(odd) & {
     left: -62px;
     right: auto;
   }
@@ -117,7 +117,7 @@ $timeline-circle-size: 20px;
   top: 15px;
   left: 15px;
 
-  .timeline-item:nth-child(odd) & {
+  .timelineItem:nth-child(odd) & {
     position: absolute;
     top: 15px;
     right: 15px;

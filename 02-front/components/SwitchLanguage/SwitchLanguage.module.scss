@@ -1,33 +1,33 @@
-.lang{
+.lang {
   display: flex;
   flex-direction: row;
   margin-right: 20px;
 }
-.lang-container{
+.langContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.lang--arrow{
+.langArrow {
   order: 1;
   margin-top: -7px;
   align-self: flex-end;
 }
 
-.lang--button{
-  cursor: pointer;  
+.langButton {
+  cursor: pointer;
   position: relative;
 }
 
-.lang--button img{
+.langButton img {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
-   /* border: var(--text-color) 2px solid;  */
+  /* border: var(--text-color) 2px solid; */
 }
 
-.lang--dropdown {
+.langDropdown {
   position: absolute;
   top: 100%;
   right: 0;
@@ -35,32 +35,32 @@
   list-style: none;
   margin-right: -8px;
   padding: 0;
-  background-color: var(--secondary-color); 
+  background-color: var(--secondary-color);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 0.25rem;
 }
 
-.lang--dropdown-item {
+.langDropdownItem {
   cursor: pointer;
   padding: 0.5rem;
-  :hover{
-    scale: 1.2;
-  }
+}
+.langDropdownItem:hover {
+  scale: 1.2;
 }
 
-.lang--dropdown-item img {
+.langDropdownItem img {
   width: 1.5rem;
   height: 1.5rem;
 }
 
 /* Mobile */
-.lang-mobile{
+.langMobile {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   margin: 20px auto;
 }
 
-.lang-mobile--item{
+.langMobileItem {
   cursor: pointer;
 }
