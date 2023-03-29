@@ -94,10 +94,12 @@ function App () {
       </header>
       <main className="Main">
         <Sidebar/>
-        <section className="Section" ref={home}>
-          {/* <Construction title='WebSite'/> */}
+        {/* <section className="Section" ref={home}>
           <Intro />
-        </section>
+        </section> */}
+        <Section title="Full Stack" ref={home}>
+          <Intro />
+        </Section>
         <Section title='About' inConstruction={false} ref={about}>
           <About/>
         </Section>

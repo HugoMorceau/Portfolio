@@ -1,10 +1,10 @@
 
 import PropTypes from 'prop-types'
-import './Navbar.module.scss'
+import styles from './Navbar.module.scss'
 
 export default function Navbar ({ handleclick, liElt }) {
   return (
-    <nav className='navbar'>
+    <nav className={styles.navbar}>
       <ul>
         {liElt.map(({ key, title, ref }) => {
           return (<li key={key} ref={ref} className="App-link"

@@ -53,28 +53,25 @@ export default function Intro () {
 
   return (
     <div className= {styles.intro}>
-    <div className={styles.introHeader}>
+      <div className={styles.introHeader}>
         <div className={styles.titles} >
           <div className={styles.hello}>{hello}</div>
           <h1 className={styles.h1}>HUGO MORCEAU</h1>
           <h2 className={styles.h2}>Full Stack Web Developer</h2>
         </div>
-        {/* <div> */}
         <div className={styles.photoContainer}>
-          {/* <img
-            src= {profil}
-            alt='Hugo Morceau' /> */}
+          <div className={styles.imageWrapper}>
           <Image
             src={'/assets/images/profil.jpg'}
             alt='Hugo Morceau'
-            width={200}
-            height={200}
-            
+            width={220}
+            height={220}
+            objectFit='contain'
+            objectPosition='center'  
           />
+          </div>
         </div>
       </div>
-      {/* <div className='background'></div> */}
-      {/* </div> */}
       <p>{t('Intro')}</p>
       <div className={styles.buttonsContainer}>
         {/* View Resume */}
