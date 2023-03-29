@@ -17,6 +17,7 @@ jobs:
         cache: 'npm'
     - run: |
         npm i
+        cp /home/portfolio/.env_backups/.env.test.local .env.test.local
         cd 02-front
         npm i
         npm run build:test
