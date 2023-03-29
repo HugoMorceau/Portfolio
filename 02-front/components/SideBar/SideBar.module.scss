@@ -1,4 +1,4 @@
-.sidebar{
+.sidebar {
     position: fixed;
     top: -20%;
     left: 5%;
@@ -11,15 +11,16 @@
         left: 7%;
     }
 }
-.sidebar.active {
+
+.active {
     top: 30%;
     transform: translateX(-80%);
     @media screen and (min-width: 768px) {
         top: 20%;
     }
-  }
+}
 
-.sidebar .icon{
+.icon {
     color: var(--primary-color);
     margin-top: 15px;
     @media screen and (max-width: 768px) {
@@ -28,8 +29,7 @@
     }
 }
 
-.sidebar .icon:hover {
+.icon:hover {
     color: var(--text-color); 
     scale: 1.2;
 }
-
