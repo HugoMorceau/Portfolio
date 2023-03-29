@@ -52,15 +52,15 @@ export default function Intro () {
   }
 
   return (
-    <div className= {styles.Intro}>
-    <div className={styles.Intro--header}>
-        <div className='titles' >
-          <div className='hello'>{hello}</div>
-          <h1 className='h1'>HUGO MORCEAU</h1>
-          <h2 className='h2'>Full Stack Web Developer</h2>
+    <div className= {styles.intro}>
+    <div className={styles.introHeader}>
+        <div className={styles.titles} >
+          <div className={styles.hello}>{hello}</div>
+          <h1 className={styles.h1}>HUGO MORCEAU</h1>
+          <h2 className={styles.h2}>Full Stack Web Developer</h2>
         </div>
         {/* <div> */}
-        <div className='photo-container'>
+        <div className={styles.photoContainer}>
           {/* <img
             src= {profil}
             alt='Hugo Morceau' /> */}
@@ -76,7 +76,7 @@ export default function Intro () {
       {/* <div className='background'></div> */}
       {/* </div> */}
       <p>{t('Intro')}</p>
-      <div className='buttons-container'>
+      <div className={styles.buttonsContainer}>
         {/* View Resume */}
         <a href={`${process.env.PUBLIC_URL}/resume/${t('CV file')}`}
           target="_blank" rel="noopener noreferrer"
