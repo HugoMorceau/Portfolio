@@ -1,47 +1,47 @@
 // import { useTranslation } from 'react-i18next'
 import projects from '../../data/projects/projectsFR.js'
-import './Projects.module.scss'
+import styles from './Projects.module.scss'
 import { FiGithub, FiExternalLink } from '../../config/icons/icons'
 import noImage from '../../public/assets/images/Image_not_available.png'
 
 export default function Projects () {
   return (
-    <div className='Projects'>
-      {projects.map((project) => {
-        return (
-          <div key={project.id} className='Project'>
-            {/* Title */}
-            <div className='Project__title'>{project.name.toUpperCase()}</div>
-            {/* Description */}
-            <div className='Project__description'>{project.description}</div>
-            {/* Image */}
-            {project.image.length > 0
-              ? <img src={project.image[0]} alt={project.name} className='Project__image' />
-              : <img src={noImage} alt={project.name} className='Project__image' />
-            }
-            {/* Tag list */}
-            <div className='Project__tags'>
-              {project.tags.slice(0, 4).map((tag) => {
-                return (
-                  <div className='Project__tag' key={tag}>
-                    {tag}
-                  </div>
-                )
-              })}
-            </div>
-            {/* Links */}
-            <div className='Project__actions'>
-              <a href={project.github} className='Project__action'
-                target='_blank' rel='noopener noreferrer'
-                title="View the code on Github"
-              >
-                <FiGithub size={24} />
-              </a>
-              <a href={project.link} className='Project__action'
-                target='_blank' rel='noopener noreferrer'
-                title="View the project"
-              >
-                <FiExternalLink size={24} />
+      <div className={styles.projects}>
+        {projects.map((project) => {
+          return (
+            <div key={project.id} className={styles.project}>
+              {/* Title */}
+              <div className={styles.projectTitle}>{project.name.toUpperCase()}</div>
+              {/* Description */}
+              <div className={styles.projectDescription}>{project.description}</div>
+              {/* Image */}
+              {project.image.length > 0
+                ? <img src={project.image[0]} alt={project.name} className={styles.projectImage} />
+                : <img src={noImage} alt={project.name} className={styles.projectImage} />
+              }
+              {/* Tag list */}
+              <div className={styles.projectTags}>
+                {project.tags.slice(0, 4).map((tag) => {
+                  return (
+                    <div className={styles.projectTag} key={tag}>
+                      {tag}
+                    </div>
+                  )
+                })}
+              </div>
+              {/* Links */}
+              <div className={styles.projectActions}>
+                <a href={project.github} className={styles.projectAction}
+                  target='_blank' rel='noopener noreferrer'
+                  title="View the code on Github"
+                >
+                  <FiGithub size={24} />
+                </a>
+                <a href={project.link} className={styles.projectAction}
+                  target='_blank' rel='noopener noreferrer'
+                  title="View the project"
+                >
+                  <FiExternalLink size={24} />
               </a>
 
               {/* TODO: Project page  */}
