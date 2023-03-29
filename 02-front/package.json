@@ -28,8 +28,8 @@
     "dev": "next dev",
     "build": "next build",
     "build:test": "env-cmd -f .env.test.local next build",
-    "start": "next start -p $NEXT_PUBLIC_PORT",
-    "start:test": "env-cmd -f .env.test.local next start",
+    "start": "next start -p 3000",
+    "start:test": "env-cmd -f .env.test.local next start -p 3100",
     "lint": "next lint"
   },
   "browserslist": {
