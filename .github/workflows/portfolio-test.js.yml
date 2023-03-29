@@ -24,6 +24,7 @@ jobs:
         npm run build:test
     - name: PM2 restart
       run: |
+        cd 02-front
         pm2 stop portfolio-dev-front
         pm2 start npm --name portfolio-dev-front -- run start:test
         pm2 save --force
