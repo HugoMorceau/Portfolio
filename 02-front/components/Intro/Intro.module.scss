@@ -1,0 +1,122 @@
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+ 
+
+    /* Desktop */
+    @media screen and (min-width: 768px) {  
+      max-width: 80%;
+        p{
+          text-align: center;
+          margin: 0 auto;
+        }  
+    }
+}
+.introHeader{
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.titles{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0px;
+}
+
+.intro .hello {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--primary-color);
+}
+  
+  /* Mobile Medium */
+  @media screen and (min-width: 375px) {
+    .intro .hello {
+      font-size: 1.4rem;
+      font-weight: 300;
+    }
+  }
+  
+  /* Mobile Large */ 
+  @media screen and (min-width: 414px) {
+    .intro .hello {
+      font-size: 1.6rem;
+      font-weight: 300;
+    }
+  }
+  
+  /* Tablet Portrait */
+  @media screen and (min-width: 768px) {
+    .intro .hello {
+      font-size: 1.8rem;
+      font-weight: 400;
+    }
+  }
+  
+  /* Tablet Landscape and Desktop */
+  @media screen and (min-width: 1024px) {
+    .intro .hello {
+      font-size: 2rem;
+      font-weight: 400;
+    }
+  }
+
+.h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.h2{
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+ 
+.photoContainer{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: var(--text-color)  5px solid;
+    background-color: #eaeaea;
+    margin: 30px 30px 30px 10px ;
+    @media screen and (min-width: 1024px) {
+      width: 200px;
+      height: 200px;
+      margin: 50px;
+    }
+}
+
+.imageWrapper {
+  position: absolute;
+  top: 5px;
+  left: -18px;
+}
+
+.buttonsContainer{
+    display: flex;
+    justify-content: center;    
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    @media screen and (max-width: 768px) {
+        align-items: center;
+        gap: 10px;
+    }
+}

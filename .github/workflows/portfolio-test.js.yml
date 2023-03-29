@@ -3,8 +3,6 @@ name: portfolio-dev
 on:
   push: 
     branches: [ develop ]
-  #pull_request:
-    #branches: [ develop ]
 
 jobs:
   build: 
@@ -21,9 +19,9 @@ jobs:
         npm i
         cd 02-front
         npm i
-        npm run build
+        npm run build:test
     - name: PM2 restart
       run: |
         pm2 stop portfolio-dev-front
-        pm2 start portfolio-dev-front
+        pm2 start npm --name portfolio-dev-front -- run start:test
         pm2 save --force

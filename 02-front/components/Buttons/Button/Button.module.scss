@@ -1,0 +1,23 @@
+.button {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 500;
+    @media screen and (max-width: 768px) {
+      width: 150px;
+      height: 35px;
+    }
+  }
+  .button a {
+    position: relative;
+    z-index: 2;
+  }
+.button:hover{
+  background-color: var(--text-color) ;
+  color: var(--background-color);
+}
+
+ 
