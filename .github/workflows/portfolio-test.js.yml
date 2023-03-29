@@ -15,10 +15,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: |
+    - name: Build 
+      run: |
         npm i
-        cp /home/portfolio/.env_backups/.env.test.local .env.test.local
         cd 02-front
+        cp /home/portfolio/.env_backups/.env.test.local .env.test.local
         npm i
         npm run build:test
     - name: PM2 restart
