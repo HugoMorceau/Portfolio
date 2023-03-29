@@ -4,10 +4,10 @@ import './Navbar.module.scss'
 
 export default function Navbar ({ handleclick, liElt }) {
   return (
-    <nav className='Navbar'>
-      <ul className="Navbar--ul">
+    <nav className='navbar'>
+      <ul>
         {liElt.map(({ key, title, ref }) => {
-          return (<li key={key} ref={ref} className="Navbar--li App-link"
+          return (<li key={key} ref={ref} className="App-link"
             onClick={(e) => handleclick(ref)}>
             {title.toUpperCase()}
           </li>)
