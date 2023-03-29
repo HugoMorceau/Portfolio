@@ -1,0 +1,132 @@
+$timeline-circle-size: 20px;
+/* TODO: Mobile first */
+.timelineItem {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+  margin: 10px 0;
+  width: 50%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding-right: 0;
+    justify-content: center;
+  }
+
+  &:nth-child(odd) {
+    align-self: flex-end;
+    justify-content: flex-start;
+    padding-left: 50px;
+    padding-right: 0;
+
+    @media (max-width: 768px) {
+      padding-left: 0;
+      align-self: auto;
+      justify-content: center;
+    }
+  }
+}
+
+.timelineItemContent {
+  background-color: var(--secondary-color);
+  width: 400px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  border-radius: 10px;
+  z-index: 2;
+  padding: 20px;
+  text-align: right;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  white-space: pre-wrap;
+
+  .timelineItem:nth-child(odd) & {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  @media (max-width: 768px) {
+    width: 90%;
+    margin-top: 10px;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  time {
+    font-style: italic;
+  }
+  .company {
+    // font-weight: bold;
+  }
+  .title {
+    font-weight: bold;
+  }
+}
+
+// Arrow pointing from the content to the circle
+@media screen and (min-width: 768px) {
+  .timelineItemContent::after {
+    content: "";
+    position: absolute;
+    --width: 15px;
+    --height: 15px;
+    width: var(--width);
+    height: var(--height);
+    top: calc(50% - var(--height) / 2);
+    right: calc(var(--width) / -2); // half of the width converted to negative value to move it to the left
+    background-color: var(--secondary-color);
+    transform: rotate(45deg);
+    z-index: -1;
+    box-shadow: 2px -1px 1px  rgba(0, 0, 0, 0.1);
+
+    .timelineItem:nth-child(odd) & {
+      left: calc(var(--width) / -2);
+      right: auto;
+      z-index: -1;
+      box-shadow: -1px 2px 3px  rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+.circle {
+  background-color: var(--secondary-color);
+  width: $timeline-circle-size;
+  height: $timeline-circle-size;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - #{$timeline-circle-size} / 2);
+  right: -58px;
+  z-index: 1;
+
+  .timelineItem:nth-child(odd) & {
+    left: -62px;
+    right: auto;
+  }
+
+  @media (max-width: 768px) {
+    // left: calc(50% - #{$timeline-circle-size} / 2);
+    // right: auto;
+    display: none;
+  }
+}
+
+// Category Icon
+.category {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+
+  .timelineItem:nth-child(odd) & {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    left: auto;
+     @media screen and (max-width: 768px) {
+      position: static;
+     }
+  }
+  @media screen and (max-width: 768px) {
+    position: static;
+  }
+}

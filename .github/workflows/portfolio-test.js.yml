@@ -3,8 +3,6 @@ name: portfolio-dev
 on:
   push: 
     branches: [ develop ]
-  #pull_request:
-    #branches: [ develop ]
 
 jobs:
   build: 
@@ -17,13 +15,16 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: |
+    - name: Build 
+      run: |
         npm i
         cd 02-front
+        cp /home/portfolio/.env_backups/.env.test.local .env.test.local
         npm i
-        npm run build
+        npm run build:test
     - name: PM2 restart
       run: |
+        cd 02-front
         pm2 stop portfolio-dev-front
-        pm2 start portfolio-dev-front
+        pm2 start npm --name portfolio-dev-front -- run start:test
         pm2 save --force
