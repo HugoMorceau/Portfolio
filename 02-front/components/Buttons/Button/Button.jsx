@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
-import './Button.module.scss'
+import styles from './Button.module.scss'
 export default function Button ({ text, type, onClick }) {
   const [flashReverse, setFlashState] = useState(true)
 
@@ -18,7 +18,7 @@ export default function Button ({ text, type, onClick }) {
 
   return (
     <button
-      className={`button ${flashReverse ? 'button-flash-reverse' : ''}`}
+      className={`${styles.button} ${flashReverse ? styles.buttonFlashReverse : ''}`}
       type={type}
       onClick={handleClick}
       onMouseEnter={handleMouseEnter}

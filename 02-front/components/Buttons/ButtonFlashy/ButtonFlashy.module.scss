@@ -36,7 +36,9 @@
   .buttonFlashy:hover::before {
     animation: flash 0.3s linear;
   }
-  .buttonFlashy-flash-reverse::before {
+  
+  // .buttonFlashy-flash-reverse::before {
+  .flashReverse::before {
     animation: flashReverse 0.3s linear;
   }
   
