@@ -18,10 +18,12 @@ jobs:
     - run: |
         npm i
         cd 02-front
+        cp /home/portfolio-prod/.env_backups/.env .env
         npm i
         npm run build
     - name: PM2 restart
       run: |
+        cd 02-front
         pm2 stop portfolio-prod-front
-        pm2 start portfolio-prod-front
+        pm2 start npm --name portfolio-prod-front -- run start
         pm2 save --force
