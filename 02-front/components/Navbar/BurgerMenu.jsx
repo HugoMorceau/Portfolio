@@ -1,4 +1,4 @@
-import './BurgerMenu.module.scss'
+import styles from'./BurgerMenu.module.scss'
 import PropTypes from 'prop-types'
 import ButtonTheme from '../Buttons/ButtonTheme/ButtonTheme'
 import languages from '../../config/languages/languages.js'
@@ -36,20 +36,21 @@ const BurgerMenu = ({ handleClick, menuItem }) => {
   }, [isMenuOpen])
 
   return (
-    <div className='burger-menu-container' >
-      <div className='burger-menu-button' ref={burgerButtonRef}>
-        <button className={isMenuOpen ? 'menu-button--open' : 'menu-button' }
+    <div className={styles.burgerMenuContainer} >
+      <div className={styles.burgerMenuButton} ref={burgerButtonRef}>
+        <button className={isMenuOpen ? styles.menuButtonOpen : styles.menuButton }
           onClick={handleClickBurger}>
-          <div className="menu-button__line">
+          <div className={styles.menuButtonLine}>
           </div>
         </button>
       </div>
-      <div className= {isMenuOpen ? 'burger-menu-item-container' : 'burger-menu-item-container--closed'} ref={menuContainerRef} >
-        <ButtonTheme className ="burger-menu--theme-button burger-menu-item" size={'1.6rem'} />
+      <div className= {isMenuOpen ? styles.burgerMenuItemContainer : styles.burgerMenuItemContainerClosed} ref={menuContainerRef} >
+        <ButtonTheme className ={`${styles.burgerMenuThemeButton} ${styles.burgerMenuItem}`} size={'1.6rem'} />
         <SwitchLanguage languages={languages}/>
+        {/* TODO : rework this class*/}
         <ul className="App-nav--ul">
           {menuItem.map(({ key, title, ref }) => {
-            return (<li key={key} ref={ref} className="burger-menu-item"
+            return (<li key={key} ref={ref} className={styles.burgerMenuItem}
               onClick={(e) => handleClickNavItem(ref)}>
               {title.toUpperCase()}
             </li>)

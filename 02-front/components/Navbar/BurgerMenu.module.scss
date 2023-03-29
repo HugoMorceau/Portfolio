@@ -1,7 +1,7 @@
-.burger-menu-container{
+.burgerMenuContainer{
 }
 /* Burger Button */
-.burger-menu-button{
+.burgerMenuButton{
     position: fixed;
     bottom: 5px;
     right: 5px;
@@ -9,8 +9,8 @@
     
 }
 /* Burger Button Open/Closed */
-.menu-button,
-.menu-button--open{
+.menuButton,
+.menuButtonOpen{
     position: relative;
     display: flex;
     // border: 3px solid var(--text-color);
@@ -20,7 +20,7 @@
     width: 40px;
 }
 /* Burger middle line */
-.menu-button__line{
+.menuButtonLine{
     width: 30px;
     height: 3px;
     border-radius: 5px;
@@ -28,7 +28,7 @@
     transition: transform 0.5s ease-in-out;   
 }
 /* Burger top and bottom lines */
-.menu-button__line::before, .menu-button__line::after{
+.menuButtonLine::before, .menuButtonLine::after{
     content: "";
     position: absolute;
     left : 0;
@@ -42,33 +42,33 @@
     background: var(--text-color);  
 }
 /* Burger top line */
-.menu-button__line::before {
+.menuButtonLine::before {
     transform: translateY(-10px);
 }
 /* Burger bottom line */
-.menu-button__line::after {
+.menuButtonLine::after {
     transform: translateY(10px);
 }
-.menu-button--open .menu-button__line {
+.menuButtonOpen .menuButtonLine {
     transform: translateX(-50px);
     background: transparent;
 }
 
-.menu-button--open{ 
-     .menu-button__line::before, .menu-button__line::after{
+.menuButtonOpen{ 
+     .menuButtonLine::before, .menu-buttonLine::after{
         background: var(--text-color);  
     }
-    .menu-button__line::before{
+    .menuButtonLine::before{
         transform: rotate(45deg) translate(35px, -35px);
     }
-    .menu-button__line::after{
+    .menuButtonLine::after{
         transform: rotate(-45deg) translate(35px, 35px);
     }
 }
 
 /* Menu */
-.burger-menu-item-container,
-.burger-menu-item-container--closed{
+.burgerMenuItemContainer,
+.burgerMenuItemContainerClosed{
 
     background-color: var(--secondary-color);
     width: 200px;
@@ -84,18 +84,18 @@
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
 }
 
-.burger-menu-item-container--closed {
+.burgerMenuItemContainerClosed {
     transform: translateX(100%);
     height: 0;
     overflow: hidden;
     
 }
-.burger-menu-item{
+.burgerMenuItem{
     margin : 10px auto;
     font-size: 1.5rem;
     cursor: pointer;
 }
 
-.burger-menu--theme-button{
+.burgerMenuThemeButton{
     margin: 0 auto;
 }
