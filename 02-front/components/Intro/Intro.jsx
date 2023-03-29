@@ -76,14 +76,14 @@ export default function Intro () {
       <p>{t('Intro')}</p>
       <div className={styles.buttonsContainer}>
         {/* View Resume */}
-        <a href={`${process.env.PUBLIC_URL}/resume/${t('CV file')}`}
+        <a href={`/assets/resume/${t('CV file')}`}
           target="_blank" rel="noopener noreferrer"
           onClick={() => trackCVView(t('CV file'))}
         >
           <Button text={t('View CV')} />
         </a>
         {/* Download Resume */}
-        <a href={`${process.env.PUBLIC_URL}/resume/${t('CV file')}`}
+        <a href={`/assets/resume/${t('CV file')}`}
           download={t('CV file')}
           onClick={() => trackCVDownload(t('CV file'))}
         >
