@@ -10,17 +10,17 @@ const About = () => {
       {/* View Resume */}
       <div className={styles.resumeContainer}>
         <div className={styles.resume}>
-          <a href={`${process.env.PUBLIC_URL}/resume/CV-FR.pdf`} target="_blank" rel="noopener noreferrer">
+          <a href={`/assets/resume/CV-FR.pdf`} target="_blank" rel="noopener noreferrer">
             <Button text='CV Francais' />
           </a>
         </div>
         <div className='resume'>
-          <a href={`${process.env.PUBLIC_URL}/resume/CV-ES.pdf`} target="_blank" rel="noopener noreferrer">
+          <a href={`/assets/resume/CV-ES.pdf`} target="_blank" rel="noopener noreferrer">
             <Button text='CV Español' />
           </a>
         </div>
         <div className='resume'>
-          <a href={`${process.env.PUBLIC_URL}/resume/CV-EN.pdf`} target="_blank" rel="noopener noreferrer">
+          <a href={`/assets/resume/CV-EN.pdf`} target="_blank" rel="noopener noreferrer">
             <Button text='CV English' />
           </a>
         </div>
