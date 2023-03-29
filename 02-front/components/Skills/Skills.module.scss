@@ -1,13 +1,11 @@
-
-.Skills-container{
+.SkillsContainer {
     display: flex;
     width : 100%;
     justify-content: center;   
     flex-wrap: wrap; 
-
 }
 
-.Skills-category{
+.SkillsCategory {
     display: flex;
     flex-direction: column;
     min-width: 30%;
@@ -21,30 +19,30 @@
 }
 
 @media screen and (max-width: 768px) {
-    .Skills-category{
+    .SkillsCategory {
         min-width: 100%;
         margin-bottom: 20px;
     }
 }
     
 
-.Skills-category h2 {
+.SkillsCategory h2 {
     margin-bottom: 20px;   
     display: flex;
     justify-content: center;    
  }
 
- .skill-wrapper{
+ .SkillWrapper {
     display: flex; 
     margin-left: 40px;
     margin-top: 10px;
 }
 
-.skill-wrapper svg{
+.SkillWrapper svg {
     margin-right: 10px;
 }
 
-.skill-wrapper:hover{
+.SkillWrapper:hover {
     color: var(--primary-color);
     cursor: default;
 }

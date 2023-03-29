@@ -1,10 +1,9 @@
-import skills from '../../data/skills/skillsFR.js'
-import './Skills.module.scss'
-// import logo from '../../logo.svg'
+import skills from '../../data/skills/skillsFR.js';
+import styles from './Skills.module.scss';
 import {
   FaHtml5, FaCss3, FaNodeJs, FaReact, FaDatabase, FaGithub,
   SiIbm, IoCodeSlash, TbRelationOneToMany
-} from '../../config/icons/icons.js'
+} from '../../config/icons/icons.js';
 
 const iconMap = {
   fahtml5: FaHtml5,
@@ -16,9 +15,9 @@ const iconMap = {
   siibm: SiIbm,
   iocodeslash: IoCodeSlash,
   tbrelationonetomany: TbRelationOneToMany
-}
+};
 
-export default function Skills () {
+export default function Skills() {
   // Todo translate categories
   const categories = {
     web: { label: 'Web', skills: [] },
@@ -26,33 +25,33 @@ export default function Skills () {
     old: { label: 'Legacy Systems', skills: [] },
     learning: { label: 'Currently learning', skills: [] },
     learningNext: { label: 'Want to learn', skills: [] }
-  }
+  };
 
   skills.forEach((skill) => {
     if (categories[skill.category]) {
-      categories[skill.category].skills.push(skill)
+      categories[skill.category].skills.push(skill);
     }
-  })
+  });
 
   return (
-    <div className="Skills-container">
+    <div className={styles.SkillsContainer}>
       {Object.values(categories).map((category) => (
         <div key={category.label}
-          className={`Skills-category Skills-category--${category.label.toLowerCase()}`}>
+          className={`${styles.SkillsCategory} ${styles[`SkillsCategory--${category.label.toLowerCase()}`]}`}>
           <h2>{category.label}</h2>
           {category.skills.map((skill) => {
-            const iconName = skill.icon.toLowerCase()
-            const IconComponent = iconMap[iconName]
+            const iconName = skill.icon.toLowerCase();
+            const IconComponent = iconMap[iconName];
 
             return (
-              <div key={skill.id} className="skill-wrapper">
+              <div key={skill.id} className={styles.SkillWrapper}>
                 {IconComponent && <IconComponent size="1.5rem" />}
                 {skill.name}
               </div>
-            )
+            );
           })}
         </div>
       ))}
     </div>
-  )
+  );
 }
