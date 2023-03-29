@@ -36,12 +36,12 @@ function App () {
   // Arrow maps
   const arrowMap = {
     arrowUp: {
-      light:'assets/arrow/arrowUpLight.svg',
-      dark: 'assets/arrow/arrowUpDark.svg'
+      light:'/assets/arrow/arrowUpLight.svg',
+      dark: '/assets/arrow/arrowUpDark.svg'
     },
     arrowDown: {
-      light: 'assets/arrow/arrowDownLight.svg',
-      dark: 'assets/arrow/arrowDownDark.svg'
+      light: '/assets/arrow/arrowDownLight.svg',
+      dark: '/assets/arrow/arrowDownDark.svg'
     }
   }
   const arrowUp = arrowMap.arrowUp[theme]

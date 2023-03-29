@@ -1,4 +1,4 @@
-.App-arrow {
+.arrow {
     display: none;
     @media screen and (min-width: 768px) {
       display: flex;
@@ -9,12 +9,14 @@
       transform: translateX(-50%);
     }    
   }
-  .App-arrow--up {
+  .arrowUp {
     cursor: pointer;
     z-index: 1;
+      
+    
   }
  
-  .App-arrow--down {
+  .arrowDown {
     cursor: pointer;
     z-index: 1;
   }
