@@ -29,7 +29,7 @@
     "build": "next build",
     "build:test": "env-cmd -f .env.test.local next build",
     "start": "next start -p $NEXT_PUBLIC_PORT",
-    "start:test": "env-cmd -f .env.test.local next start -p $NEXT_PUBLIC_PORT",
+    "start:test": "env-cmd -f .env.test.local next start",
     "lint": "next lint"
   },
   "browserslist": {
