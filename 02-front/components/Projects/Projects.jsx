@@ -2,7 +2,7 @@
 import projects from '../../data/projects/projectsFR.js'
 import styles from './Projects.module.scss'
 import { FiGithub, FiExternalLink } from '../../config/icons/icons'
-import noImage from '../../public/assets/images/Image_not_available.png'
+const noImage = 'assets/images/Image_not_available.png'
 
 export default function Projects () {
   return (

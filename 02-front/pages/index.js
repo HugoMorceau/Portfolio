@@ -97,7 +97,7 @@ function App () {
         {/* <section className="Section" ref={home}>
           <Intro />
         </section> */}
-        <Section title="Full Stack" ref={home}>
+        <Section title="" inConstruction={false} ref={home}>
           <Intro />
         </Section>
         <Section title='About' inConstruction={false} ref={about}>

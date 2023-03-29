@@ -61,8 +61,8 @@ SwitchLanguage.propTypes = {
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       code: PropTypes.string.isRequired,
-      flag: PropTypes.object
+      flag: PropTypes.string
     }).isRequired
   ).isRequired,
-  arrowDown: PropTypes.object
+  arrowDown: PropTypes.string
 }

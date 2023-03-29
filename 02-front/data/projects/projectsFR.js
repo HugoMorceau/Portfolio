@@ -1,6 +1,7 @@
-import unimetrixImages from '../../public/assets/images/projects/unimetrix'
-import miniGamesImages from '../../public/assets/images/projects/miniGames'
-import portfolioImages from '../../public/assets/images/projects/portfolio'
+// import unimetrixImages from '/assets/images/projects/unimetrix'
+const miniGamesImages = [ '/assets/images/projects/miniGames/resume.png']
+const portfolioImages = [ '/assets/images/projects/portfolio/portfolio-light.png', '/assets/images/projects/portfolio/portfolio-dark.png' ]
+const unimetrixImages = [ '/assets/images/projects/unimetrix/project.png', '/assets/images/projects/unimetrix/logo.png', '/assets/images/projects/unimetrix/home.png' ]
 const projects = [
   {
     id: 1,
