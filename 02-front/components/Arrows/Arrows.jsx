@@ -6,7 +6,7 @@ export default function Arrows ({ handleClick, arrowUp }) {
     <div className={styles.arrow}>
       <button className = {styles.arrowUp} onClick={() => handleClick()}>
         {/* <img src={arrowUp} alt='arrow up' height='40px' /> */}
-          <Image src={arrowUp} alt='arrow up' height='40px' width='40px' />
+          <Image src={arrowUp} alt='arrow up' height='40' width='40' />
       </button>
     </div>
     

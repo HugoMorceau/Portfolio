@@ -102,12 +102,24 @@
       margin: 50px;
     }
 }
-
-.imageWrapper {
-  position: absolute;
+// This style is passed to the next/Image component
+.imageCustom {
+  object-fit: contain;
+  object-position: center;
+  width: 110%;
+  height: 110%;
   top: 5px;
-  left: -18px;
+  left: -12px;
+  position: absolute;
 }
+// .imageWrapper {
+//   position: absolute;
+//   top: 5px;
+//   left: -18px;
+//   @media screen and (min-width: 1024px) {
+//     left: -18px;
+//   }
+// }
 
 .buttonsContainer{
     display: flex;

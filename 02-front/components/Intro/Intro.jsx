@@ -61,16 +61,20 @@ export default function Intro () {
           <h2 className={styles.h2}>Full Stack Web Developer</h2>
         </div>
         <div className={styles.photoContainer}>
-          <div className={styles.imageWrapper}>
+          {/* <div className={styles.imageWrapper}> */}
           <Image
             src={'/assets/images/profil.jpg'}
             alt='Hugo Morceau'
             width={220}
             height={220}
-            objectFit='contain'
-            objectPosition='center'  
+            className={styles.imageCustom}
+
+            // style={{
+            //   objectFit: 'contain',
+            //   objectPosition: 'center',
+            // }}
           />
-          </div>
+          {/* </div> */}
         </div>
       </div>
       <p>{t('Intro')}</p>
