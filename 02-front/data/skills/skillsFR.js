@@ -154,7 +154,7 @@ const skills = [
     icon: 'SiNextdotjs'
   },
   {
-    id: 15,
+    id: 21,
     name: 'MongoDB',
     type: 'front',
     category: 'learning',

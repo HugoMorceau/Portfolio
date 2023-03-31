@@ -24,6 +24,7 @@ function App () {
 
   // States
   const [currentPosition, setCurrentPosition] = useState('')
+  const [activeSection, setActiveSection] = useState(1);
 
   // Refs
   const home = useRef(null)
@@ -49,20 +50,23 @@ function App () {
 
   // Destinations
   const destinations = [
-    { key: 1, title: t('Home'), ref: home },
-    { key: 2, title: t('About'), ref: about },
-    { key: 3, title: t('Skills'), ref: skills },
-    { key: 4, title: t('Work Experience'), ref: work },
-    { key: 5, title: t('My Projects'), ref: projects },
-    { key: 6, title: t('Contact Me'), ref: contact }
+    { key:1, id: 1, title: t('Home'), ref: home, component: Intro },
+    { key:2, id: 2, title: t('About'), ref: about, component: About },
+    { key:3, id: 3, title: t('Skills'), ref: skills, component: Skills },
+    { key:4, id: 4, title: t('Work Experience'), ref: work, component: WorkXp },
+    { key:5, id: 5, title: t('My Projects'), ref: projects, component: Projects },
+    { key:6, id: 6, title: t('Contact Me'), ref: contact, component: Contact }
   ]
 
   // Effects
+
+  // Matomo
   useEffect(() => {
     trackPageView()
   })
+
+  // Language
   useEffect(() => {
-    // Met à jour l'attribut `lang` de l'élément `<html>` en fonction de la langue actuelle
     document.documentElement.lang = i18n.language
   }, [i18n.language])
 
@@ -79,42 +83,34 @@ function App () {
   return (
     <div className="App">
       <header className="App-header">
-        {/* Top Menu */}
-        {/* TODO: Disable for mobile ? */}
+        {/* Top Menu for desktop */}
         <div className="App-header--top">
-          <Navbar handleclick={executeScroll} liElt={destinations}/>
+          <Navbar handleclick={executeScroll} destinations={destinations} activeSection={activeSection}/>
           <div className="App-header--top__right">
             <ButtonTheme className ="theme-button" />
             <SwitchLanguage languages={languages} arrowDown={arrowDown}/>
           </div>
         </div>
+        {/* Burger Menu for Mobiles */}
         <div className="App-header--mobile">
           <BurgerMenu handleClick={executeScroll} menuItem={destinations} />
         </div>
       </header>
       <main className="Main">
         <Sidebar/>
-        {/* <section className="Section" ref={home}>
-          <Intro />
-        </section> */}
-        <Section title="" inConstruction={false} ref={home}>
-          <Intro />
-        </Section>
-        <Section title='About' inConstruction={false} ref={about}>
-          <About/>
-        </Section>
-        <Section title='Skills' inConstruction={false} ref={skills}>
-          <Skills/>
-        </Section>
-        <Section title='Work Experience' inConstruction={false} ref={work}>
-          <WorkXp></WorkXp>
-        </Section>
-        <Section title='My Projects' inConstruction={false} ref={projects}>
-          <Projects />
-        </Section>
-        <Section title="Contact" inConstruction={false} ref={contact}>
-          <Contact />
-        </Section>
+        {destinations.map((destination) => (
+          <Section 
+            key={destination.key}
+            id={destination.id}
+            title={destination.title === 'Home' ? '' : destination.title}
+            inConstruction={false}
+            ref={destination.ref}
+            // id={destination.title.toLowerCase().replace(/ /g, "-")}
+            setActiveSection={setActiveSection}
+          >         
+          {React.createElement(destination.component)} 
+          </Section>
+        ))}
         <Arrows handleClick={executeScroll} arrowUp={arrowUp}/>
       </main>
       <footer className="App-footer">
