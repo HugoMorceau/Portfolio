@@ -1,8 +1,9 @@
 import skills from '../../data/skills/skillsFR.js';
 import styles from './Skills.module.scss';
 import {
-  FaHtml5, FaCss3, FaNodeJs, FaReact, FaDatabase, FaGithub,
-  SiIbm, IoCodeSlash, TbRelationOneToMany
+  FaHtml5, FaCss3, FaNodeJs, FaReact, FaDatabase, FaGithub, FaVuejs, FaDocker,
+  SiIbm, SiNextdotjs, SiMongodb, SiTypescript, SiGraphql, SiThreedotjs,
+  IoCodeSlash, TbRelationOneToMany,
 } from '../../config/icons/icons.js';
 
 const iconMap = {
@@ -14,7 +15,15 @@ const iconMap = {
   fagithub: FaGithub,
   siibm: SiIbm,
   iocodeslash: IoCodeSlash,
-  tbrelationonetomany: TbRelationOneToMany
+  tbrelationonetomany: TbRelationOneToMany,
+  sinextdotjs: SiNextdotjs,
+  simongodb: SiMongodb,
+  sitypescript: SiTypescript,
+  favuejs: FaVuejs,
+  fadocker: FaDocker,
+  sigraphql: SiGraphql,
+  sithreedotjs: SiThreedotjs
+
 };
 
 export default function Skills() {

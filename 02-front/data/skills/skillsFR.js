@@ -101,9 +101,9 @@ const skills = [
     id: 14,
     name: 'Typescript',
     type: 'Javascript',
-    category: 'learning',
+    category: 'web',
     level: 99,
-    icon: ''
+    icon: 'SiTypescript'
   },
   {
     id: 15,
@@ -111,7 +111,7 @@ const skills = [
     type: 'front',
     category: 'learning',
     level: 99,
-    icon: ''
+    icon: 'FaVuejs'
   },
   {
     id: 16,
@@ -119,7 +119,7 @@ const skills = [
     type: 'back',
     category: 'learningNext',
     level: 99,
-    icon: ''
+    icon: 'SiGraphql'
   },
   {
     id: 17,
@@ -127,7 +127,7 @@ const skills = [
     type: 'Javascript',
     category: 'learningNext',
     level: 99,
-    icon: ''
+    icon: 'SiThreedotjs'
   },
   {
     id: 18,
@@ -143,8 +143,24 @@ const skills = [
     type: 'back',
     category: 'learning',
     level: 1,
-    icon: ''
-  }
+    icon: 'FaDocker'
+  },
+  {
+    id: 20,
+    name: 'Next.js',
+    type: 'front',
+    category: 'web',
+    level: 99,
+    icon: 'SiNextdotjs'
+  },
+  {
+    id: 15,
+    name: 'MongoDB',
+    type: 'front',
+    category: 'learning',
+    level: 99,
+    icon: 'SiMongodb'
+  },
 ]
 
 export default skills
