@@ -5,11 +5,6 @@ import Button from '../Buttons/Button/Button'
 import { useTranslation } from 'react-i18next'
 import { trackCVDownload, trackCVView } from '../../config/matomo/matomoTracker'
 import Image from 'next/image'
-// import i18n from '../../i18n'
-
-// const profil = require('../../public/assets/images/profil.jpg')
-// console.log(process.env)
-console.log('PORT : ', process.env.NEXT_PUBLIC_PORT)
 export default function Intro () {
   const hellos = ['Hello there, I am', 'Hola, soy', 'Bonjour, je suis']
   const { t } = useTranslation()

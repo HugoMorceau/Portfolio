@@ -4,7 +4,7 @@ export {
 } from 'react-icons/fa'
 
 // Skills
-export { SiIbm } from 'react-icons/si'
+export { SiIbm, SiNextdotjs, SiMongodb, SiTypescript, SiGraphql, SiThreedotjs } from 'react-icons/si'
 export { IoCodeSlash } from 'react-icons/io5'
 export { TbRelationOneToMany } from 'react-icons/tb'
 
@@ -15,6 +15,6 @@ export { MdOutlineSchool, MdOutlineWorkOutline, MdLightbulbOutline }
 // Theme switcher
 export { BsMoonStars, BsSun } from 'react-icons/bs'
 
-export { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa'
+export { FaLinkedin, FaGithub, FaTwitter, FaVuejs, FaDocker } from 'react-icons/fa'
 
 export { FiGithub, FiLinkedin, FiTwitter, FiMail, FiExternalLink, FiMoreHorizontal } from 'react-icons/fi'

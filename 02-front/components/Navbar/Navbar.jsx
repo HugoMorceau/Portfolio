@@ -1,14 +1,17 @@
 
 import PropTypes from 'prop-types'
 import styles from './Navbar.module.scss'
-
-export default function Navbar ({ handleclick, liElt }) {
+export default function Navbar ({ handleclick, destinations, activeSection }) {
+  
   return (
+    
     <nav className={styles.navbar}>
       <ul>
-        {liElt.map(({ key, title, ref }) => {
-          return (<li key={key} ref={ref} className="App-link"
-            onClick={(e) => handleclick(ref)}>
+        {destinations.map(({ key, id, title, ref }) => {
+          return (
+          <li key={key} ref={ref} className={`App-link ${activeSection === id ? styles.active : ''}`}
+            onClick={(e) => handleclick(ref)}
+          >
             {title.toUpperCase()}
           </li>)
         })}
@@ -19,10 +22,11 @@ export default function Navbar ({ handleclick, liElt }) {
 
 Navbar.propTypes = {
   handleclick: PropTypes.func.isRequired,
-  liElt: PropTypes.arrayOf(
+  destinations: PropTypes.arrayOf(
     PropTypes.shape({
       key: PropTypes.number.isRequired,
       ref: PropTypes.object.isRequired
     }).isRequired
-  ).isRequired
+  ).isRequired,
+  activeSection: PropTypes.number.isRequired
 }
