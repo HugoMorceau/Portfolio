@@ -22,10 +22,6 @@ function App () {
   const { i18n, t } = useTranslation()
   const { theme } = useTheme()
 
-  // States
-  const [currentPosition, setCurrentPosition] = useState('')
-  const [activeSection, setActiveSection] = useState(1);
-
   // Refs
   const home = useRef(null)
   const skills = useRef(null)
@@ -57,8 +53,33 @@ function App () {
     { key:5, id: 5, title: t('My Projects'), ref: projects, component: Projects },
     { key:6, id: 6, title: t('Contact Me'), ref: contact, component: Contact }
   ]
+  // States
+  const [currentPosition, setCurrentPosition] = useState('')
+  const [activeSection, setActiveSection] = useState(1);
+  const [scrollDirection, setScrollDirection] = useState("down");
+  const [isTopOfPage, setIsTopOfPage] = useState(true);
 
-  // Effects
+  // Scroll
+    useEffect(() => {
+    let lastScrollY = window.pageYOffset;
+
+    const handleScroll = () => {
+      const currentScrollY = window.pageYOffset;
+      setScrollDirection(currentScrollY > lastScrollY ? "down" : "up");
+      lastScrollY = currentScrollY;
+      if (currentScrollY < 200) {
+        setIsTopOfPage(true);
+      } else {
+        setIsTopOfPage(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   // Matomo
   useEffect(() => {
@@ -105,13 +126,15 @@ function App () {
             title={destination.title === 'Home' ? '' : destination.title}
             inConstruction={false}
             ref={destination.ref}
-            // id={destination.title.toLowerCase().replace(/ /g, "-")}
             setActiveSection={setActiveSection}
-          >         
-          {React.createElement(destination.component)} 
+            scrollDirection={scrollDirection}
+          >
+            {/* Section specific component */}
+            {React.createElement(destination.component)} 
           </Section>
         ))}
-        <Arrows handleClick={executeScroll} arrowUp={arrowUp}/>
+        {/* Icon Arrow => Scroll back to top */}
+        {!isTopOfPage && <Arrows handleClick={executeScroll} arrowUp={arrowUp}/>}
       </main>
       <footer className="App-footer">
         <p> 2023</p>

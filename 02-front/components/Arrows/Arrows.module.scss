@@ -7,13 +7,12 @@
       bottom: 5%;
       right: 5%;
       transform: translateX(-50%);
+      transition: all 0.5s ease-in-out;
     }    
   }
   .arrowUp {
     cursor: pointer;
     z-index: 1;
-      
-    
   }
  
   .arrowDown {

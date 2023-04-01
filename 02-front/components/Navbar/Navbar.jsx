@@ -8,7 +8,6 @@ export default function Navbar ({ handleclick, destinations, activeSection }) {
     <nav className={styles.navbar}>
       <ul>
         {destinations.map(({ key, id, title, ref }) => {
-          {console.log(activeSection, 'activeSection')}
           return (
           <li key={key} ref={ref} className={`App-link ${activeSection === id ? styles.active : ''}`}
             onClick={(e) => handleclick(ref)}

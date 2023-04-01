@@ -7,7 +7,7 @@ import Construction from '../Construction/Construction'
 import styles from './Section.module.scss'
 
 const Section = forwardRef(function Section (props, ref) {
-  const {id, title, inConstruction, setActiveSection, children} = props
+  const {id, title, inConstruction, setActiveSection, scrollDirection, children} = props
   const { t } = useTranslation()
 
   const [observerRef, inView] = useInView({
@@ -17,23 +17,7 @@ const Section = forwardRef(function Section (props, ref) {
     threshold: 1,
   });
 
-  const [scrollDirection, setScrollDirection] = useState("down");
 
-  useEffect(() => {
-    let lastScrollY = window.pageYOffset;
-
-    const handleScroll = () => {
-      const currentScrollY = window.pageYOffset;
-      setScrollDirection(currentScrollY > lastScrollY ? "down" : "up");
-      lastScrollY = currentScrollY;
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   useEffect(() => {
     if (scrollDirection === "down" && inView) {
