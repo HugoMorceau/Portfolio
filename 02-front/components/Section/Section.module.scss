@@ -4,6 +4,7 @@
     justify-content: flex-start;
     margin: 10px auto 100px auto;
     
+    
 
     /* For Tablet and Desktop */
     @media screen and (min-width: 768px) {
@@ -13,6 +14,7 @@
            /* Make some space for the top navbar */
             scroll-margin-top: 5rem;
             margin: 100px auto 150px auto;
+            min-height: 90vh;
     }
 }
 
