@@ -13,7 +13,7 @@ const Sidebar = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsActive(true);
-    }, 2000);
+    }, 1000);
     return () => clearTimeout(timer);
   }, []);
 

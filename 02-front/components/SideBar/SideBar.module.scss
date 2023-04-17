@@ -1,12 +1,12 @@
 .sidebar {
     position: fixed;
-    top: -20%;
+    top: -50%;
     left: 5%;
     height: 100%;
     z-index: 100;
     transform: translateX(-300%);
     // transition: 2s ease-in-out;
-    transition: transform 2s ease-in-out, top 2s ease-in-out;
+    transition: transform 3s ease-in-out, top 3s ease-in-out;
     @media screen and (max-width: 768px) {
         left: 7%;
     }
@@ -16,7 +16,7 @@
     top: 30%;
     transform: translateX(-80%);
     @media screen and (min-width: 768px) {
-        top: 20%;
+        top: 40%;
     }
 }
 
