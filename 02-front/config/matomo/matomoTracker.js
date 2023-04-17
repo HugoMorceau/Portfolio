@@ -1,7 +1,9 @@
 import matomoInstance from './matomoInstance'
 
-export const trackPageView = () => {
-  matomoInstance.trackPageView()
+export const trackPageView = (destination) => {
+  matomoInstance.trackPageView({
+    documentTitle: destination}
+  )
 }
 
 export const trackCVDownload = (cvName) => {

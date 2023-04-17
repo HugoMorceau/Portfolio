@@ -83,8 +83,8 @@ function App () {
 
   // Matomo
   useEffect(() => {
-    trackPageView()
-  })
+    trackPageView(activeSection)
+  }, [])
 
   // Language
   useEffect(() => {
@@ -123,13 +123,15 @@ function App () {
           <Section 
             key={destination.key}
             id={destination.id}
-            title={destination.title === 'Home' ? '' : destination.title}
+            // title={destination.title === 'Home' ? '' : destination.title}
+            title={destination.title}
             inConstruction={false}
             ref={destination.ref}
             setActiveSection={setActiveSection}
             scrollDirection={scrollDirection}
           >
             {/* Section specific component */}
+            
             {React.createElement(destination.component)} 
           </Section>
         ))}
