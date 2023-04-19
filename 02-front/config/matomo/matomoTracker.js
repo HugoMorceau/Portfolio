@@ -1,8 +1,8 @@
 import matomoInstance from './matomoInstance'
 
 export const trackPageView = (destination) => {
-  matomoInstance.trackPageView({
-    documentTitle: destination}
+  matomoInstance.trackPageView(
+    {documentTitle: destination}
   )
 }
 
@@ -11,12 +11,6 @@ export const trackCVDownload = (cvName) => {
     category: 'CV_Downloads',
     action: 'Download',
     name: cvName
-  })
-
-  matomoInstance.trackEvent({
-    category: 'CV_Downloads',
-    action: 'Download',
-    name: 'Global_CV'
   })
 }
 
