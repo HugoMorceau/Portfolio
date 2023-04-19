@@ -83,8 +83,9 @@ function App () {
 
   // Matomo
   useEffect(() => {
+    console.log('activeSection', activeSection)
     trackPageView(activeSection)
-  }, [])
+  }, [activeSection])
 
   // Language
   useEffect(() => {
