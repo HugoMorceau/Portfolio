@@ -31,18 +31,22 @@ export default function Projects () {
               </div>
               {/* Links */}
               <div className={styles.projectActions}>
+              {project.github.length > 0 &&
                 <a href={project.github} className={styles.projectAction}
                   target='_blank' rel='noopener noreferrer'
                   title="View the code on Github"
                 >
                   <FiGithub size={24} />
                 </a>
+              }
+                {project.link.length > 0 && 
                 <a href={project.link} className={styles.projectAction}
                   target='_blank' rel='noopener noreferrer'
                   title="View the project"
                 >
                   <FiExternalLink size={24} />
               </a>
+              }
 
               {/* TODO: Project page  */}
               {/* <a href={'/' + project.name.replace(/\s+/g, '-')} className='Project__action'
