@@ -37,3 +37,10 @@ export const trackThemeChang = (them) => {
     name: them
   })
 }
+export const trackBurgerMenu = () => {
+  matomoInstance.trackEvent({
+    category: 'BurgerMenu',
+    action: 'Click',
+    name: 'open/close'
+  })
+}
