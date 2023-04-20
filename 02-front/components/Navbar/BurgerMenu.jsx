@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import ButtonTheme from '../Buttons/ButtonTheme/ButtonTheme'
 import languages from '../../config/languages/languages.js'
 import SwitchLanguage from '../SwitchLanguage/SwitchLanguage'
+import { trackBurgerMenu } from '../../config/matomo/matomoTracker'
 import { useState, useEffect, useRef } from 'react'
 
 const BurgerMenu = ({ handleClick, menuItem }) => {
@@ -11,6 +12,7 @@ const BurgerMenu = ({ handleClick, menuItem }) => {
   const burgerButtonRef = useRef(null)
   const handleClickBurger = () => {
     setIsMenuOpen(prevIsMenuOpen => !prevIsMenuOpen)
+    trackBurgerMenu()
   }
   const handleClickOutside = (e) => {
     if (
