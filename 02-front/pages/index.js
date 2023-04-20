@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useMatomo } from '@datapunt/matomo-tracker-react'
+// import { useMatomo } from '@datapunt/matomo-tracker-react'
+import { trackPageView } from '../config/matomo/matomoTracker'
 import { useTheme } from '../config/themes/ThemeContext'
 import ButtonTheme from '../components/Buttons/ButtonTheme/ButtonTheme'
 import BurgerMenu from '../components/Navbar/BurgerMenu'
@@ -18,7 +19,8 @@ import languages from '../config/languages/languages.js'
 import Section from '../components/Section/Section'
 function App () {
   // Imports
-  const { trackPageView } = useMatomo()
+  // const { trackPageView } = useMatomo()
+
   const { i18n, t } = useTranslation()
   const { theme } = useTheme()
 
@@ -83,8 +85,8 @@ function App () {
 
   // Matomo
   useEffect(() => {
-    trackPageView()
-  })
+    trackPageView(destinations[activeSection -1 ].title)
+  }, [activeSection])
 
   // Language
   useEffect(() => {
@@ -123,13 +125,15 @@ function App () {
           <Section 
             key={destination.key}
             id={destination.id}
-            title={destination.title === 'Home' ? '' : destination.title}
+            // title={destination.title === 'Home' ? '' : destination.title}
+            title={destination.title}
             inConstruction={false}
             ref={destination.ref}
             setActiveSection={setActiveSection}
             scrollDirection={scrollDirection}
           >
             {/* Section specific component */}
+            
             {React.createElement(destination.component)} 
           </Section>
         ))}

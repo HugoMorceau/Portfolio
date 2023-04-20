@@ -30,13 +30,18 @@ const Section = forwardRef(function Section (props, ref) {
   return (
     <section ref={ref} className= {styles.section }>
       <div ref={observerRef}></div>
-      <h2 className={styles.sectionTitle}>{t(title).toUpperCase()}</h2>
+      {title === 'Home' ? null :
+      <h2 className={styles.sectionTitle}>
+        {t(title).toUpperCase()}
+        </h2>
+      }
       {inConstruction && <Construction title={'Section'}/>}
       {children}
       <div ref={bottomObserverRef}></div>
     </section>
   )
 })
+
 
 // PropTypes
 Section.propTypes = {
