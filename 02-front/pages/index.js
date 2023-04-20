@@ -3,15 +3,13 @@ import { useTranslation } from 'react-i18next'
 // import { useMatomo } from '@datapunt/matomo-tracker-react'
 import { trackPageView } from '../config/matomo/matomoTracker'
 import { useTheme } from '../config/themes/ThemeContext'
-import ButtonTheme from '../components/Buttons/ButtonTheme/ButtonTheme'
-import BurgerMenu from '../components/Navbar/BurgerMenu'
 
 // components
 import {
   Intro, About, Skills, WorkXp, Projects,
   Contact, Navbar, SwitchLanguage,
   Arrows, /* Construction */
-  Sidebar
+  Sidebar, ButtonTheme, BurgerMenu
 } from '../components'
  
 // assets

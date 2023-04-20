@@ -8,7 +8,7 @@ export const trackPageView = (destination) => {
 
 export const trackCVDownload = (cvName) => {
   matomoInstance.trackEvent({
-    category: 'CV_Downloads',
+    category: 'CV',
     action: 'Download',
     name: cvName
   })
@@ -16,8 +16,16 @@ export const trackCVDownload = (cvName) => {
 
 export const trackCVView = (cvName) => {
   matomoInstance.trackEvent({
-    category: 'CV_Views',
+    category: 'CV',
     action: 'View',
     name: cvName
   })
+}
+
+export const trackLangChang = (lang) => {
+    matomoInstance.trackEvent({
+      category: 'Language',
+      action: 'Change',
+      name: lang
+    })
 }

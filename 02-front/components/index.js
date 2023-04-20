@@ -10,6 +10,8 @@ import SwitchLanguage from './SwitchLanguage/SwitchLanguage'
 import Arrows from './Arrows/Arrows'
 import Construction from './Construction/Construction'
 import Sidebar from './SideBar/SideBar'
+import ButtonTheme from './Buttons/ButtonTheme/ButtonTheme'
+import BurgerMenu from './Navbar/BurgerMenu'
 
 // export all components
 
@@ -25,5 +27,7 @@ export {
   SwitchLanguage,
   Arrows,
   Construction,
-  Sidebar
+  Sidebar,
+  ButtonTheme,
+  BurgerMenu
 }
