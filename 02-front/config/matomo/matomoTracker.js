@@ -29,3 +29,11 @@ export const trackLangChang = (lang) => {
       name: lang
     })
 }
+
+export const trackThemeChang = (them) => {
+  matomoInstance.trackEvent({
+    category: 'Theme',
+    action: 'Change',
+    name: them
+  })
+}

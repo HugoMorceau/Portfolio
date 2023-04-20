@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
+import { trackThemeChang } from '../matomo/matomoTracker'
 
 const ThemeContext = createContext()
 
@@ -18,6 +19,7 @@ export const ThemeProvider = ({ defaultTheme, children }) => {
 
   const toggleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light')
+    trackThemeChang(theme === 'light' ? 'dark' : 'light')
   }
 
   return (
