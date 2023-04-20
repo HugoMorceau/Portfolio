@@ -2,6 +2,7 @@ import { useState } from 'react'
 import PropTypes from 'prop-types'
 import { useTranslation } from 'react-i18next'
 import styles from './SwitchLanguage.module.scss'
+import { trackLangChang } from '../../config/matomo/matomoTracker'
 
 export default function SwitchLanguage ({ languages, arrowDown }) {
   const { i18n } = useTranslation()
@@ -12,6 +13,7 @@ export default function SwitchLanguage ({ languages, arrowDown }) {
     i18n.changeLanguage(language.code)
     setActiveLanguage(language)
     setIsDropdownOpen(false)
+    trackLangChang(language.code)
   }
 
   const handleDropdownToggle = () => {
