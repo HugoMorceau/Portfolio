@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - front
+    networks:
+      - global-proxy-network
+
+  front:
+    build:
+      context: ./02-front
+    environment:
+      - NODE_ENV=production
+    networks:
+      - global-proxy-network
+
+networks:
+  global-proxy-network:
+    name: global-proxy-network
+    driver: bridge
