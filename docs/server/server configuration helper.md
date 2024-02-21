@@ -143,6 +143,7 @@ snap install --classic certbot
 sudo apt install certbot
 sudo apt install certbot python3-certbot-nginx
 
+certbot --nginx -d example.com -d www.example.com
 certbot --nginx
 	enter email adress
 	agree
