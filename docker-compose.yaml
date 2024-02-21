@@ -32,7 +32,9 @@ services:
       - ./certbot/www:/var/www/certbot
     depends_on:
       - nginx
-    command: certonly --dry-run --webroot --webroot-path=/var/www/certbot --email 27mhugo@gmail.com -d hugomorceau.com -d www.hugomorceau.com --agree-tos --no-eff-email --staging
+    # DRY RUN : command: certonly --dry-run --webroot --webroot-path=/var/www/certbot --email 27mhugo@gmail.com -d hugomorceau.com -d www.hugomorceau.com --agree-tos --no-eff-email --staging
+    # PROD :
+    command: certonly --webroot --webroot-path=/var/www/certbot --email 27mhugo@gmail.com -d hugomorceau.com -d www.hugomorceau.com --agree-tos --no-eff-email
 
 networks:
   global-proxy-network:
