@@ -33,12 +33,14 @@ services:
     depends_on:
       - nginx
     # DRY RUN : 
-    command: certonly --dry-run --webroot --webroot-path=/var/www/certbot --email 27mhugo@gmail.com --agree-tos --no-eff-email --staging
-     -d mini-games.hugomorceau.com
-     # -d hugomorceau.com -d www.hugomorceau.com 
+    # command: certonly --dry-run --webroot --webroot-path=/var/www/certbot --email 27mhugo@gmail.com --agree-tos --no-eff-email --staging
+    #  -d hugomorceau.com -d www.hugomorceau.com 
+    #  -d mini-games.hugomorceau.com
      
     # PROD :
-    # command: certonly --webroot --webroot-path=/var/www/certbot --email 27mhugo@gmail.com -d hugomorceau.com -d www.hugomorceau.com --agree-tos --no-eff-email
+    command: certonly --webroot --webroot-path=/var/www/certbot --email 27mhugo@gmail.com --agree-tos --no-eff-email
+     -d hugomorceau.com -d www.hugomorceau.com 
+     -d mini-games.hugomorceau.com
 
 networks:
   global-proxy-network:
