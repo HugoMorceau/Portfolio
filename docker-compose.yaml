@@ -34,7 +34,7 @@ services:
       - nginx
     # DRY RUN : 
     command: certonly --dry-run --webroot --webroot-path=/var/www/certbot --email 27mhugo@gmail.com --agree-tos --no-eff-email --staging
-     -d mini-games.hugomorceau.com -d www.mini-games.hugomorceau.com 
+     -d mini-games.hugomorceau.com
      # -d hugomorceau.com -d www.hugomorceau.com 
      
     # PROD :
