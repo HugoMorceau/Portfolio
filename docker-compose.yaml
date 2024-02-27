@@ -1,0 +1,53 @@
+version: '3.8'
+services:
+
+  front:
+    build:
+      context: ./02-front
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    networks:
+      - global-proxy-network
+
+  nginx:
+    image: nginx:latest    
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./certbot/conf:/etc/letsencrypt:ro
+      - ./certbot/www:/var/www/certbot/:ro
+    depends_on:
+      - front
+    restart: unless-stopped
+    networks:
+      - global-proxy-network
+
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    depends_on:
+      - nginx
+    # DRY RUN : 
+    # command: certonly --dry-run --webroot --webroot-path=/var/www/certbot --email 27mhugo@gmail.com --agree-tos --no-eff-email --staging
+    #  -d hugomorceau.com -d www.hugomorceau.com 
+    #  -d mini-games.hugomorceau.com
+     
+    # PROD :
+    command: certonly --webroot --webroot-path=/var/www/certbot --email 27mhugo@gmail.com --agree-tos --no-eff-email 
+     -d hugomorceau.com -d www.hugomorceau.com 
+     -d mini-games.hugomorceau.com
+    # --force-renewal 
+
+networks:
+  global-proxy-network:
+    external: true
+# networks:
+#   global-proxy-network:
+#     name: global-proxy-network
+#     driver: bridge
+    

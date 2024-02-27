@@ -19,5 +19,7 @@
   "bugs": {
     "url": "https://github.com/HugoMorceau/Portfolio/issues"
   },
-  "homepage": "https://github.com/HugoMorceau/Portfolio#readme"
+  "homepage": "https://github.com/HugoMorceau/Portfolio#readme",
+  "dependencies": {
+  }
 }
