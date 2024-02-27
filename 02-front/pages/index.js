@@ -52,15 +52,6 @@ function App () {
   const arrowUp = arrowMap.arrowUp[theme]
   const arrowDown = arrowMap.arrowDown[theme]
 
-  // Destinations
-  // const destinations = [
-  //   { key:1, id: 1, title: t('Home'), ref: home, component: Intro },
-  //   { key:2, id: 2, title: t('About'), ref: about, component: About },
-  //   { key:3, id: 3, title: t('Skills'), ref: skills, component: Skills },
-  //   { key:4, id: 4, title: t('Work Experience'), ref: work, component: WorkXp },
-  //   { key:5, id: 5, title: t('My Projects'), ref: projects, component: Projects },
-  //   { key:6, id: 6, title: t('Contact Me'), ref: contact, component: Contact }
-  // ]
   const destinations = [
     { key:1, id: 1, title: 'Home', ref: home, component: Intro },
     { key:2, id: 2, title: 'About', ref: about, component: About },
@@ -77,10 +68,10 @@ function App () {
 
   // Scroll
     useEffect(() => {
-    let lastScrollY = window.pageYOffset;
+    let lastScrollY = window.scrollY;
 
     const handleScroll = () => {
-      const currentScrollY = window.pageYOffset;
+      const currentScrollY = window.scrollY;
       setScrollDirection(currentScrollY > lastScrollY ? "down" : "up");
       lastScrollY = currentScrollY;
       if (currentScrollY < 200) {
@@ -112,8 +103,14 @@ function App () {
     if (!ref) {
       ref = home
     }
-    ref.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
-    setCurrentPosition(ref)
+    // Détermine si la hauteur de la section dépasse la hauteur de la fenêtre
+    const isTallerThanViewport = ref.current.offsetHeight > window.innerHeight;
+
+    // Ajuste le paramètre 'block' en fonction de la hauteur de la section
+    const blockSetting = isTallerThanViewport ? 'start' : 'center';
+
+    ref.current.scrollIntoView({ behavior: 'smooth', block: blockSetting, inline: 'nearest' });
+    setCurrentPosition(ref);
   }
 
   // render
