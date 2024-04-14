@@ -1,20 +1,18 @@
 // Skills
-export {
-  FaHtml5, FaCss3, FaNodeJs, FaReact, FaDatabase
-} from 'react-icons/fa'
+export { FaCss3, FaDatabase, FaHtml5, FaNodeJs, FaReact } from 'react-icons/fa'
 
 // Skills
-export { SiIbm, SiNextdotjs, SiMongodb, SiTypescript, SiGraphql, SiThreedotjs } from 'react-icons/si'
 export { IoCodeSlash } from 'react-icons/io5'
+export { SiDatocms, SiGatsby, SiGraphql, SiIbm, SiMongodb, SiNestjs, SiNextdotjs, SiStrapi, SiThreedotjs, SiTypescript } from 'react-icons/si'
 export { TbRelationOneToMany } from 'react-icons/tb'
 
 // Work experience categories
-export { MdOutlineSchool, MdOutlineWorkOutline, MdLightbulbOutline }
-  from 'react-icons/md'
+export { MdLightbulbOutline, MdOutlineSchool, MdOutlineWorkOutline } from 'react-icons/md'
 
 // Theme switcher
 export { BsMoonStars, BsSun } from 'react-icons/bs'
 
-export { FaLinkedin, FaGithub, FaTwitter, FaVuejs, FaDocker } from 'react-icons/fa'
+export { FaDocker, FaGithub, FaLinkedin, FaTwitter, FaVuejs } from 'react-icons/fa'
 
-export { FiGithub, FiLinkedin, FiTwitter, FiMail, FiExternalLink, FiMoreHorizontal } from 'react-icons/fi'
+export { FiExternalLink, FiGithub, FiLinkedin, FiMail, FiMoreHorizontal, FiTwitter } from 'react-icons/fi'
+

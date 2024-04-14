@@ -4,7 +4,7 @@ const skills = [
     id: 1,
     name: 'HTML',
     type: 'front',
-    category: 'web',
+    category: 'webf',
     level: 99,
     icon: 'FaHtml5'
   },
@@ -12,7 +12,7 @@ const skills = [
     id: 2,
     name: 'CSS',
     type: 'front',
-    category: 'web',
+    category: 'webf',
     level: 99,
     icon: 'FaCss3'
   },
@@ -20,7 +20,7 @@ const skills = [
     id: 4,
     name: 'React',
     type: 'front',
-    category: 'web',
+    category: 'webf',
     level: 99,
     icon: 'FaReact'
   },
@@ -28,7 +28,7 @@ const skills = [
     id: 5,
     name: 'Node.js',
     type: 'back',
-    category: 'web',
+    category: 'webb',
     level: 99,
     icon: 'FaNodeJs'
   },
@@ -52,7 +52,7 @@ const skills = [
     id: 8,
     name: 'Git',
     type: 'back',
-    category: 'web',
+    category: 'other',
     level: 99,
     icon: 'FaGithub'
   },
@@ -101,7 +101,7 @@ const skills = [
     id: 14,
     name: 'Typescript',
     type: 'Javascript',
-    category: 'web',
+    category: 'webb',
     level: 99,
     icon: 'SiTypescript'
   },
@@ -117,31 +117,15 @@ const skills = [
     id: 16,
     name: 'GraphQL',
     type: 'back',
-    category: 'learningNext',
+    category: 'db',
     level: 99,
     icon: 'SiGraphql'
-  },
-  {
-    id: 17,
-    name: 'Three.js',
-    type: 'Javascript',
-    category: 'learningNext',
-    level: 99,
-    icon: 'SiThreedotjs'
-  },
-  {
-    id: 18,
-    name: 'noSQL',
-    type: 'back',
-    category: 'learningNext',
-    level: -1,
-    icon: ''
   },
   {
     id: 19,
     name: 'Docker',
     type: 'back',
-    category: 'learning',
+    category: 'webb',
     level: 1,
     icon: 'FaDocker'
   },
@@ -149,7 +133,7 @@ const skills = [
     id: 20,
     name: 'Next.js',
     type: 'front',
-    category: 'web',
+    category: 'webf',
     level: 99,
     icon: 'SiNextdotjs'
   },
@@ -157,9 +141,41 @@ const skills = [
     id: 21,
     name: 'MongoDB',
     type: 'front',
-    category: 'learning',
+    category: 'db',
     level: 99,
     icon: 'SiMongodb'
+  },
+  {
+    id: 22,
+    name: 'NestJS',
+    type: 'back',
+    category: 'webb',
+    level: 99,
+    icon: 'SiNestJs'
+  },
+  {
+    id: 23,
+    name: 'Gatsby',
+    type: 'front',
+    category: 'webf',
+    level: 99,
+    icon: 'SiGatsby'
+  },
+  {
+    id: 24,
+    name: 'DatoCMS',
+    type: 'cms',
+    category: 'cms',
+    level: 99,
+    icon: 'SiDatocms'
+  },
+  {
+    id: 25,
+    name: 'Strapi',
+    type: 'cms',
+    category: 'cms',
+    level: 99,
+    icon: 'SiStrapi'
   },
 ]
 

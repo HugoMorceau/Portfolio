@@ -72,7 +72,7 @@ const resumeES = [
     category: 'Project',
     description: '\nMi sitio web personal hecho desde cero con React',
     startDate: '20230301',
-    endDate: 'Actualidad',
+    endDate: '20230301',
     location: 'Francia, Telepresencial'
   },
   {
@@ -84,6 +84,16 @@ const resumeES = [
     startDate: '20110901',
     endDate: '20120630',
     location: 'Francia, Telepresencial'
+  },
+  {
+    id: 9,
+    company: 'Extia',
+    title: 'Software Engineer',
+    category: 'Experience',
+    description: '\nFullstack web developer (React, NodeJS)',
+    startDate: '20230501',
+    endDate: 'Present',
+    location: 'Spain, Remote'
   }
 ]
 export default resumeES
