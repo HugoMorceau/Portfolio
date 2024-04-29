@@ -37,6 +37,7 @@ services:
      -d hugomorceau.com -d www.hugomorceau.com 
      -d mini-games.hugomorceau.com
      -d breweries.hugomorceau.com
+     --force-renewal 
      
     # PROD :
     # command: certonly --webroot --webroot-path=/var/www/certbot --email 27mhugo@gmail.com --agree-tos --no-eff-email 
