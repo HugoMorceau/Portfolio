@@ -2,7 +2,7 @@
 const miniGamesImages = [ '/assets/images/projects/miniGames/resume.png']
 const portfolioImages = [ '/assets/images/projects/portfolio/portfolio-light.png', '/assets/images/projects/portfolio/portfolio-dark.png' ]
 const unimetrixImages = [ '/assets/images/projects/unimetrix/project.png', '/assets/images/projects/unimetrix/logo.png', '/assets/images/projects/unimetrix/home.png' ]
-const breweryImages = [ '/assets/images/projects/breweries/breweryFinder.png']
+const breweryImages = [ '/assets/images/projects/breweries/brewery-finder.png']
 const projects = [
   {
     id: 1,
