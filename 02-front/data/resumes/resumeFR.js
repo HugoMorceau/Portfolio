@@ -84,6 +84,16 @@ const resumeFR = [
     startDate: '20110901',
     endDate: '20120630',
     location: 'France, Téléprésentiel'
+  },
+  {
+    id: 8,
+    company: 'Extia',
+    title: 'Software Engineer',
+    category: 'Experience',
+    description: '\nFullstack web developer (React, NodeJS)',
+    startDate: '20230501',
+    endDate: 'Present',
+    location: 'Spain, Remote'
   }
 
 ]

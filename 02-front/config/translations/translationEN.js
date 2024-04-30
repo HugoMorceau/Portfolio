@@ -3,16 +3,16 @@ const translationEN = {
   ComponentIntro: 'Introduction',
   'Hello World': "Hello there, I'm",
   Welcome: 'Welcome to my portfolio',
-  Intro: 'After 10 years of experience as a software engineer in Adelia, RPG, Cobol on AS400, I reconverted in 2022 to web and mobile development. Therefore I am looking for my first experience as a web developer in JavaScript, back and/or front-end',
+  Intro: 'Fullstack JavaScript development specialist with over 10 years of programming experience. Passionate about technological innovation, I am ready to bring my technical expertise to ambitious web and mobile projects',
 
   ComponentNavBar: 'Introduction',
   Home: 'Home',
   About: 'About',
-  Aboutme: `Hello, my name is Hugo, a passionate French developer with 10 years of experience in Adélia, RPG4, and COBOL languages on AS/400 systems.
-  \nIn 2022, I decided to explore new horizons by diving into the fascinating world of web development and thus pivot my professional focus. To achieve this, I completed an intensive 6-month course with O'Clock School in a remote format. This experience allowed me to gain skills in modern programming languages.
-  \nThis transition also coincided with my move from Paris to the wonderful city of Barcelona, where I have chosen to settle and embark on both a professional and personal adventure.
-  \nDriven by curiosity and passion, I am ready to take on new challenges and contribute to ambitious and innovative projects with enthusiasm.
-  \nCurrently seeking professional opportunities, please feel free to download my CV and contact me to discuss potential collaborations.`,
+  Aboutme: `Hello, my name is Hugo, a passionate French developer with 10 years of experience in software development.
+  \nToday, I specialize in fullstack web and mobile development using JavaScript, having started my career in IBM mainframe environments with legacy technologies (AS400, RPG4, COBOL, Adélia).
+  \nAfter spending 10 years in Paris, I am now based in Barcelona.
+  \nDriven by curiosity and passion, I am ready to take on new challenges and contribute enthusiastically to ambitious and innovative projects.
+  \nFeel free to download my resume and contact me to discuss potential collaborations.`,
   Skills: 'Skills',
   'Work Experience': 'Experience',
   'My Projects': 'Projects',
