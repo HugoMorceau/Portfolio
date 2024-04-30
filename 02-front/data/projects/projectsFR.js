@@ -2,6 +2,7 @@
 const miniGamesImages = [ '/assets/images/projects/miniGames/resume.png']
 const portfolioImages = [ '/assets/images/projects/portfolio/portfolio-light.png', '/assets/images/projects/portfolio/portfolio-dark.png' ]
 const unimetrixImages = [ '/assets/images/projects/unimetrix/project.png', '/assets/images/projects/unimetrix/logo.png', '/assets/images/projects/unimetrix/home.png' ]
+const breweryImages = [ '/assets/images/projects/breweries/breweryFinder.png']
 const projects = [
   {
     id: 1,
@@ -37,13 +38,23 @@ const projects = [
   },
   {
     id: 4,
+    name: 'Brewery Finder',
+    description: 'A website to find breweries, using the Open Brewery DB API',
+    image: breweryImages,
+    date: '20240430',
+    link: 'https://breweries.hugomorceau.com/',
+    github: 'https://github.com/HugoMorceau/WasteX-test',
+    tags: [ 'Vue.JS',  'Tailwind', 'Pinia', 'Docker', 'Nginx', 'JavaScript' ]
+  },
+  {
+    id: 5,
     name: 'Portfolio',
     description: 'This website',
     image: portfolioImages,
     date: '20230301',
     link: '',
     github: 'https://github.com/HugoMorceau/Portfolio',
-    tags: ['JavaScript', 'React', 'Node.js', 'SCSS', 'Matomo', 'Nginx', 'Pm2' ]
+    tags: ['React', 'Node.js', 'SCSS', 'Matomo', 'Nginx', 'Docker', 'JavaScript' ]
   }
 
 ]
